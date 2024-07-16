@@ -1,0 +1,447 @@
+Not enough permission to place log file at /var/log/archinstall/install.log, creating it in /home/administrator/.local/share/chezmoi/install.log instead
+Hardware model detected: Dell Inc. Latitude E6440; UEFI mode: True
+Processor model detected: Intel(R) Core(TM) i7-4600M CPU @ 2.90GHz
+Memory statistics: 4984056 available out of 8034800 total installed
+Could not detect virtual system: ['/usr/bin/systemd-detect-virt'] exited with abnormal exit code [1]: none
+
+System is not running in a VM: ['/usr/bin/systemd-detect-virt'] exited with abnormal exit code [1]: none
+
+Virtualization detected: None; is VM: False
+Graphics devices detected: dict_keys(['Intel Corporation 4th Gen Core Processor Integrated Graphics Controller (rev 06)'])
+Disk states before installing: [
+    {
+        "children": [
+            {
+                "children": [],
+                "fsavail": 11902976,
+                "fsroots": [
+                    "."
+                ],
+                "fstype": "vfat",
+                "fsuse_percentage": "96%",
+                "fsver": "FAT32",
+                "log_sec": 512,
+                "mountpoint": "/boot",
+                "mountpoints": [
+                    "/boot"
+                ],
+                "name": "sda1",
+                "partn": 1,
+                "parttype": "c12a7328-f81f-11d2-ba4b-00a0c93ec93b",
+                "partuuid": "d15befbb-8326-4262-a977-a614c2c757b5",
+                "path": "/dev/sda1",
+                "pkname": "sda",
+                "pttype": "gpt",
+                "ptuuid": "d084c01d-916f-40db-ac55-a66784db46ad",
+                "rota": false,
+                "size": "299 MiB",
+                "tran": null,
+                "type": "part",
+                "uuid": "4CB2-8481"
+            },
+            {
+                "children": [],
+                "fsavail": 37960835072,
+                "fsroots": [
+                    "@log",
+                    "@pkg",
+                    "@home",
+                    "@"
+                ],
+                "fstype": "btrfs",
+                "fsuse_percentage": "85%",
+                "fsver": null,
+                "log_sec": 512,
+                "mountpoint": "/var/log",
+                "mountpoints": [
+                    "/var/log",
+                    "/var/cache/pacman/pkg",
+                    "/home",
+                    "/"
+                ],
+                "name": "sda2",
+                "partn": 2,
+                "parttype": "0fc63daf-8483-4772-8e79-3d69d8477de4",
+                "partuuid": "a0a78e87-e8b1-4dbe-80f2-480fe82b440b",
+                "path": "/dev/sda2",
+                "pkname": "sda",
+                "pttype": "gpt",
+                "ptuuid": "d084c01d-916f-40db-ac55-a66784db46ad",
+                "rota": false,
+                "size": "243898 MiB",
+                "tran": null,
+                "type": "part",
+                "uuid": "d3992546-6d83-421c-bf40-a1be9e5a6f1c"
+            }
+        ],
+        "fsavail": null,
+        "fsroots": [],
+        "fstype": null,
+        "fsuse_percentage": null,
+        "fsver": null,
+        "log_sec": 512,
+        "mountpoint": null,
+        "mountpoints": [],
+        "name": "sda",
+        "partn": null,
+        "parttype": null,
+        "partuuid": null,
+        "path": "/dev/sda",
+        "pkname": null,
+        "pttype": "gpt",
+        "ptuuid": "d084c01d-916f-40db-ac55-a66784db46ad",
+        "rota": false,
+        "size": "244198 MiB",
+        "tran": "sata",
+        "type": "disk",
+        "uuid": null
+    },
+    {
+        "children": [],
+        "fsavail": null,
+        "fsroots": [],
+        "fstype": null,
+        "fsuse_percentage": null,
+        "fsver": null,
+        "log_sec": 512,
+        "mountpoint": null,
+        "mountpoints": [],
+        "name": "sr0",
+        "partn": null,
+        "parttype": null,
+        "partuuid": null,
+        "path": "/dev/sr0",
+        "pkname": null,
+        "pttype": null,
+        "ptuuid": null,
+        "rota": true,
+        "size": "1023 MiB",
+        "tran": "sata",
+        "type": "rom",
+        "uuid": null
+    },
+    {
+        "children": [],
+        "fsavail": null,
+        "fsroots": [],
+        "fstype": null,
+        "fsuse_percentage": null,
+        "fsver": null,
+        "log_sec": 4096,
+        "mountpoint": "[SWAP]",
+        "mountpoints": [
+            "[SWAP]"
+        ],
+        "name": "zram0",
+        "partn": null,
+        "parttype": null,
+        "partuuid": null,
+        "path": "/dev/zram0",
+        "pkname": null,
+        "pttype": null,
+        "ptuuid": null,
+        "rota": false,
+        "size": "3923 MiB",
+        "tran": null,
+        "type": "disk",
+        "uuid": null
+    }
+]
+Not enough permission to place log file at /var/log/archinstall/install.log, creating it in /home/administrator/.local/share/chezmoi/install.log instead
+Hardware model detected: Dell Inc. Latitude E6440; UEFI mode: True
+Processor model detected: Intel(R) Core(TM) i7-4600M CPU @ 2.90GHz
+Memory statistics: 4678152 available out of 8034800 total installed
+Could not detect virtual system: ['/usr/bin/systemd-detect-virt'] exited with abnormal exit code [1]: none
+
+System is not running in a VM: ['/usr/bin/systemd-detect-virt'] exited with abnormal exit code [1]: none
+
+Virtualization detected: None; is VM: False
+Graphics devices detected: dict_keys(['Intel Corporation 4th Gen Core Processor Integrated Graphics Controller (rev 06)'])
+Disk states before installing: [
+    {
+        "children": [
+            {
+                "children": [],
+                "fsavail": 11902976,
+                "fsroots": [
+                    "."
+                ],
+                "fstype": "vfat",
+                "fsuse_percentage": "96%",
+                "fsver": "FAT32",
+                "log_sec": 512,
+                "mountpoint": "/boot",
+                "mountpoints": [
+                    "/boot"
+                ],
+                "name": "sda1",
+                "partn": 1,
+                "parttype": "c12a7328-f81f-11d2-ba4b-00a0c93ec93b",
+                "partuuid": "d15befbb-8326-4262-a977-a614c2c757b5",
+                "path": "/dev/sda1",
+                "pkname": "sda",
+                "pttype": "gpt",
+                "ptuuid": "d084c01d-916f-40db-ac55-a66784db46ad",
+                "rota": false,
+                "size": "299 MiB",
+                "tran": null,
+                "type": "part",
+                "uuid": "4CB2-8481"
+            },
+            {
+                "children": [],
+                "fsavail": 37961064448,
+                "fsroots": [
+                    "@log",
+                    "@pkg",
+                    "@home",
+                    "@"
+                ],
+                "fstype": "btrfs",
+                "fsuse_percentage": "85%",
+                "fsver": null,
+                "log_sec": 512,
+                "mountpoint": "/var/log",
+                "mountpoints": [
+                    "/var/log",
+                    "/var/cache/pacman/pkg",
+                    "/home",
+                    "/"
+                ],
+                "name": "sda2",
+                "partn": 2,
+                "parttype": "0fc63daf-8483-4772-8e79-3d69d8477de4",
+                "partuuid": "a0a78e87-e8b1-4dbe-80f2-480fe82b440b",
+                "path": "/dev/sda2",
+                "pkname": "sda",
+                "pttype": "gpt",
+                "ptuuid": "d084c01d-916f-40db-ac55-a66784db46ad",
+                "rota": false,
+                "size": "243898 MiB",
+                "tran": null,
+                "type": "part",
+                "uuid": "d3992546-6d83-421c-bf40-a1be9e5a6f1c"
+            }
+        ],
+        "fsavail": null,
+        "fsroots": [],
+        "fstype": null,
+        "fsuse_percentage": null,
+        "fsver": null,
+        "log_sec": 512,
+        "mountpoint": null,
+        "mountpoints": [],
+        "name": "sda",
+        "partn": null,
+        "parttype": null,
+        "partuuid": null,
+        "path": "/dev/sda",
+        "pkname": null,
+        "pttype": "gpt",
+        "ptuuid": "d084c01d-916f-40db-ac55-a66784db46ad",
+        "rota": false,
+        "size": "244198 MiB",
+        "tran": "sata",
+        "type": "disk",
+        "uuid": null
+    },
+    {
+        "children": [],
+        "fsavail": null,
+        "fsroots": [],
+        "fstype": null,
+        "fsuse_percentage": null,
+        "fsver": null,
+        "log_sec": 512,
+        "mountpoint": null,
+        "mountpoints": [],
+        "name": "sr0",
+        "partn": null,
+        "parttype": null,
+        "partuuid": null,
+        "path": "/dev/sr0",
+        "pkname": null,
+        "pttype": null,
+        "ptuuid": null,
+        "rota": true,
+        "size": "1023 MiB",
+        "tran": "sata",
+        "type": "rom",
+        "uuid": null
+    },
+    {
+        "children": [],
+        "fsavail": null,
+        "fsroots": [],
+        "fstype": null,
+        "fsuse_percentage": null,
+        "fsver": null,
+        "log_sec": 4096,
+        "mountpoint": "[SWAP]",
+        "mountpoints": [
+            "[SWAP]"
+        ],
+        "name": "zram0",
+        "partn": null,
+        "parttype": null,
+        "partuuid": null,
+        "path": "/dev/zram0",
+        "pkname": null,
+        "pttype": null,
+        "ptuuid": null,
+        "rota": false,
+        "size": "3923 MiB",
+        "tran": null,
+        "type": "disk",
+        "uuid": null
+    }
+]
+Not enough permission to place log file at /var/log/archinstall/install.log, creating it in /home/administrator/.local/share/chezmoi/install.log instead
+Hardware model detected: Dell Inc. Latitude E6440; UEFI mode: True
+Processor model detected: Intel(R) Core(TM) i7-4600M CPU @ 2.90GHz
+Memory statistics: 5237616 available out of 8034800 total installed
+Could not detect virtual system: ['/usr/bin/systemd-detect-virt'] exited with abnormal exit code [1]: none
+
+System is not running in a VM: ['/usr/bin/systemd-detect-virt'] exited with abnormal exit code [1]: none
+
+Virtualization detected: None; is VM: False
+Graphics devices detected: dict_keys(['Intel Corporation 4th Gen Core Processor Integrated Graphics Controller (rev 06)'])
+Disk states before installing: [
+    {
+        "children": [
+            {
+                "children": [],
+                "fsavail": 11902976,
+                "fsroots": [
+                    "."
+                ],
+                "fstype": "vfat",
+                "fsuse_percentage": "96%",
+                "fsver": "FAT32",
+                "log_sec": 512,
+                "mountpoint": "/boot",
+                "mountpoints": [
+                    "/boot"
+                ],
+                "name": "sda1",
+                "partn": 1,
+                "parttype": "c12a7328-f81f-11d2-ba4b-00a0c93ec93b",
+                "partuuid": "d15befbb-8326-4262-a977-a614c2c757b5",
+                "path": "/dev/sda1",
+                "pkname": "sda",
+                "pttype": "gpt",
+                "ptuuid": "d084c01d-916f-40db-ac55-a66784db46ad",
+                "rota": false,
+                "size": "299 MiB",
+                "tran": null,
+                "type": "part",
+                "uuid": "4CB2-8481"
+            },
+            {
+                "children": [],
+                "fsavail": 37953470464,
+                "fsroots": [
+                    "@log",
+                    "@pkg",
+                    "@home",
+                    "@"
+                ],
+                "fstype": "btrfs",
+                "fsuse_percentage": "85%",
+                "fsver": null,
+                "log_sec": 512,
+                "mountpoint": "/var/log",
+                "mountpoints": [
+                    "/var/log",
+                    "/var/cache/pacman/pkg",
+                    "/home",
+                    "/"
+                ],
+                "name": "sda2",
+                "partn": 2,
+                "parttype": "0fc63daf-8483-4772-8e79-3d69d8477de4",
+                "partuuid": "a0a78e87-e8b1-4dbe-80f2-480fe82b440b",
+                "path": "/dev/sda2",
+                "pkname": "sda",
+                "pttype": "gpt",
+                "ptuuid": "d084c01d-916f-40db-ac55-a66784db46ad",
+                "rota": false,
+                "size": "243898 MiB",
+                "tran": null,
+                "type": "part",
+                "uuid": "d3992546-6d83-421c-bf40-a1be9e5a6f1c"
+            }
+        ],
+        "fsavail": null,
+        "fsroots": [],
+        "fstype": null,
+        "fsuse_percentage": null,
+        "fsver": null,
+        "log_sec": 512,
+        "mountpoint": null,
+        "mountpoints": [],
+        "name": "sda",
+        "partn": null,
+        "parttype": null,
+        "partuuid": null,
+        "path": "/dev/sda",
+        "pkname": null,
+        "pttype": "gpt",
+        "ptuuid": "d084c01d-916f-40db-ac55-a66784db46ad",
+        "rota": false,
+        "size": "244198 MiB",
+        "tran": "sata",
+        "type": "disk",
+        "uuid": null
+    },
+    {
+        "children": [],
+        "fsavail": null,
+        "fsroots": [],
+        "fstype": null,
+        "fsuse_percentage": null,
+        "fsver": null,
+        "log_sec": 512,
+        "mountpoint": null,
+        "mountpoints": [],
+        "name": "sr0",
+        "partn": null,
+        "parttype": null,
+        "partuuid": null,
+        "path": "/dev/sr0",
+        "pkname": null,
+        "pttype": null,
+        "ptuuid": null,
+        "rota": true,
+        "size": "1023 MiB",
+        "tran": "sata",
+        "type": "rom",
+        "uuid": null
+    },
+    {
+        "children": [],
+        "fsavail": null,
+        "fsroots": [],
+        "fstype": null,
+        "fsuse_percentage": null,
+        "fsver": null,
+        "log_sec": 4096,
+        "mountpoint": "[SWAP]",
+        "mountpoints": [
+            "[SWAP]"
+        ],
+        "name": "zram0",
+        "partn": null,
+        "parttype": null,
+        "partuuid": null,
+        "path": "/dev/zram0",
+        "pkname": null,
+        "pttype": null,
+        "ptuuid": null,
+        "rota": false,
+        "size": "3923 MiB",
+        "tran": null,
+        "type": "disk",
+        "uuid": null
+    }
+]
