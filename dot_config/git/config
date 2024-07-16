@@ -1,0 +1,13 @@
+[user]
+	email = lihua@email.com
+	name = Li Hua
+	signingkey = 5ADFEAB69DD0B560
+[sendemail]
+	smtpEncryption = tls
+	smtpServer = "/usr/bin/msmtp"
+	smtpServerPort = 465
+	confirm = auto
+[color]
+	ui = auto
+[commit]
+	gpgsign = true

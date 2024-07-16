@@ -1,0 +1,6 @@
+Host *
+    ServerAliveInterval 15
+Host GitHub
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github

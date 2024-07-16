@@ -1,0 +1,4 @@
+set mbox_type = Maildir
+set folder = "/var/spool/mail/administor/lihua"
+set virtual_spoolfile=yes
+source mailboxes

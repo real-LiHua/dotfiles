@@ -1,0 +1,20 @@
+IMAPStore lihua-remote
+Host	imap.mail.com
+Port	993
+User	lihua@email.com
+PassCmd	"keepassxc-cli show -k ~/.config/keepassxc/pass --no-password -sa Password ~/.config/keepassxc/Password.kdbx Email"
+SSLType	IMAPS
+
+MaildirStore lihua-local
+SubFolders Verbatim
+Path /var/spool/mail/administor/lihua/
+Inbox /var/spool/mail/administor/lihua/INBOX
+
+Channel lihua
+Far :lihua-remote:
+Near :lihua-local:
+Patterns * !&g0l6P3ux- !&V4NXPnux-
+Create Both
+SyncState *
+MaxMessages 150
+MaxSize 200k
