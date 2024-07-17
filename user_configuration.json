@@ -52,7 +52,7 @@
 		"https://mirrors.cqu.edu.cn/archlinux/$repo/os/$arch",
 		"https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch",
 		"https://mirrors.aliyun.com/archlinux/$repo/os/$arch",
-		"https://mirror.nyist.edu.cn/archlinux/$repo/os/$arch",
+		"https://mirror.nyist.edu.cn/archlinux/$repo/os/$arch"
 	    ]
 	}
     },
