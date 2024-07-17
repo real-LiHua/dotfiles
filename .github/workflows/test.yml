@@ -21,6 +21,7 @@ jobs:
   
       - name: Chroot
         run: |
+          sudo apt-get install -y unar
           unar -D archlinux-x86_64.iso arch/x86_64/airootfs.sfs
           sudo unsquashfs arch/x86_64/airootfs.sfs
           sudo mount --bind squashfs-root squashfs-root
