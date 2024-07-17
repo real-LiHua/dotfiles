@@ -1,0 +1,20 @@
+name: Test
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Download ArchLinux LiveCD
+        run: |
+          wget https://geo.mirror.pkgbuild.com/iso/latest/archlinux-x86_64.iso
+          wget https://archlinux.org/iso/latest/archlinux-x86_64.iso.sig
+          wget https://archlinux.org/iso/latest/b2sums.txt
+          wget https://archlinux.org/iso/latest/sha256sums.txt
+          b2sum -c b2sums.txt
+          gpg --auto-key-locate clear,wkd -v --locate-external-key pierre@archlinux.org
+          gpg --keyserver-options auto-key-retrieve --verify archlinux-x86_64.iso.sig archlinux-x86_64.iso
+  
