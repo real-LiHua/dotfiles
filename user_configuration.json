@@ -1,94 +1,96 @@
 {
-    "additional-repositories": [
-	"multilib"
+  "additional-repositories": [
+    "multilib"
+  ],
+  "archinstall-language": "English",
+  "audio_config": {
+    "audio": "pipewire"
+  },
+  "bootloader": "efistub",
+  "config_version": "2.8.1",
+  "custom-commands": [
+    "su administrator -c chezmoi init real-LiHua --apply"
+  ],
+  "debug": false,
+  "disk_config": {
+    "config_type": "pre_mounted_config",
+    "mountpoint": "."
+  },
+  "disk_encryption": null,
+  "hostname": "localhost",
+  "kernels": [
+    "linux-zen"
+  ],
+  "locale_config": {
+    "kb_layout": "us",
+    "sys_enc": "UTF-8",
+    "sys_lang": "zh_CN"
+  },
+  "mirror_config": {
+    "custom_mirrors": [
+      {
+        "name": "archlinuxcn",
+        "url": "https://repo.archlinuxcn.org/$arch"
+      }
     ],
-    "archinstall-language": "English",
-    "audio_config": {
-	"audio": "pipewire"
-    },
-    "bootloader": "efistub",
-    "config_version": "2.8.1",
-    "custom-commands": [
-	"su administrator -c chezmoi init real-LiHua --apply"
-    ],
-    "debug": false,
-    "disk_config": {
-	"config_type": "pre_mounted_config",
-	"mountpoint": "."
-    },
-    "disk_encryption": null,
-    "hostname": "localhost",
-    "kernels": [
-	"linux-zen"
-    ],
-    "locale_config": {
-	"kb_layout": "us",
-	"sys_enc": "UTF-8",
-	"sys_lang": "zh_CN"
-    },
-    "mirror_config": {
-	"custom_mirrors": [
-	    {
-		"name": "archlinuxcn",
-		"url": "https://repo.archlinuxcn.org/$arch"
-	    }
-	],
-	"mirror_regions": {
-	    "China": [
-		"https://mirrors.xjtu.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.wsyu.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.sjtug.sjtu.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.shanghaitech.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.qvq.net.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.qlu.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.nju.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.jxust.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.jlu.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.jcut.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.hust.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.cqu.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch",
-		"https://mirrors.aliyun.com/archlinux/$repo/os/$arch",
-		"https://mirror.nyist.edu.cn/archlinux/$repo/os/$arch"
-	    ]
-	}
-    },
-    "network_config": {
-	"type": "nm"
-    },
-    "no_pkg_lookups": false,
-    "ntp": true,
-    "offline": false,
-    "packages": [
-	"archlinuxcn-keyring",
-	"archlinuxcn-mirrorlist-git",
-	"base-devel",
-	"chezmoi",
-	"fcitx5",
-	"firefox",
-	"git",
-	"kitty",
-	"neovim",
-	"oh-my-zsh-git",
-	"paru"
-    ],
-    "parallel downloads": 5,
-    "profile_config": {
-	"profile": {
-	    "custom_settings": {},
-	    "details": ["sway"],
-	    "main": "Minimal"
-	}
-    },
-    "script": "guided",
-    "silent": false,
-    "skip_ntp": false,
-    "skip_version_check": false,
-    "swap": true,
-    "timezone": "UTC",
-    "uki": true,
-    "version": "2.8.1"
+    "mirror_regions": {
+      "China": [
+        "https://mirrors.xjtu.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.wsyu.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.sjtug.sjtu.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.shanghaitech.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.qvq.net.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.qlu.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.nju.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.jxust.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.jlu.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.jcut.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.hust.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.cqu.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch",
+        "https://mirrors.aliyun.com/archlinux/$repo/os/$arch",
+        "https://mirror.nyist.edu.cn/archlinux/$repo/os/$arch"
+      ]
+    }
+  },
+  "network_config": {
+    "type": "nm"
+  },
+  "no_pkg_lookups": false,
+  "ntp": true,
+  "offline": false,
+  "packages": [
+    "archlinuxcn-keyring",
+    "archlinuxcn-mirrorlist-git",
+    "base-devel",
+    "chezmoi",
+    "fcitx5",
+    "firefox",
+    "git",
+    "kitty",
+    "neovim",
+    "oh-my-zsh-git",
+    "paru"
+  ],
+  "parallel downloads": 5,
+  "profile_config": {
+    "profile": {
+      "custom_settings": {},
+      "details": [
+        "sway"
+      ],
+      "main": "Minimal"
+    }
+  },
+  "script": "guided",
+  "silent": false,
+  "skip_ntp": false,
+  "skip_version_check": false,
+  "swap": true,
+  "timezone": "UTC",
+  "uki": true,
+  "version": "2.8.1"
 }
