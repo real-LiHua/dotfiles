@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: archlinux/archlinux:latest
-      options: --privileged
+      options: --attach --privileged --tty
     steps: 
       - name: Prepare arch
         run: |
@@ -19,5 +19,5 @@ jobs:
           pacman --noconfirm -Syyu python-pip python-pyparted python-simple-term-menu pkgconfig gcc archinstall
       - name: Test
         run: |
-          export TERM=xterm
+          export TERM=linux
           archinstall --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json
