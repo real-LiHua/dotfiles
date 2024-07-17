@@ -81,7 +81,9 @@
   "profile_config": {
     "profile": {
       "custom_settings": {},
-      "details": ["sway"],
+      "details": [
+        "Sway"
+      ],
       "main": "Minimal"
     }
   },
