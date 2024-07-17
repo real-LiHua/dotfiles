@@ -17,7 +17,7 @@ jobs:
           b2sum -c b2sums.txt --ignore-missing
           gpg --auto-key-locate clear,wkd -v --locate-external-key pierre@archlinux.org
           wget -nv https://archlinux.org/iso/latest/archlinux-bootstrap-x86_64.tar.zst.sig
-          gpg --keyserver-options auto-key-retrieve --verify archlinux-x86_64.iso.sig archlinux-x86_64.iso
+          gpg --keyserver-options auto-key-retrieve --verify archlinux-bootstrap-x86_64.tar.zst.sig archlinux-bootstrap-x86_64.tar.zst
       - name: Chroot
         run: |
           tar xf archlinux-bootstrap-x86_64.tar.zst --numeric-owner
