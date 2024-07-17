@@ -87,7 +87,7 @@
       "main": "Minimal"
     }
   },
-  "script": "guided",
+  "script": "unattended",
   "silent": false,
   "skip_ntp": false,
   "skip_version_check": false,
