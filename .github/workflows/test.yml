@@ -7,33 +7,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: archlinux/archlinux:latest
+      options: --privileged
     steps: 
-      - name: Download ArchLinux LiveCD
-        run: |
-          wget -nv https://geo.mirror.pkgbuild.com/iso/latest/archlinux-x86_64.iso
-          wget -nv https://archlinux.org/iso/latest/sha256sums.txt
-          sha256sum -c sha256sums.txt --ignore-missing
-          wget -nv https://archlinux.org/iso/latest/b2sums.txt
-          b2sum -c b2sums.txt --ignore-missing
-          gpg --auto-key-locate clear,wkd -v --locate-external-key pierre@archlinux.org
-          wget -nv https://archlinux.org/iso/latest/archlinux-x86_64.iso.sig
-          gpg --keyserver-options auto-key-retrieve --verify archlinux-x86_64.iso.sig archlinux-x86_64.iso
-  
-      - name: Chroot
-        run: |
-          sudo apt-get install -y unar
-          unar -D archlinux-x86_64.iso arch/x86_64/airootfs.sfs
-          sudo unsquashfs arch/x86_64/airootfs.sfs
-          sudo mount --bind squashfs-root squashfs-root
-          sudo mount -t proc none squashfs-root/proc
-          sudo mount -t sysfs none squashfs-root/sys
-          sudo mount -o bind /dev squashfs-root/dev
-          sudo mount -o bind /dev/pts squashfs-root/dev/pts
-          sudo rm squashfs-root/etc/resolv.conf
-          echo 'nameserver 8.8.8.8' | sudo tee -a squashfs-root/etc/resolv.conf
-          echo 'nameserver 2001:4860:4860::8888' | sudo tee -a squashfs-root/etc/resolv.conf
-          sudo chroot squashfs-root pacman-key --init
-          sudo chroot squashfs-root pacman-key --populate
-          sudo chroot squashfs-root pacman -Sy --noconfirm archlinux-keyring 
-          sudo chroot squashfs-root pacman-key --lsign-key farseerfc@archlinux.org
-          sudo chroot squashfs-root archinstall --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json
+      - run: |
+          pacman-key --init
+          pacman-key --populate
+          pacman -Sy --noconfirm archlinux-keyring
+          pacman-key --lsign-key farseerfc@archlinux.org
+          pacman -Sy --noconfirm archinstall
+          archinstall --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json
