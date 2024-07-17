@@ -10,12 +10,15 @@ jobs:
     steps: 
       - name: Download ArchLinux LiveCD
         run: |
-          wget -nv https://geo.mirror.pkgbuild.com/iso/latest/archlinux-x86_64.iso
+          wget -nv https://geo.mirror.pkgbuild.com/iso/latest/archlinux-bootstrap-x86_64.tar.zst
           wget -nv https://archlinux.org/iso/latest/sha256sums.txt
           sha256sum -c sha256sums.txt --ignore-missing
           wget -nv https://archlinux.org/iso/latest/b2sums.txt
           b2sum -c b2sums.txt --ignore-missing
           gpg --auto-key-locate clear,wkd -v --locate-external-key pierre@archlinux.org
-          wget -nv https://archlinux.org/iso/latest/archlinux-x86_64.iso.sig
+          wget -nv https://archlinux.org/iso/latest/archlinux-bootstrap-x86_64.tar.zst.sig
           gpg --keyserver-options auto-key-retrieve --verify archlinux-x86_64.iso.sig archlinux-x86_64.iso
-  
+      - name: Chroot
+        run: |
+          tar xf archlinux-bootstrap-x86_64.tar.zst --numeric-owner
+          ./root.x86_64/bin/arch-chroot root.x86_64 archinstall --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json
