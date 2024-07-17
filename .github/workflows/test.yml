@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: archlinux/archlinux:latest
-      options: --attach --privileged --tty
+      options: --privileged --tty
     steps: 
       - name: Prepare arch
         run: |
