@@ -20,5 +20,5 @@ jobs:
           gpg --keyserver-options auto-key-retrieve --verify archlinux-bootstrap-x86_64.tar.zst.sig archlinux-bootstrap-x86_64.tar.zst
       - name: Chroot
         run: |
-          tar xvf archlinux-bootstrap-x86_64.tar.zst --numeric-owner
-          su -c ./root.x86_64/bin/arch-chroot root.x86_64 archinstall --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json
+          tar xf archlinux-bootstrap-x86_64.tar.zst --numeric-owner
+          sudo ./root.x86_64/bin/arch-chroot root.x86_64 archinstall --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json
