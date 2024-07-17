@@ -29,5 +29,4 @@ jobs:
           sudo mount -t sysfs none squashfs-root/sys
           sudo mount -o bind /dev squashfs-root/dev
           sudo mount -o bind /dev/pts squashfs-root/dev/pts
-          sudo cp -L /etc/resolv.conf squashfs-root/etc
           sudo chroot squashfs-root archinstall --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json
