@@ -30,7 +30,9 @@
     "custom_mirrors": [
       {
         "name": "archlinuxcn",
-        "url": "https://repo.archlinuxcn.org/$arch"
+        "url": "https://repo.archlinuxcn.org/$arch",
+        "sign_check": "Required",
+        "sign_option": "TrustedOnly"
       }
     ],
     "mirror_regions": {

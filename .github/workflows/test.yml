@@ -32,4 +32,5 @@ jobs:
           sudo rm squashfs-root/etc/resolv.conf
           echo 'nameserver 8.8.8.8' | sudo tee -a squashfs-root/etc/resolv.conf
           echo 'nameserver 2001:4860:4860::8888' | sudo tee -a squashfs-root/etc/resolv.conf
+          sudo chroot squashfs-root pacman-key --lsign-key  "farseerfc@archlinux.org"
           sudo chroot squashfs-root archinstall --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json
