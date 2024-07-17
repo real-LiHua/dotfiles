@@ -87,12 +87,12 @@
       "main": "Minimal"
     }
   },
-  "script": "unattended",
   "silent": true,
   "skip_ntp": false,
   "skip_version_check": false,
   "swap": true,
   "timezone": "UTC",
   "uki": true,
+  "unattended": true,
   "version": "2.8.1"
 }
