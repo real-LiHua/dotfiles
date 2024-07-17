@@ -19,5 +19,5 @@ jobs:
           pacman --noconfirm -Syyu python-pip python-pyparted python-simple-term-menu pkgconfig gcc archinstall
       - name: Test
         run: |
-          export TERM=linux
+          export TERM=xterm
           archinstall --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json
