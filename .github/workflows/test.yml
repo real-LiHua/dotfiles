@@ -11,7 +11,7 @@ jobs:
       image: archlinux/archlinux:latest
       options: --privileged --tty
     steps: 
-      - use: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           sparse-checkout: .
 
