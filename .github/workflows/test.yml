@@ -13,6 +13,8 @@ jobs:
     steps: 
       - name: Prepare arch
         run: |
+          # pacman-key --init
+          pacman --noconfirm -Sy archlinux-keyring
           pacman-key --lsign-key farseerfc@archlinux.org
           pacman --noconfirm -Syyu  archinstall
           archinstall --script unattended --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json
