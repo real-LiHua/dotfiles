@@ -93,6 +93,5 @@
   "swap": true,
   "timezone": "UTC",
   "uki": true,
-  "unattended": true,
   "version": "2.8.1"
 }
