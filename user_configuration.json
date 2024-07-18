@@ -87,9 +87,9 @@
       "main": "Minimal"
     }
   },
-  "silent": true,
+  "silent": false,
   "skip_ntp": false,
-  "skip_version_check": false,
+  "skip_version_check": true,
   "swap": true,
   "timezone": "UTC",
   "uki": true,
