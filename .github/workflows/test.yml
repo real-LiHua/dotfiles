@@ -11,10 +11,14 @@ jobs:
       image: archlinux/archlinux:latest
       options: --privileged --tty
     steps: 
-      - name: Prepare arch
+      - use: actions/checkout@v4
+        with:
+          sparse-checkout: .
+
+      - name: Test
         run: |
           pacman-key --init
           pacman --noconfirm -Sy archlinux-keyring
           pacman-key --lsign-key farseerfc@archlinux.org
-          pacman --noconfirm -Syyu  archinstall
-          archinstall --script unattended --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json
+          pacman --noconfirm -Syyu archinstall
+          archinstall --script unattended --config user_configuration.json
