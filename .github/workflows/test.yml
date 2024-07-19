@@ -20,4 +20,5 @@ jobs:
           pacman-key --init
           pacman --noconfirm -Sy archlinux-keyring archinstall
           pacman-key --lsign-key farseerfc@archlinux.org
+          sed -i 's/skip_ntp": false/skip_ntp": true/' user_configuration.json
           archinstall --config user_configuration.json --silent --script guided

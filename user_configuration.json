@@ -168,7 +168,6 @@
       "main": "Minimal"
     }
   },
-  "silent": true,
   "skip_ntp": false,
   "skip_version_check": true,
   "swap": true,
