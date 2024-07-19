@@ -18,7 +18,7 @@ jobs:
       - name: Test
         run: |
           pacman-key --init
-          pacman --noconfirm -Sy archlinux-keyring
+          pacman --noconfirm -Sy archlinux-keyring archinstall
           pacman-key --lsign-key farseerfc@archlinux.org
-          pacman --noconfirm -Syyu archinstall
+          python3 main.py
           archinstall --config user_configuration.json --script guided

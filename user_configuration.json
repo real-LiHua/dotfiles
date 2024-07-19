@@ -14,7 +14,43 @@
   "debug": true,
   "disk_config": {
     "config_type": "pre_mounted_config",
-    "mountpoint": "."
+    "partitions": [
+      {
+        "boot": True,
+        "encrypted": False,
+        "filesystem": {
+          "format": "fat32"
+        },
+        "mountpoint": "/boot",
+        "size": "512MiB",
+        "start": "1MiB",
+        "type": "primary",
+        "wipe": True
+      },
+      {
+        "btrfs": {
+          "subvolumes": {
+            "@": "/",
+            "@.snapshots": "/.snapshots",
+            "@home": "/home",
+            "@log": "/var/log",
+            "@pkg": "/var/cache/pacman/pkg"
+          }
+        },
+        "encrypted": False,
+        "filesystem": {
+          "format": "btrfs",
+          "mount_options": [
+            "compress=zstd"
+          ]
+        },
+        "mountpoint": None,
+        "size": "100%",
+        "start": "513MiB",
+        "type": "primary",
+        "wipe": True
+      }
+    ],
   },
   "disk_encryption": null,
   "hostname": "localhost",
