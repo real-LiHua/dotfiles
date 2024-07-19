@@ -17,8 +17,6 @@ jobs:
 
       - name: Test
         run: |
-          ls
-          exit 1
           pacman-key --init
           pacman --noconfirm -Sy archlinux-keyring archinstall
           pacman-key --lsign-key farseerfc@archlinux.org
