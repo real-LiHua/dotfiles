@@ -19,6 +19,9 @@ jobs:
         run: |
           pacman-key --init
           pacman-key --populate archlinux
-          pacman --noconfirm -Sy archinstall
-          pacman-key --lsign-key farseerfc@archlinux.org
-          archinstall --config user_configuration.json --silent --script guided --skip-ntp
+          pacman --noconfirm -Sy archiso
+          sed -i 's/timeout /&1 #/g' /usr/share/archiso/configs/releng/efiboot/loader/loader.conf
+          sed -i 's/timeout=/&1 #/g' /usr/share/archiso/configs/releng/grub/grub.cfg
+          sed -i 's/timeout=/&1 #/g' /usr/share/archiso/configs/releng/grub/loopback.cfg
+          mkarchiso /usr/share/archiso/configs/releng/
+          rm -rvf work
