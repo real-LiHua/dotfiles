@@ -19,7 +19,7 @@ jobs:
         run: |
           pacman-key --init
           pacman-key --populate archlinux
-          pacman --noconfirm -Sy archiso
+          pacman --noconfirm -Sy archiso qemu-desktop edk2-ovmf
           sed -i 's/timeout /&1 #/g' /usr/share/archiso/configs/releng/efiboot/loader/loader.conf
           sed -i 's/timeout=/&1 #/g' /usr/share/archiso/configs/releng/grub/grub.cfg
           sed -i 's/timeout=/&1 #/g' /usr/share/archiso/configs/releng/grub/loopback.cfg
