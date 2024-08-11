@@ -11,17 +11,15 @@ jobs:
       image: archlinux/archlinux:latest
       options: --privileged
     steps: 
-      - uses: actions/checkout@v4
-        with:
-          sparse-checkout: .
-
-      - name: Test
-        run: |
+      - run: |
           pacman-key --init
           pacman-key --populate archlinux
           pacman --noconfirm -Sy archiso qemu-desktop edk2-ovmf
           sed -i 's/timeout /&1 #/g' /usr/share/archiso/configs/releng/efiboot/loader/loader.conf
           sed -i 's/timeout=/&1 #/g' /usr/share/archiso/configs/releng/grub/grub.cfg
           sed -i 's/timeout=/&1 #/g' /usr/share/archiso/configs/releng/grub/loopback.cfg
+          perl -pi -e 'chomp if eof' /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
+          echo ' script=https://raw.githubusercontent.com/real-LiHua/dotfiles/main/install.sh\n' >> /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
           mkarchiso -v /usr/share/archiso/configs/releng/
           rm -rvf work
+          ls out
