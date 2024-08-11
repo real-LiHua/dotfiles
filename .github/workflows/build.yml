@@ -1,4 +1,4 @@
-name: Test
+name: Build
 
 on:
   push:
@@ -12,20 +12,17 @@ jobs:
       options: --privileged
     steps: 
       - name: Test
-        env:
-          XDG_RUNTIME_DIR: /run/user/0
         run: |
           pacman-key --init
           pacman-key --populate archlinux
-          pacman --noconfirm -Sy archiso qemu-desktop edk2-ovmf perl pulseaudio
+          pacman --noconfirm -Sy archiso perl
           pacman --noconfirm -Scc
-          useradd -d /var/run/pulse pulse
-          mkdir -pv /var/run/pulse/.config/pulse
-          chown -Rv pulse:pulse /var/run/pulse
-          pulseaudio --system --disallow-module-loading
           sed -i 's/timeout /&1 #/g' /usr/share/archiso/configs/releng/efiboot/loader/loader.conf
           perl -pi -e 'chomp if eof' /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
           echo " script=https://raw.githubusercontent.com/${{ github.repository }}/main/install.sh" >> /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
           mkarchiso -v /usr/share/archiso/configs/releng/
           rm -rf work
-          run_archiso -u -i out/*.iso
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.3.6
+        with:
+          path: out
