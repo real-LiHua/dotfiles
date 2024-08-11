@@ -12,6 +12,8 @@ jobs:
       options: --privileged
     steps: 
       - name: Test
+        env:
+          XDG_RUNTIME_DIR: /run/user/0
         run: |
           pacman-key --init
           pacman-key --populate archlinux
