@@ -23,5 +23,5 @@ jobs:
           sed -i 's/timeout /&1 #/g' /usr/share/archiso/configs/releng/efiboot/loader/loader.conf
           sed -i 's/timeout=/&1 #/g' /usr/share/archiso/configs/releng/grub/grub.cfg
           sed -i 's/timeout=/&1 #/g' /usr/share/archiso/configs/releng/grub/loopback.cfg
-          mkarchiso /usr/share/archiso/configs/releng/
+          mkarchiso -v /usr/share/archiso/configs/releng/
           rm -rvf work
