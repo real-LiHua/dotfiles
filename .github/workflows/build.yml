@@ -19,7 +19,7 @@ jobs:
           pacman --noconfirm -Scc
           sed -i 's/timeout /&1 #/g' /usr/share/archiso/configs/releng/efiboot/loader/loader.conf
           perl -pi -e 'chomp if eof' /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
-          echo " script=https://raw.githubusercontent.com/${{ github.repository }}/main/install.sh" >> /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
+          echo " script=https://cdn.jsdelivr.net/gh/${{ github.repository }}/install.sh" >> /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
           mkarchiso -v /usr/share/archiso/configs/releng/
           rm -rf work
       - name: Upload a Build Artifact
