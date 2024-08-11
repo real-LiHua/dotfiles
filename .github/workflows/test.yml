@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: archlinux/archlinux:latest
-      options: --privileged
+      options: --privileged --volume=/run/user/0/pulse:/run/user/0/pulse
     steps: 
       - name: Test
         env:
@@ -17,7 +17,7 @@ jobs:
         run: |
           pacman-key --init
           pacman-key --populate archlinux
-          pacman --noconfirm -Syuu archiso qemu-desktop edk2-ovmf perl pulseaudio
+          pacman --noconfirm -Sy archiso qemu-desktop edk2-ovmf perl
           pacman --noconfirm -Scc
           sed -i 's/timeout /&1 #/g' /usr/share/archiso/configs/releng/efiboot/loader/loader.conf
           perl -pi -e 'chomp if eof' /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
