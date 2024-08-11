@@ -20,7 +20,7 @@ jobs:
           pacman --noconfirm -Sy archiso qemu-desktop edk2-ovmf perl pulseaudio
           pacman --noconfirm -Scc
           useradd -d /var/run/pulse pulse
-          pulseaudio --system
+          pulseaudio --system --disallow-module-loading
           sed -i 's/timeout /&1 #/g' /usr/share/archiso/configs/releng/efiboot/loader/loader.conf
           perl -pi -e 'chomp if eof' /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
           echo " script=https://raw.githubusercontent.com/${{ github.repository }}/main/install.sh" >> /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
