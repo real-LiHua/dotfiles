@@ -11,16 +11,15 @@ jobs:
       image: archlinux/archlinux:latest
       options: --privileged
     steps: 
-      - name: Test
-        run: |
-          pacman-key --init
-          pacman-key --populate archlinux
-          pacman --noconfirm -Sy archiso perl
-          pacman --noconfirm -Scc
-          perl -pi -e 'chomp if eof' /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
-          echo " script=https://cdn.jsdelivr.net/gh/${{ github.repository }}/install.sh" >> /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
-          mkarchiso -v /usr/share/archiso/configs/releng/
-          rm -rf work
+      - run: pacman-key --init
+      - run: pacman-key --populate archlinux
+      - run: pacman --noconfirm -Sy archiso perl
+      - run: pacman --noconfirm -Scc
+      - run: perl -pi -e 'chomp if eof' /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
+      - run: echo " script=https://cdn.jsdelivr.net/gh/${{ github.repository }}/install.sh" >> /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
+      - run: mkarchiso -v /usr/share/archiso/configs/releng/
+      - run: rm -rf work
+      
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.6
         with:
