@@ -31,9 +31,12 @@
               }
             },
             "size": {
-              "sector_size": null,
-              "unit": "MiB",
-              "value": 300
+              "sector_size": {
+                "unit": "MiB",
+                "value": 300
+              }
+              "unit": "sectors",
+              "value": 1
             },
             "fs_type": "fat32",
             "mountpoint": "/boot",
