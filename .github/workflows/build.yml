@@ -18,6 +18,8 @@ jobs:
       - run: pacman --noconfirm -Scc
       - run: perl -pi -e 'chomp if eof' /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
       - run: curl -sSLvo /usr/share/archiso/configs/releng/airootfs/etc/hosts https://raw.githubusercontent.com/maxiaof/github-hosts/master/hosts
+      - run: mkdir -vp /usr/share/archiso/configs/releng/airootfs/usr/share/licenses/github-hosts
+      - run: curl -sSLvo /usr/share/archiso/configs/releng/airootfs/usr/share/licenses/github-hosts https://raw.githubusercontent.com/maxiaof/github-hosts/master/LICENSE
       - run: echo " script=https://raw.githubusercontent.com/${{ github.repository }}/main/install.sh" >> /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
       - run: mkarchiso -v /usr/share/archiso/configs/releng/
       - run: rm -rf work
