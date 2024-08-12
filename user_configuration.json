@@ -112,7 +112,7 @@
       {
         "name": "archlinuxcn",
         "url": "https://repo.archlinuxcn.org/$arch",
-        "sign_check": "Required",
+        "sign_check": "Optional",
         "sign_option": "TrustedOnly"
       }
     ],
