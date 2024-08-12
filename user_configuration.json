@@ -27,7 +27,7 @@
               "value": 34,
               "sector_size": {
                 "unit": "B",
-                "value": "512"
+                "value": 512
               }
             },
             "length": {
