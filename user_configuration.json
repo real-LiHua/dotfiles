@@ -13,7 +13,7 @@
   ],
   "debug": true,
   "disk_config": {
-    "config_type": "manual_partitioning",
+    "config_type": "default_layout",
     "device_modifications": [
       {
         "device": "/dev/sda",
