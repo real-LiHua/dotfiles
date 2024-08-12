@@ -15,7 +15,7 @@
   "disk_config": {
     "config_type": "manual_partitioning",
     "device_modifications": [{
-      "device": "/dev/sda"，
+      "device": "/dev/sda",
       "partitions": [
         {
           "btrfs": [],
