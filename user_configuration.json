@@ -24,11 +24,13 @@
             "type": "primary",
             "start": {
               "unit": "KiB",
-              "value": 17
+              "value": 17,
+              "sector_size": null
             },
             "length": {
               "unit": "MiB",
-              "value": 300
+              "value": 300,
+              "sector_size": null
             },
             "fs_type": "fat32",
             "mountpoint": "/boot",
