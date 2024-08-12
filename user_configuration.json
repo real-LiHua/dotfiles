@@ -28,7 +28,7 @@
             },
             "length": {
               "unit": "MB",
-              "value": 3
+              "value": 300
             },
             "fs_type": "fat32",
             "mountpoint": "/boot",
