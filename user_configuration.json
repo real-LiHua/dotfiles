@@ -11,7 +11,7 @@
   "custom-commands": [
     "curl -o - https://blackarch.org/strap.sh 2>/dev/null | sh",
     "pacman -Sy --noconfirm chezmoi",
-    "su 1000 -c chezmoi init real-LiHua --apply"
+    "su $(id -un 1000) -c chezmoi init real-LiHua --apply"
   ],
   "debug": true,
   "disk_config": {
