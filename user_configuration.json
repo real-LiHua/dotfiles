@@ -100,7 +100,7 @@
   "disk_encryption": null,
   "hostname": "localhost",
   "kernels": [
-    "linux-zen"
+    "linux"
   ],
   "locale_config": {
     "kb_layout": "us",
