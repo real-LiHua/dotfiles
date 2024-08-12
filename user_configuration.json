@@ -17,36 +17,89 @@
     "device_modifications": [
       {
         "device": "/dev/sda",
-        "wipe": true,
         "partitions": [
           {
-            "status": "create",
-            "type": "primary",
-            "start": {
-              "sector_size": {
-                "sector_size": null,
-                "total_size": null,
-                "unit": "B",
-                "value": 512
-              },
-              "total_size": null,
-              "unit": "sectors",
-              "value": 2048
-            },
-            "length": {
-              "sector_size": null,
-              "total_size": null,
-              "unit": "MiB",
-              "value": 300
-            },
-            "fs_type": "fat32",
-            "mountpoint": "/boot",
+            "btrfs": [],
+            "dev_path": null,
             "flags": [
               "Boot",
               "ESP"
-            ]
+            ],
+            "fs_type": "fat32",
+            "mount_options": [],
+            "mountpoint": "/boot",
+            "obj_id": "207fe2ef-edcc-4d63-a88d-ba4cd82695e1",
+            "size": {
+              "sector_size": {
+                "unit": "B",
+                "value": 512
+              },
+              "unit": "GiB",
+              "value": 1
+            },
+            "start": {
+              "sector_size": {
+                "unit": "B",
+                "value": 512
+              },
+              "unit": "MiB",
+              "value": 1
+            },
+            "status": "create",
+            "type": "primary"
+          },
+          {
+            "btrfs": [
+              {
+                "mountpoint": "/",
+                "name": "@"
+              },
+              {
+                "mountpoint": "/home",
+                "name": "@home"
+              },
+              {
+                "mountpoint": "/var/log",
+                "name": "@log"
+              },
+              {
+                "mountpoint": "/var/cache/pacman/pkg",
+                "name": "@pkg"
+              },
+              {
+                "mountpoint": "/.snapshots",
+                "name": "@.snapshots"
+              }
+            ],
+            "dev_path": null,
+            "flags": [],
+            "fs_type": "btrfs",
+            "mount_options": [
+              "compress=zstd"
+            ],
+            "mountpoint": null,
+            "obj_id": "4937cb23-b9cb-4753-acc7-83f9c5b5d8fc",
+            "size": {
+              "sector_size": {
+                "unit": "B",
+                "value": 512
+              },
+              "unit": "B",
+              "value": 7514095616
+            },
+            "start": {
+              "sector_size": {
+                "unit": "B",
+                "value": 512
+              },
+              "unit": "B",
+              "value": 1074790400
+            },
+            "status": "create",
+            "type": "primary"
           }
-        ]
+        ],
+        "wipe": true
       }
     ]
   },
