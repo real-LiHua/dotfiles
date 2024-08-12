@@ -17,7 +17,7 @@ jobs:
       - run: pacman --noconfirm -Sy archiso perl
       - run: pacman --noconfirm -Scc
       - run: perl -pi -e 'chomp if eof' /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
-      - run: echo " script=https://cdn.jsdelivr.net/gh/${{ github.repository }}/install.sh" >> /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
+      - run: echo " script=https://cdn.jsdelivr.net/gh/${{ github.repository }}@main/install.sh" >> /usr/share/archiso/configs/releng/efiboot/loader/entries/01-archiso-x86_64-linux.conf
       - run: mkarchiso -v /usr/share/archiso/configs/releng/
       - run: rm -rf work
       
