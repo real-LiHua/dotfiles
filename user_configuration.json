@@ -23,9 +23,12 @@
             "status": "create",
             "type": "primary",
             "start": {
-              "unit": "KiB",
-              "value": 17,
-              "sector_size": null
+              "unit": "sectors",
+              "value": 34,
+              "sector_size": {
+                "unit": "B",
+                "value": "512"
+              }
             },
             "length": {
               "unit": "MiB",
