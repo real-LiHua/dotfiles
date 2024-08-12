@@ -13,14 +13,33 @@
   ],
   "debug": true,
   "disk_config": {
-	"config_type": "default_layout",
-        "device_modifications": [
-            {
-                "device": "/dev/sda",
-                "wipe": true,
-                "partitions": "..."
-            }
+    "config_type": "manual_partitioning",
+    "device_modifications": [
+      {
+        "device": "/dev/sda",
+        "wipe": true,
+        "partitions": [
+          {
+            "status": "create",
+            "type": "primary",
+            "start": {
+              "unit": "KiB",
+              "value": 17
+            },
+            "length": {
+              "unit": "MiB",
+              "value": 300
+            },
+            "fs_type": "fat32",
+            "mountpoint": "/boot",
+            "flags": [
+              "ESP"
+            ],
+            "btrfs_subvols": []
+          }
         ]
+      }
+    ]
   },
   "disk_encryption": null,
   "hostname": "localhost",
