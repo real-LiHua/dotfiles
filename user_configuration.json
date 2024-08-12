@@ -97,9 +97,9 @@
             "status": "create",
             "type": "primary"
           }
-        ],
-      },
-    ],
+        ]
+      }
+    ]
   },
   "disk_encryption": null,
   "hostname": "localhost",
