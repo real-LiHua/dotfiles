@@ -14,89 +14,91 @@
   "debug": true,
   "disk_config": {
     "config_type": "manual_partitioning",
-    "device_modifications": [
-      {
-        "btrfs": [],
-        "flags": [
-          "Boot"
-        ],
-        "fs_type": "fat32",
-        "length": {
-          "sector_size": null,
-          "total_size": null,
-          "unit": "B",
-          "value": 99982592
-        },
-        "mount_options": [],
-        "mountpoint": "/boot",
-        "obj_id": "369f31a8-2781-4d6b-96e7-75680552b7c9",
-        "start": {
-          "sector_size": {
+    "device_modifications": [{
+      "device": "/dev/sda"，
+      "partitions": [
+        {
+          "btrfs": [],
+          "flags": [
+            "Boot"
+          ],
+          "fs_type": "fat32",
+          "length": {
             "sector_size": null,
             "total_size": null,
             "unit": "B",
-            "value": 512
+            "value": 99982592
           },
-          "total_size": null,
-          "unit": "sectors",
-          "value": 34
+          "mount_options": [],
+          "mountpoint": "/boot",
+          "obj_id": "369f31a8-2781-4d6b-96e7-75680552b7c9",
+          "start": {
+            "sector_size": {
+              "sector_size": null,
+              "total_size": null,
+              "unit": "B",
+              "value": 512
+            },
+            "total_size": null,
+            "unit": "sectors",
+            "value": 34
+          },
+          "status": "create",
+          "type": "primary"
         },
-        "status": "create",
-        "type": "primary"
-      },
-      {
-        "btrfs": [
-          {
-            "mountpoint": "/",
-            "name": "@"
-          },
-          {
-            "mountpoint": "/home",
-            "name": "@home"
-          },
-          {
-            "mountpoint": "/var/log",
-            "name": "@log"
-          },
-          {
-            "mountpoint": "/var/cache/pacman/pkg",
-            "name": "@pkg"
-          },
-          {
-            "mountpoint": "/.snapshots",
-            "name": "@.snapshots"
-          }
-        ],
-        "dev_path": null,
-        "flags": [],
-        "fs_type": "btrfs",
-        "mount_options": [
-          "compress=zstd"
-        ],
-        "mountpoint": null,
-        "obj_id": "d712357f-97cc-40f8-a095-24ff244d4539",
-        "size": {
-          "sector_size": {
+        {
+          "btrfs": [
+            {
+              "mountpoint": "/",
+              "name": "@"
+            },
+            {
+              "mountpoint": "/home",
+              "name": "@home"
+            },
+            {
+              "mountpoint": "/var/log",
+              "name": "@log"
+            },
+            {
+              "mountpoint": "/var/cache/pacman/pkg",
+              "name": "@pkg"
+            },
+            {
+              "mountpoint": "/.snapshots",
+              "name": "@.snapshots"
+            }
+          ],
+          "dev_path": null,
+          "flags": [],
+          "fs_type": "btrfs",
+          "mount_options": [
+            "compress=zstd"
+          ],
+          "mountpoint": null,
+          "obj_id": "d712357f-97cc-40f8-a095-24ff244d4539",
+          "size": {
+            "sector_size": {
+              "unit": "B",
+              "value": 512
+            },
             "unit": "B",
-            "value": 512
+            "value": 15568207872
           },
-          "unit": "B",
-          "value": 15568207872
-        },
-        "start": {
-          "sector_size": {
-            "unit": "B",
-            "value": 512
+          "start": {
+            "sector_size": {
+              "unit": "B",
+              "value": 512
+            },
+            "unit": "MiB",
+            "value": 513
           },
-          "unit": "MiB",
-          "value": 513
-        },
-        "status": "create",
-        "type": "primary"
-      }
-
-    ]
-  },
+          "status": "create",
+          "type": "primary"
+        }
+      ],
+    },
+  ],
   "disk_encryption": null,
   "hostname": "localhost",
   "kernels": [
