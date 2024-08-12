@@ -23,19 +23,28 @@
             "status": "create",
             "type": "primary",
             "start": {
-              "unit": "KB",
-              "value": 1
+              "sector_size": {
+                "sector_size": null,
+                "total_size": null,
+                "unit": "B",
+                "value": 512
+              },
+              "total_size": null,
+              "unit": "sectors",
+              "value": 2048
             },
             "length": {
-              "unit": "MB",
+              "sector_size": null,
+              "total_size": null,
+              "unit": "MiB",
               "value": 300
             },
             "fs_type": "fat32",
             "mountpoint": "/boot",
             "flags": [
+              "Boot",
               "ESP"
-            ],
-            "btrfs_subvols": []
+            ]
           }
         ]
       }
