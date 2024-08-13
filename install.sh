@@ -1,6 +1,6 @@
 #pacman -Sy --needed --noconfirm archlinux-keyring
 #pacman-key --lsign-key "farseerfc@archlinux.org"
-sed -i '/.* raw.githubusercontent.com/d' /etc/hosts
+sed -i '/.* raw.githubusercontent.com/d' /etc/hosts || true
 for ip in 185.199.{108..111}.133; do
     curl --connect-timeout 1 \
          --resolve raw.githubusercontent.com:443:$ip \
