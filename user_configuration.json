@@ -123,11 +123,11 @@
         "sign_option": "TrustedOnly"
       },
       {
-		"name": "blackarch",
-		"url": "https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch",
-		"sign_check": "Optional",
-		"sign_option": "TrustedOnly"
-    }
+        "name": "blackarch",
+        "url": "https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch",
+        "sign_check": "Optional",
+        "sign_option": "TrustedOnly"
+      }
     ],
     "mirror_regions": {
       "China": [
