@@ -1,8 +1,0 @@
-1723482227.3652122 ['/usr/bin/systemd-detect-virt']
-1723482227.3844318 ['/usr/bin/systemd-detect-virt']
-1723482227.401839 ['/usr/bin/lspci']
-1723482227.4814906 ['/usr/bin/lsblk', '--json', '--bytes', '--output', '+name,path,pkname,size,log-sec,pttype,ptuuid,rota,tran,partn,partuuid,parttype,uuid,fstype,fsver,fsavail,fsuse%,type,mountpoint,mountpoints,fsroots']
-1723525261.4205353 ['/usr/bin/systemd-detect-virt']
-1723525261.429703 ['/usr/bin/systemd-detect-virt']
-1723525261.4358466 ['/usr/bin/lspci']
-1723525261.4667444 ['/usr/bin/lsblk', '--json', '--bytes', '--output', '+name,path,pkname,size,log-sec,pttype,ptuuid,rota,tran,partn,partuuid,parttype,uuid,fstype,fsver,fsavail,fsuse%,type,mountpoint,mountpoints,fsroots']
