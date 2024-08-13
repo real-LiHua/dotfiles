@@ -122,11 +122,7 @@
         "url": "https://repo.archlinuxcn.org/$arch",
         "sign_check": "Optional",
         "sign_option": "TrustedOnly"
-      },
-      {
-		"name": "blackarch",
-		"url":
-    }
+      }
     ],
     "mirror_regions": {
       "China": [
