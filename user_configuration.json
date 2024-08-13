@@ -153,7 +153,8 @@
   "ntp": true,
   "offline": false,
   "packages": [
-    "archlinuxcn-keyring"
+    "archlinuxcn-keyring",
+    "chezmoi"
   ],
   "parallel downloads": 5,
   "profile_config": {
