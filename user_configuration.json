@@ -157,7 +157,8 @@
     "archlinuxcn-keyring",
     "chezmoi",
     "git",
-    "kitty"
+    "kitty",
+    "ttf-firacode-nerd"
   ],
   "parallel downloads": 5,
   "profile_config": {
