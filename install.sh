@@ -14,7 +14,7 @@ echo -n ,home,opt,usr,var | xargs -i -d, btrfs -v subvolume create /mnt/@{}
 umount -v /mnt
 mount  -vo noatime,nodiratime,compress=lzo,subvol=@ "$disk"2 /mnt
 mkdir  -v /mnt/{boot,home,opt,usr,var}
-mount  -vo noatime,nodiratime "$disk"1 /mnt/boot &
+mount  -vo noatime,nodiratime "$disk"1 /mnt/boot
 echo -n  home,opt,usr,var | xargs -i -d, \
     mount -vo noatime,nodiratime,compress=lzo,subvol=@{} "$disk"2 /mnt/{}
 chattr +C /mnt/var

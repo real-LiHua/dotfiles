@@ -17,7 +17,7 @@
   "debug": true,
   "disk_config": {
     "config_type": "pre_mounted_config",
-    "mountpoint": "/mnt"
+    "mountpoint": "/mnt/archinstall"
   },
   "disk_encryption": null,
   "hostname": "localhost",
