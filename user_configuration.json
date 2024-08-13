@@ -11,6 +11,7 @@
   "custom-commands": [
     "mkdir -pv /run/user/0;su $(id -un 1000) -c 'chezmoi init real-LiHua --apply'",
     "pacman -Sy --noconfirm oh-my-zsh-git paru",
+    "pacman -Rsc --noconfirm nano vim",
     "chsh -s /usr/bin/zsh $(id -un 1000)"
   ],
   "debug": true,
@@ -157,6 +158,7 @@
     "chezmoi",
     "git",
     "kitty",
+    "neovim",
     "nerd-fonts"
   ],
   "parallel downloads": 5,
