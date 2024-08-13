@@ -155,7 +155,8 @@
   "offline": false,
   "packages": [
     "archlinuxcn-keyring",
-    "chezmoi"
+    "chezmoi",
+    "kitty"
   ],
   "parallel downloads": 5,
   "profile_config": {
