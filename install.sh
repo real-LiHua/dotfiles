@@ -3,7 +3,7 @@
 sed -i '/.* raw.githubusercontent.com/d' /etc/hosts
 for ip in 185.199.{108..111}.133; do
     curl --connect-timeout 1 \
-         --resolve raw.githubusercontent.com:443:$ip
+         --resolve raw.githubusercontent.com:443:$ip \
          -sLo /dev/null https://raw.githubusercontent.com && \
     echo "$ip raw.githubusercontent.com" | tee -a /etc/hosts && break
 done
