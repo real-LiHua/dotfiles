@@ -135,7 +135,6 @@
         "https://mirrors.qvq.net.cn/archlinux/$repo/os/$arch",
         "https://mirrors.qlu.edu.cn/archlinux/$repo/os/$arch",
         "https://mirrors.nju.edu.cn/archlinux/$repo/os/$arch",
-        "https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch",
         "https://mirrors.jxust.edu.cn/archlinux/$repo/os/$arch",
         "https://mirrors.jlu.edu.cn/archlinux/$repo/os/$arch",
         "https://mirrors.jcut.edu.cn/archlinux/$repo/os/$arch",
@@ -158,7 +157,7 @@
     "chezmoi",
     "git",
     "kitty",
-    "ttf-firacode-nerd"
+    "nerd-fonts"
   ],
   "parallel downloads": 5,
   "profile_config": {
