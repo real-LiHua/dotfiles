@@ -17,9 +17,10 @@ jobs:
       - run: pacman --noconfirm -Sy archiso perl
       - run: pacman --noconfirm -Scc
       - run: cp -rv /usr/share/archiso/configs/releng archiso
-      - run: curl -sSLvo archiso/airootfs/etc/hosts https://raw.githubusercontent.com/maxiaof/github-hosts/master/hosts
-      - run: mkdir -vp archiso/airootfs/usr/share/licenses/github-hosts
-      - run: curl -sSLvo archiso/airootfs/usr/share/licenses/github-hosts/LICENSE https://raw.githubusercontent.com/maxiaof/github-hosts/master/LICENSE
+      - run: echo '185.199.108.133 raw.githubusercontent.com' >> archiso/airootfs/etc/hosts
+      - run: echo '185.199.109.133 raw.githubusercontent.com' >> archiso/airootfs/etc/hosts
+      - run: echo '185.199.110.133 raw.githubusercontent.com' >> archiso/airootfs/etc/hosts
+      - run: echo '185.199.111.133 raw.githubusercontent.com' >> archiso/airootfs/etc/hosts
       - run: perl -pi -e 'chomp if eof' archiso/efiboot/loader/entries/01-archiso-x86_64-linux.conf
       - run: echo " script=https://raw.githubusercontent.com/${{ github.repository }}/main/install.sh" >> archiso/efiboot/loader/entries/01-archiso-x86_64-linux.conf
       - run: mkarchiso -v archiso
