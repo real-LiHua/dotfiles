@@ -14,7 +14,6 @@
     "pacman -Rsc --noconfirm nano vim",
     "chsh -s /usr/bin/zsh $(id -un 1000)",
     "su $(id -un 1000) -c 'rm -v ~/.bash*'",
-    "yes | curl https://blackarch.org/strap.sh | sh",
     "cp -vRf /home/$(id -un 1000)/.local/share/chezmoi/root/. /"
   ],
   "debug": true,
