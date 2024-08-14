@@ -24,9 +24,9 @@ mount -vo compress=zstd,subvol=@.snapshots "$disk"2 /mnt/.snapshots
 
 curl -sO 'https://www.blackarch.org/keyring/blackarch-keyring.pkg.tar.xz'
 curl -sO 'https://www.blackarch.org/keyring/blackarch-keyring.pkg.tar.xz.sig'
-gpg --receive-keys  4345771566D76038C7FEB43863EC0ADBEA87E4E3
+gpg --receive-keys 4345771566D76038C7FEB43863EC0ADBEA87E4E3
 gpg --keyserver-options no-auto-key-retrieve --with-fingerprint blackarch-keyring.pkg.tar.xz.sig
-pacman --noconfirm -U blackarch-keyring.pkg.tar.xz
+pacman --noconfirm -Ur /mnt blackarch-keyring.pkg.tar.xz
 
 archinstall \
     --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json \
