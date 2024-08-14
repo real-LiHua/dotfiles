@@ -12,7 +12,13 @@
     "add": {
       "pre": {
         "command": "python3",
-        "args": ["{{ .chezmoi.workingTree }}/pre_add.py"]
+        "args": ["{{ .chezmoi.workingTree }}/hook.py"]
+      }
+    },
+    "apply": {
+      "post": {
+        "command": "python3",
+        "args": ["{{ .chezmoi.workingTree }}/hook.py"]
       }
     }
   }
