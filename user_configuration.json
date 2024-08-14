@@ -38,7 +38,7 @@
       },
       {
         "name": "blackarch",
-        "url": "https://mirrors.cernet.edu.cn/blackarch/$repo/os/$arch",
+        "url": "https://blackarch.org/blackarch/blackarch/os/$arch",
         "sign_check": "Optional",
         "sign_option": "TrustedOnly"
       }
