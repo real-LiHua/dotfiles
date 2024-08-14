@@ -1,6 +1,5 @@
 disk='/dev/sda'
 sfdisk --delete "$disk"
-shred -zvs 251M "$disk"
 parted -sa  opt "$disk"             \
     mklabel gpt                     \
     mkpart  EFI     fat32   1M 1G   \
