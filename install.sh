@@ -10,14 +10,15 @@ mkfs.fat -vF 32 "$disk"1
 mkfs.btrfs -vfn 32k "$disk"2
 mkdir -v /mnt/archinstall
 mount -vo compress=zstd "$disk"2 /mnt/archinstall
-echo -n ,home,opt,usr,var | xargs -i -d, btrfs -v subvolume create /mnt/archinstall/@{}
+echo -n ,home,log,pkg,.snapshots | xargs -i -d, btrfs -v subvolume create /mnt/archinstall/@{}
 umount -vR /mnt/archinstall
 mount  -vo compress=zstd,subvol=@ "$disk"2 /mnt/archinstall
-mkdir  -v /mnt/archinstall/{boot,home,opt,usr,var}
+mkdir  -vp /mnt/archinstall/{boot,home,var/log,var/cache/pacman/pkg,.snapshots}
 mount  -v "$disk"1 /mnt/archinstall/boot
-echo -n  home,opt,usr,var | xargs -i -d, \
-    mount -vo compress=zstd,subvol=@{} "$disk"2 /mnt/archinstall/{}
-chattr +C /mnt/archinstall/var
+mount -vo compress=zstd,subvol=@home       "$disk"2 /mnt/archinstall/home
+mount -vo compress=zstd,subvol=@log        "$disk"2 /mnt/archinstall/var/log
+mount -vo compress=zstd,subvol=@pkg        "$disk"2 /mnt/archinstall/var/cache/pacman/pkg
+mount -vo compress=zstd,subvol=@.snapshots "$disk"2 /mnt/archinstall/.snapshots
 archinstall \
     --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json \
     --creds https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_credentials.json \
