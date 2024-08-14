@@ -22,7 +22,6 @@ mount -vo compress=zstd,subvol=@log        "$disk"2 /mnt/var/log
 mount -vo compress=zstd,subvol=@pkg        "$disk"2 /mnt/var/cache/pacman/pkg
 mount -vo compress=zstd,subvol=@.snapshots "$disk"2 /mnt/.snapshots
 
-yes | curl https://blackarch.org/strap.sh | sh
 
 archinstall \
     --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json \
