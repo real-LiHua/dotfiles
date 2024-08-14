@@ -38,7 +38,7 @@
       },
       {
         "name": "blackarch",
-        "url": "https://blackarch.org/blackarch/blackarch/os/$arch",
+        "url": "https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch",
         "sign_check": "Optional",
         "sign_option": "TrustedOnly"
       }
