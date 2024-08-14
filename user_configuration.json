@@ -68,11 +68,13 @@
   "offline": false,
   "packages": [
     "archlinuxcn-keyring",
+    "awesome-terminal-fonts",
     "chezmoi",
     "git",
     "kitty",
     "neovim",
     "nerd-fonts",
+    "powerline-fonts",
     "zsh-autosuggestions",
     "zsh-completions",
     "zsh-syntax-highlighting"
