@@ -32,7 +32,13 @@
     "custom_mirrors": [
       {
         "name": "archlinuxcn",
-        "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch",
+        "url": "https://mirrors.cernet.edu.cn/archlinuxcn/$arch",
+        "sign_check": "Optional",
+        "sign_option": "TrustedOnly"
+      },
+      {
+        "name": "blackarch",
+        "url": "https://mirrors.cernet.edu.cn/blackarch/$repo/os/$arch",
         "sign_check": "Optional",
         "sign_option": "TrustedOnly"
       }
@@ -67,6 +73,7 @@
   "offline": false,
   "packages": [
     "archlinuxcn-keyring",
+    "blackarch-keyring",
     "chezmoi",
     "git",
     "kitty",
