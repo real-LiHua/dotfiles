@@ -13,7 +13,8 @@
     "pacman -Sy --noconfirm oh-my-zsh-git paru",
     "pacman -Rsc --noconfirm nano vim",
     "chsh -s /usr/bin/zsh $(id -un 1000)",
-    "su $(id -un 1000) -c 'rm -v ~/.bash*'"
+    "su $(id -un 1000) -c 'rm -v ~/.bash*'",
+    "cp -vRf /home/$(id -un 1000)/.local/share/chezmoi/root/* /"
   ],
   "debug": true,
   "disk_config": {
