@@ -33,7 +33,7 @@
     "custom_mirrors": [
       {
         "name": "archlinuxcn",
-        "url": "https://repo.archlinuxcn.org/$arch",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch",
         "sign_check": "Optional",
         "sign_option": "TrustedOnly"
       }
