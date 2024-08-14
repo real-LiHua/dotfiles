@@ -8,9 +8,10 @@ parted -sa  opt "$disk"             \
     set     2       root    on
 mkfs.fat -vF 32 "$disk"1
 mkfs.btrfs -vfn 32k "$disk"2
-mount -vo compress=lzo "$disk"2 /mnt/arch_btrfs
-echo -n ,home,opt,usr,var | xargs -i -d, btrfs -v subvolume create /mnt/arch_btrfs/@{}
-umount -v /mnt/arch_btrfs
+mkdir -v /mnt/archinstall
+mount -vo compress=lzo "$disk"2 /mnt/archinstall
+echo -n ,home,opt,usr,var | xargs -i -d, btrfs -v subvolume create /mnt/archinstall/@{}
+umount -vR /mnt/archinstall
 mount  -vo noatime,nodiratime,compress=lzo,subvol=@ "$disk"2 /mnt/archinstall
 mkdir  -v /mnt/archinstall/{boot,home,opt,usr,var}
 mount  -vo noatime,nodiratime "$disk"1 /mnt/archinstall/boot
