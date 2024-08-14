@@ -14,7 +14,7 @@ echo -n ,home,opt,usr,var | xargs -i -d, btrfs -v subvolume create /mnt/archinst
 umount -vR /mnt/archinstall
 mount  -vo compress=zstd,subvol=@ "$disk"2 /mnt/archinstall
 mkdir  -v /mnt/archinstall/{boot,home,opt,usr,var}
-mount  -vo "$disk"1 /mnt/archinstall/boot
+mount  -v "$disk"1 /mnt/archinstall/boot
 echo -n  home,opt,usr,var | xargs -i -d, \
     mount -vo compress=zstd,subvol=@{} "$disk"2 /mnt/archinstall/{}
 chattr +C /mnt/archinstall/var
@@ -23,4 +23,5 @@ archinstall \
     --creds https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_credentials.json \
     --silent \
     --script guided \
+    --debug \
     --skip-version-check
