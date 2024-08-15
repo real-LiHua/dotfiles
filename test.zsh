@@ -1,4 +1,0 @@
-#/usr/bin/zsh
-#CHEZMOI_WORKING_TREE
-#CHEZMOI_ARGS
-env
