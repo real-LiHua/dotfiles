@@ -11,7 +11,7 @@
   },
 
   "hooks": {
-    {{ range $_, $command := list "init" "apply" "update" }}
+    {{ range $_, $command := list "apply" "update" "init" }}
     "{{ $command }}": {
       "post": {
         "command": "python3",
