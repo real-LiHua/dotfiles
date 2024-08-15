@@ -2,33 +2,26 @@
   "edit": {
     "command":"nvim"
   },
+
   "git":{
     "autoAdd": true,
     "autoCommit": true,
     "autoPush": true,
     "commitMessageTemplate": "Update"
   },
+
   "hooks": {
+    {{ range $_, $command := list "init" "apply" "update" }}
+    "{{ $command }}": {
+      "post": {
+        "command": "python3",
+        "args": [".local/share/chezmoi/hook.py"]
+      }
+    },
+    {{ end }}
+
     "add": {
       "pre": {
-        "command": "python3",
-        "args": ["{{ .chezmoi.workingTree }}/hook.py"]
-      }
-    },
-    "apply": {
-      "post": {
-        "command": "python3",
-        "args": ["{{ .chezmoi.workingTree }}/hook.py"]
-      }
-    },
-    "init": {
-      "post": {
-        "command": "python3",
-        "args": ["{{ .chezmoi.workingTree }}/hook.py"]
-      }
-    },
-    "update": {
-      "post": {
         "command": "python3",
         "args": ["{{ .chezmoi.workingTree }}/hook.py"]
       }
