@@ -5,12 +5,19 @@ from pathlib import Path
 from shutil import copytree, ignore_patterns
 from subprocess import run
 
+def apply():
+    if getuid() != 0:
+        run(["sudo", "-E", "/usr/bin/python3", __file__])
+        exit()
+    copytree(Path(getenv("CHEZMOI_WORKING_TREE")) / "root", "/", ignore=ignore_patterns("*~"), dirs_exist_ok=True)
+
 match getenv("CHEZMOI_COMMAND"):
+    case "update":
+        apply()
     case "apply":
-        if getuid() != 0:
-            run(["sudo", "-E", "/usr/bin/python3", __file__])
-            exit()
-        copytree(Path(getenv("CHEZMOI_WORKING_TREE")) / "root", "/", ignore=ignore_patterns("*~"), dirs_exist_ok=True)
+        apply()
+    case "init":
+        apply()
     case "add":
         pass
     case _:
