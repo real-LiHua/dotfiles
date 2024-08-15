@@ -17,7 +17,9 @@ match getenv("CHEZMOI_COMMAND"):
     case "apply":
         apply()
     case "init":
-        apply()
+        args = getenv("CHEZMOI_ARGS", "").split()
+        if "-a" in args or "--apply" in args:
+            apply()
     case "add":
         pass
     case _:
