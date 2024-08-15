@@ -9,14 +9,13 @@
   "bootloader": "efistub",
   "config_version": "2.8.1",
   "custom-commands": [
+    "chsh -s /usr/bin/zsh $(id -un 1000)",
     "mkdir -v /etc/sudoers.d || true",
     "echo $(id -un 1000) 'ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/temp",
     "mkdir -pv /run/user/0;su $(id -un 1000) -c 'chezmoi init real-LiHua --apply'",
     "rm -fv /etc/sudoers.d/temp",
-    "pacman -Sy --noconfirm oh-my-zsh-git paru zsh-theme-powerlevel10k-git",
-    "pacman -Rsc --noconfirm nano vim",
-    "chsh -s /usr/bin/zsh $(id -un 1000)",
-    "su $(id -un 1000) -c 'rm -v ~/.bash*'"
+    "pacman -Sy --noconfirm $(<$(su $(id -un 1000) -c 'chezmoi source-path')/../packages.x86_64)",
+    "pacman -Rsc --noconfirm nano vim"
   ],
   "debug": true,
   "disk_config": {
@@ -69,23 +68,7 @@
   "offline": false,
   "packages": [
     "archlinuxcn-keyring",
-    "adobe-source-han-sans-cn-fonts",
-    "adobe-source-han-serif-cn-fonts",
-    "awesome-terminal-fonts",
-    "chezmoi",
-    "fcitx5-rime",
-    "git",
-    "kitty",
-    "neovim",
-    "nerd-fonts",
-    "powerline-fonts",
-    "rime-emoji",
-    "wqy-microhei",
-    "wqy-zenhei",
-    "wqy-bitmapfont",
-    "zsh-autosuggestions",
-    "zsh-completions",
-    "zsh-syntax-highlighting"
+    "zsh"
   ],
   "parallel downloads": 5,
   "profile_config": {
