@@ -1,0 +1,11 @@
+noblacklist ${RUNUSER}/app
+whitelist ${RUNUSER}/app/org.keepassxc.KeePassXC
+whitelist ${RUNUSER}/kpxc_server
+whitelist ${RUNUSER}/org.keepassxc.KeePassXC.BrowserServer
+whitelist ${RUNUSER}/wayland-0
+whitelist ${RUNUSER}/wayland-1
+dbus-user filter
+dbus-user.talk org.freedesktop.portal.Fcitx
+#ignore include whitelist-runuser-common.inc
+ignore dbus-user none
+#private-bin keepassxc-proxy
