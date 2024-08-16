@@ -36,7 +36,7 @@ match getenv("CHEZMOI_COMMAND"):
         if "-a" in args or "--apply" in args:
             apply()
     case "add":
-        for path: str in getenv("CHEZMOI_ARGS", "").split()[2:]:
+        for path in getenv("CHEZMOI_ARGS", "").split()[2:]:
             print(abspath(Path(abspath(path)) / ".."))
             pass
     case _:
