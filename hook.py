@@ -26,8 +26,7 @@ def apply():
     if getuid():
         run(["sudo", "-E", "/usr/bin/python3", __file__])
         return
-    ignore = ignore_patterns("*~")
-    copytree(source, target, ignore=ignore, dirs_exist_ok=True)
+    copytree(source, target, ignore=ignore_patterns("*~"), dirs_exist_ok=True)
 
 match getenv("CHEZMOI_COMMAND"):
     case "update" | "apply":
