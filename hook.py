@@ -8,7 +8,7 @@ from subprocess import run
 
 
 def has_diff(diff: dircmp) -> bool:
-    if diff.diff_files:
+    if diff.left_only or diff.diff_files:
         return True
     for sub in diff.subdirs.values():
         if has_diff(sub):
