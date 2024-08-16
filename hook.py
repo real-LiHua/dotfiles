@@ -15,11 +15,11 @@ match getenv("CHEZMOI_COMMAND"):
     case "update" | "apply":
         apply()
     case "init":
-        args: list = getenv("CHEZMOI_ARGS", "").split()
+        args: list[str] = getenv("CHEZMOI_ARGS", "").split()
         if "-a" in args or "--apply" in args:
             apply()
     case "add":
-        for path in getenv("CHEZMOI_ARGS", "").split()[2:]:
+        for path: str in getenv("CHEZMOI_ARGS", "").split()[2:]:
             print(abspath(Path(abspath(path)) / ".."))
             pass
     case _:
