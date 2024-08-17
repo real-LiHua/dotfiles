@@ -10,14 +10,14 @@
   "config_version": "2.8.1",
   "custom-commands": [
     "chsh -s /usr/bin/zsh $(id -un 1000)",
-    "mkdir -pv /home/$(id -un 1000)/.ssh || true",
+    "mkdir -vp /home/$(id -un 1000)/.ssh || true",
     "echo 'github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl' > /home/$(id -un 1000)/.ssh/known_hosts",
     "echo 'LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUFNd0FBQUF0emMyZ3RaVwpReU5UVXhPUUFBQUNETmIwb3lWWlJGVlBrZi9wbkk1QkF6cnhraEpUL0JmSjc3bFpaTnJZYVlCQUFBQUloY0JDc3JYQVFyCkt3QUFBQXR6YzJndFpXUXlOVFV4T1FBQUFDRE5iMG95VlpSRlZQa2YvcG5JNUJBenJ4a2hKVC9CZko3N2xaWk5yWWFZQkEKQUFBRURMdFJHZjhvanVxNWYvTmJpcXd1UzJFMzczc25RTHBjcDBLZHlON3BzQm44MXZTakpWbEVWVStSLyttY2prRURPdgpHU0VsUDhGOG52dVZsazJ0aHBnRUFBQUFBQUVDQXdRRgotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K' | base64 -d >> /home/$(id -un 1000)/.ssh/key",
-    "chown -v 1000:1000 /home/$(id -un 1000)/.ssh/key",
+    "chown -vR 1000:1000 /home/$(id -un 1000)/.ssh",
     "chmod -v 0600 /home/$(id -un 1000)/.ssh/key",
     "mkdir -v /etc/sudoers.d || true",
     "echo $(id -un 1000) 'ALL=(ALL:ALL) NOPASSWD: /usr/bin/python3' > /etc/sudoers.d/temp",
-    "mkdir -pv /run/user/0;GIT_SSH_COMMAND='ssh -i ~/.ssh/key' su $(id -un 1000) -c 'chezmoi init real-LiHua -a --ssh'",
+    "mkdir -vp /run/user/0;GIT_SSH_COMMAND='ssh -i ~/.ssh/key' su $(id -un 1000) -c 'chezmoi init real-LiHua -a --ssh'",
     "rm -fv /etc/sudoers.d/temp /home/$(id -un 1000)/.ssh/key",
     "pacman -Sy --noconfirm $(<$(su $(id -un 1000) -c 'chezmoi source-path')/../packages.x86_64)",
     "pacman -Rsc --noconfirm nano vim"
