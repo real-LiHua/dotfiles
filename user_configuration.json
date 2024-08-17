@@ -73,6 +73,7 @@
     "archlinuxcn-keyring",
     "chezmoi",
     "git",
+    "openssh",
     "zsh"
   ],
   "parallel downloads": 5,
