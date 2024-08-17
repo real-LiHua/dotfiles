@@ -69,6 +69,7 @@
   "packages": [
     "archlinuxcn-keyring",
     "chezmoi",
+    "git",
     "zsh"
   ],
   "parallel downloads": 5,
