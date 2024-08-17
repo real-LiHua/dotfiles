@@ -12,7 +12,7 @@
     "chsh -s /usr/bin/zsh $(id -un 1000)",
     "mkdir -vp /home/$(id -un 1000)/.ssh || true",
     "echo 'github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl' > /home/$(id -un 1000)/.ssh/known_hosts",
-    "echo 'LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUFNd0FBQUF0emMyZ3RaVwpReU5UVXhPUUFBQUNETmIwb3lWWlJGVlBrZi9wbkk1QkF6cnhraEpUL0JmSjc3bFpaTnJZYVlCQUFBQUloY0JDc3JYQVFyCkt3QUFBQXR6YzJndFpXUXlOVFV4T1FBQUFDRE5iMG95VlpSRlZQa2YvcG5JNUJBenJ4a2hKVC9CZko3N2xaWk5yWWFZQkEKQUFBRURMdFJHZjhvanVxNWYvTmJpcXd1UzJFMzczc25RTHBjcDBLZHlON3BzQm44MXZTakpWbEVWVStSLyttY2prRURPdgpHU0VsUDhGOG52dVZsazJ0aHBnRUFBQUFBQUVDQXdRRgotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K' | base64 -d >> /home/$(id -un 1000)/.ssh/key",
+    "echo '-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACDNb0oyVZRFVPkf/pnI5BAzrxkhJT/BfJ77lZZNrYaYBAAAAIhcBCsrXAQrKwAAAAtzc2gtZWQyNTUxOQAAACDNb0oyVZRFVPkf/pnI5BAzrxkhJT/BfJ77lZZNrYaYBAAAAEDLtRGf8ojuq5f/NbiqwuS2E373snQLpcp0KdyN7psBn81vSjJVlEVU+R/+mcjkEDOvGSElP8F8nvuVlk2thpgEAAAAAAECAwQF\n-----END OPENSSH PRIVATE KEY-----' >> /home/$(id -un 1000)/.ssh/key",
     "chown -vR 1000:1000 /home/$(id -un 1000)/.ssh",
     "chmod -v 0600 /home/$(id -un 1000)/.ssh/key",
     "mkdir -v /etc/sudoers.d || true",
