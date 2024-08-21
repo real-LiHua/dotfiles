@@ -77,7 +77,7 @@
     "git",
     "openssh",
     "pkgfile",
-    "zsh-completions"
+    "zsh"
   ],
   "parallel downloads": 5,
   "profile_config": {

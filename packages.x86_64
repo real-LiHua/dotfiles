@@ -24,3 +24,6 @@ wl-clipboard
 wqy-microhei
 wqy-zenhei
 wqy-bitmapfont
+zsh-completions
+zsh-syntax-highlighting
+zsh-theme-powerlevel10k-git
