@@ -9,7 +9,6 @@ kitty
 neovim
 nerd-fonts
 obs-studio
-oh-my-zsh-git
 paru
 powerline-fonts
 pre-commit
@@ -25,6 +24,5 @@ wqy-microhei
 wqy-zenhei
 wqy-bitmapfont
 zsh-autosuggestions
-zsh-completions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k-git

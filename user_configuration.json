@@ -76,7 +76,7 @@
     "chezmoi",
     "git",
     "openssh",
-    "zsh"
+    "zsh-completions"
   ],
   "parallel downloads": 5,
   "profile_config": {
