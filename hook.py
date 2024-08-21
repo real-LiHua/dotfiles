@@ -3,7 +3,7 @@ from filecmp import dircmp
 from os import environ, getenv, getuid
 from os.path import abspath
 from pathlib import Path
-from shutil import copytree, ignore_patterns,copy2
+from shutil import copy2, copytree, ignore_patterns
 from subprocess import run
 
 
@@ -42,9 +42,9 @@ match getenv("CHEZMOI_COMMAND"):
         working_tree: Path = Path(getenv("CHEZMOI_WORKING_TREE")) / "root"
         for path in getenv("CHEZMOI_ARGS", "").split()[2:]:
             if path.startswith("/"):
-                source:Path = Path(path)
+                source: Path = Path(path)
             else:
-                source:Path = command_dir / Path(path)
+                source: Path = command_dir / Path(path)
             target: Path = working_tree / abspath(source)[1:]
             Path(abspath(target / "..")).mkdir(exist_ok=True)
             copy2(Path(source), target)
