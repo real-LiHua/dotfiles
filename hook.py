@@ -18,12 +18,12 @@ def has_diff(diff: dircmp) -> bool:
 def apply():
     source: Path = Path(getenv("CHEZMOI_WORKING_TREE")) / "root"
     target: str = "/"
-    try:
-        if not has_diff(dircmp(source, target)):
-            return
-    except RecursionError:
-        pass
     if getuid():
+        try:
+            if not has_diff(dircmp(source, target)):
+                return
+        except RecursionError:
+            pass
         run(["sudo", "-E", "/usr/bin/python3", __file__])
         return
     copytree(source, target, ignore=ignore_patterns("*~"), dirs_exist_ok=True)
