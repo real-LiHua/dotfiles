@@ -76,7 +76,6 @@
     "chezmoi",
     "git",
     "openssh",
-    "pkgfile",
     "zsh"
   ],
   "parallel downloads": 5,
