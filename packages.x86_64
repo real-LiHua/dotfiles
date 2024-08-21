@@ -5,6 +5,7 @@ awesome-terminal-fonts
 fastfetch
 fcitx5-pinyin-moegirl
 fcitx5-rime
+grml-zsh-config
 kitty
 neovim
 nerd-fonts
@@ -23,6 +24,3 @@ wl-clipboard
 wqy-microhei
 wqy-zenhei
 wqy-bitmapfont
-zsh-autosuggestions
-zsh-syntax-highlighting
-zsh-theme-powerlevel10k-git
