@@ -15,6 +15,7 @@ def has_diff(diff: dircmp) -> bool:
             return True
     return False
 
+
 def apply():
     source: Path = Path(getenv("CHEZMOI_WORKING_TREE")) / "root"
     target: str = "/"
@@ -25,8 +26,9 @@ def apply():
         except RecursionError:
             pass
         run(["sudo", "-E", "/usr/bin/python3", __file__])
-        return
-    copytree(source, target, ignore=ignore_patterns("*~"), dirs_exist_ok=True)
+    else:
+        copytree(source, target, ignore=ignore_patterns("*~"), dirs_exist_ok=True)
+
 
 match getenv("CHEZMOI_COMMAND"):
     case "update" | "apply":
