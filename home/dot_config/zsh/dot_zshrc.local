@@ -1,2 +1,3 @@
 prompt fire blue magenta blue white white white 
 source /usr/share/doc/pkgfile/command-not-found.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
