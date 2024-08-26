@@ -108,25 +108,17 @@ require("lazy").setup({
 	},
 	{
 		"mhartington/formatter.nvim",
+		event = { "InsertEnter" },
 		config = function()
 			local util = require("formatter.util")
 			require("formatter").setup({
 				logging = true,
 				filetype = {
 					lua = {
-						function()
-							return {
-								exe = "stylua",
-								args = {
-									"--search-parent-directories",
-									"--stdin-filepath",
-									util.escape_path(util.get_current_buffer_file_path()),
-									"--",
-									"-",
-								},
-								stdin = true,
-							}
-						end,
+						require("formatter.filetypes.lua").stylua,
+					},
+					["*"] = {
+						require("formatter.filetypes.any").remove_trailing_whitespace,
 					},
 				},
 			})
