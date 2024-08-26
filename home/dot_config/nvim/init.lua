@@ -108,7 +108,6 @@ require("lazy").setup({
 	},
 	{
 		"mhartington/formatter.nvim",
-		event = { "InsertEnter" },
 		config = function()
 			local util = require("formatter.util")
 			require("formatter").setup({
@@ -131,6 +130,7 @@ require("lazy").setup({
 					},
 				},
 			})
+			vim.api.nvim_create_autocmd({ "BufWritePost" }, { command = ":FormatWrite" })
 		end,
 	},
 	{ "mfussenegger/nvim-dap" },
