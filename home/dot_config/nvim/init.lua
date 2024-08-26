@@ -40,8 +40,7 @@ require("lazy").setup({
 		lazy = false,
 		build = ":TSUpdate",
 		config = function()
-			local configs = require("nvim-treesitter.configs")
-			configs.setup({
+			require("nvim-treesitter.configs").setup({
 				auto_install = true,
 				highlight = { enable = true },
 				indent = { enable = true },
@@ -106,6 +105,11 @@ require("lazy").setup({
 	{
 		"mfussenegger/nvim-lint",
 		event = { "InsertEnter" },
+		config = function()
+			vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+				callback = require("lint").try_lint,
+			})
+		end,
 	},
 	{
 		"mhartington/formatter.nvim",
@@ -142,6 +146,7 @@ require("lazy").setup({
 			})
 		end,
 	},
+	{"lewis6991/gitsigns.nvim", lazy=false}
 }, {
 	defaults = { lazy = true },
 	checker = { enable = true },
