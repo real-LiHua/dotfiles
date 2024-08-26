@@ -67,7 +67,18 @@ require("lazy").setup({
 			},
 		},
 	},
-	{ "neovim/nvim-lspconfig" },
+	{
+		"neovim/nvim-lspconfig",
+	},
+	{
+		"ray-x/lsp_signature.nvim",
+		opts = {
+			bind = true,
+			handler_opts = {
+				border = "rounded",
+			},
+		},
+	},
 	{
 		"hrsh7th/nvim-cmp",
 		event = { "InsertEnter", "CmdlineEnter" },
@@ -115,7 +126,6 @@ require("lazy").setup({
 		"mhartington/formatter.nvim",
 		event = { "InsertEnter" },
 		config = function()
-			local util = require("formatter.util")
 			require("formatter").setup({
 				logging = true,
 				filetype = {
@@ -146,7 +156,13 @@ require("lazy").setup({
 			})
 		end,
 	},
-	{"lewis6991/gitsigns.nvim", lazy=false}
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		lazy = false,
+		opts = {},
+	},
+	{ "lewis6991/gitsigns.nvim", opts = {} },
 }, {
 	defaults = { lazy = true },
 	checker = { enable = true },
