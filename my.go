@@ -9,7 +9,7 @@ import (
 func main() {
     switch os.Getenv("CHEZMOI_COMMAND") {
 	case "update":
-	    fmt.Println("Test")
+	    fmt.Println("Test1")
 
 	default:
 	    fmt.Println("Test")

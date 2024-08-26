@@ -42,11 +42,12 @@ match getenv("CHEZMOI_COMMAND"):
         working_tree: Path = Path(getenv("CHEZMOI_WORKING_TREE")) / "root"
         for path in getenv("CHEZMOI_ARGS", "").split()[2:]:
             if path.startswith("/"):
-                source: Path = Path(path)
+                source: str = abspath(Path(path))
             else:
-                source: Path = command_dir / Path(path)
-            target: Path = working_tree / abspath(source)[1:]
-            Path(abspath(target / "..")).mkdir(exist_ok=True)
-            copy2(Path(source), target)
+                source: str = abspath(command_dir / Path(path))
+            if not source.startswith("/home"):
+                target: Path = working_tree / source[1:]
+                Path(abspath(target / "..")).mkdir(exist_ok=True)
+                copy2(Path(source), target)
     case _:
         print(environ)
