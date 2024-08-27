@@ -22,7 +22,7 @@ jobs:
       - run: echo '185.199.110.133 raw.githubusercontent.com' >> archiso/airootfs/etc/hosts
       - run: echo '185.199.111.133 raw.githubusercontent.com' >> archiso/airootfs/etc/hosts
       - run: perl -pi -e 'chomp if eof' archiso/efiboot/loader/entries/01-archiso-x86_64-linux.conf
-      - run: echo " script=https://raw.githubusercontent.com/${{ github.repository }}/main/install.sh" >> archiso/efiboot/loader/entries/01-archiso-x86_64-linux.conf
+      - run: echo " script=https://${{ github.actor }}.github.io/dotfiles/install.sh" >> archiso/efiboot/loader/entries/01-archiso-x86_64-linux.conf
       - run: mkarchiso -v archiso
       - run: mv -v out/arch*.iso arch.iso
       - run: rm -rf archiso work out
