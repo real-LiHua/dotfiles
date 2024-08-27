@@ -4,9 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/static.yml"
-      - "_site/install.sh"
-      - "_site/user_configuration.json"
-      - "_site/user_credentials.json"
+      - "_site"
   workflow_dispatch:
 
 permissions:
