@@ -4,9 +4,9 @@ on:
   push:
     paths:
       - ".github/workflows/static.yml"
-      - "install.sh"
-      - "user_configuration.json"
-      - "user_credentials.json"
+      - "_site/install.sh"
+      - "_site/user_configuration.json"
+      - "_site/user_credentials.json"
   workflow_dispatch:
 
 permissions:
@@ -31,8 +31,5 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
