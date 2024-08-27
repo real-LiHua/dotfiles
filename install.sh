@@ -23,8 +23,8 @@ mount -vo compress=zstd,subvol=@pkg        "$disk"2 /mnt/var/cache/pacman/pkg
 mount -vo compress=zstd,subvol=@.snapshots "$disk"2 /mnt/.snapshots
 
 archinstall \
-    --config https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_configuration.json \
-    --creds https://raw.githubusercontent.com/real-LiHua/dotfiles/main/user_credentials.json \
+    --config https://real-lihua.github.io/dotfiles/user_configuration.json \
+    --creds https://real-lihua.github.io/dotfiles/user_credentials.json \
     --silent \
     --script guided \
     --debug \
