@@ -23,9 +23,10 @@ mount -vo compress=zstd,subvol=@log        "$disk"2 /mnt/var/log
 mount -vo compress=zstd,subvol=@pkg        "$disk"2 /mnt/var/cache/pacman/pkg
 mount -vo compress=zstd,subvol=@.snapshots "$disk"2 /mnt/.snapshots
 
+wget -t 0 --retry-connrefused --retry-on-host-error  https://lihua.surge.sh/user_{configuration,credentials}.json
 archinstall \
-    --config https://lihua.surge.sh/user_configuration.json \
-    --creds https://lihua.surge.sh/user_credentials.json \
+    --config ./user_configuration.json \
+    --creds ./user_credentials.json \
     --silent \
     --script guided \
     --debug \
