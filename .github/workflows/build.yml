@@ -17,7 +17,7 @@ jobs:
       - run: pacman --noconfirm -Sy archiso perl
       - run: pacman --noconfirm -Scc
       - run: cp -rv /usr/share/archiso/configs/releng archiso
-      - run: echo "airootfs_image_tool_options=('-comp' 'xz' '-Xbcj' 'x86' '-b' '1M' '-Xdict-size' '1M' '-ignore-zeros')" >> archiso/profiledef.sh
+      - run: echo "bootmodes=('uefi-x64.systemd-boot.esp' 'uefi-x64.systemd-boot.eltorito')" >> archiso/profiledef.sh
       - run: perl -pi -e 'chomp if eof' archiso/efiboot/loader/entries/01-archiso-x86_64-linux.conf
       - run: echo " script=https://${{ github.actor }}.github.io/dotfiles" >> archiso/efiboot/loader/entries/01-archiso-x86_64-linux.conf
       - run: mkarchiso -v archiso
