@@ -26,5 +26,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - run: mv _site/install.sh _site/index.html
-      - run: npm install -g surge
-      - run: surge _site lihua.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      - id: deployment
+        run: |
+          npm install -g surge
+          surge _site lihua.surge.sh --token ${{ secrets.SURGE_TOKEN }}
