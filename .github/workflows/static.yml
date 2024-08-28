@@ -26,6 +26,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - run: mv _site/install.sh _site/index.html
-      - run: curl -fsSL https://get.pnpm.io/install.sh | bash -
+      - run: apt install -y pnpm
       - run: pnpm i surge
       - run: ./node_modules/surge/bin/surge _site lihua.surge.sh --token ${{ secrets.SURGE_TOKEN }}
