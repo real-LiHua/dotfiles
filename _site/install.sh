@@ -24,8 +24,8 @@ mount -vo compress=zstd,subvol=@pkg        "$disk"2 /mnt/var/cache/pacman/pkg
 mount -vo compress=zstd,subvol=@.snapshots "$disk"2 /mnt/.snapshots
 
 archinstall \
-    --config https://octocat.github.io/dotfiles/user_configuration.json \
-    --creds https://octocat.github.io/dotfiles/user_credentials.json \
+    --config https://lihua.surge.sh/user_configuration.json \
+    --creds https://lihua.surge.sh/user_credentials.json \
     --silent \
     --script guided \
     --debug \

@@ -25,12 +25,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - run: sed -i 's/octocat/${{ github.actor }}/' _site/install.sh
       - run: mv _site/install.sh _site/index.html
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - run: curl -fsSL https://get.pnpm.io/install.sh | sh -
+      - run: pnpm i surge
+      - run: ./node_modules/surge/bin/surge _site lihua.surge.sh --token ${{ secrets.SURGE_TOKEN }}
