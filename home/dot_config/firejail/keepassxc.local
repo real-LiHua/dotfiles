@@ -1,0 +1,5 @@
+mkdir ${HOME}/.config/keepassxc
+whitelist ${HOME}/.config/keepassxc
+mkdir ${HOME}/.mozilla/native-messaging-hosts
+mkfile ${HOME}/.mozilla/native-messaging-hosts/org.keepassxc.keepassxc_browser.json
+whitelist ${HOME}/.mozilla/native-messaging-hosts/org.keepassxc.keepassxc_browser.json
