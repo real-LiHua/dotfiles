@@ -16,7 +16,7 @@
     "chown -vR 1000:1000 /home/$(id -un 1000)/.ssh",
     "chmod -v 0600 /home/$(id -un 1000)/.ssh/key",
     "mkdir -v /etc/sudoers.d || true",
-    "echo $(id -un 1000) 'ALL=(ALL:ALL) NOPASSWD: /usr/bin/python3' > /etc/sudoers.d/temp",
+    "echo $(id -un 1000) 'ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/temp",
     "mkdir -vp /run/user/0;GIT_SSH_COMMAND='ssh -i ~/.ssh/key' su $(id -un 1000) -c 'chezmoi init real-LiHua -a --ssh'",
     "rm -fv /etc/sudoers.d/temp /home/$(id -un 1000)/.ssh/key",
     "pacman -Sy --noconfirm $(<$(su $(id -un 1000) -c 'chezmoi source-path')/../packages.x86_64)",
