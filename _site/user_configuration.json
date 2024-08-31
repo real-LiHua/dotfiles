@@ -22,7 +22,7 @@
     "pacman -Sy --needed --noconfirm $(<$(su $(id -un 1000) -c 'chezmoi source-path')/../packages.install)",
     "pacman -Rsc --noconfirm $(<$(su $(id -un 1000) -c 'chezmoi source-path')/../packages.uninstall)"
   ],
-  "debug": true,
+  "debug": false,
   "disk_config": {
     "config_type": "pre_mounted_config",
     "mountpoint": "/mnt"
@@ -81,7 +81,7 @@
   "parallel downloads": 5,
   "profile_config": {
     "profile": {
-      "custom_settings": {},
+      "greeter": "ly",
       "details": [
         "Sway"
       ],
