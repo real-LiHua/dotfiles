@@ -81,7 +81,7 @@
   "parallel downloads": 5,
   "profile_config": {
     "profile": {
-      "greeter": "ly",
+      "greeter": "Ly",
       "details": [
         "Sway"
       ],
