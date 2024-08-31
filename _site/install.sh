@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/bash
 if [[ -b '/dev/sda' ]]; then
     disk='/dev/sda'
 elif [[ -b '/dev/vda' ]]; then
