@@ -28,5 +28,5 @@ jobs:
             ${{ runner.os }}-node-
     
       - run: mv _site/install.sh _site/index.html
-      - run: npm install surge
+      - run: npm i
       - run: ./node_modules/surge/bin/surge _site lihua.surge.sh --token ${{ secrets.SURGE_TOKEN }}
