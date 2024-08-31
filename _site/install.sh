@@ -1,5 +1,11 @@
 #!/usr/bin/zsh
-disk='/dev/sda'
+if [[ -b '/dev/sda' ]]; then
+    disk='/dev/sda'
+elif [[ -b '/dev/vda' ]]; then
+    disk='/dev/vda'
+else
+    exit 1
+fi
 sfdisk --delete "$disk"
 parted -sa  opt "$disk"             \
     mklabel gpt                     \
