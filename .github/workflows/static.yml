@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/static.yml"
+      - "package-lock.json"
       - "_site/**"
   workflow_dispatch:
 
