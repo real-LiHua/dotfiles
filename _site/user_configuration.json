@@ -19,8 +19,8 @@
     "echo $(id -un 1000) 'ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/temp",
     "mkdir -vp /run/user/0;GIT_SSH_COMMAND='ssh -i ~/.ssh/key' su $(id -un 1000) -c 'chezmoi init real-LiHua -a --ssh'",
     "[[ -f '/dev/vda' ]] || rm -fv /etc/sudoers.d/temp /home/$(id -un 1000)/.ssh/key",
-    "pacman -Sy --noconfirm $(<$(su $(id -un 1000) -c 'chezmoi source-path')/../packages.x86_64)",
-    "pacman -Rsc --noconfirm nano vim"
+    "pacman -Sy --needed --noconfirm $(<$(su $(id -un 1000) -c 'chezmoi source-path')/../packages.x86_64)",
+    "pacman -Rsc --needed --noconfirm foot nano vim"
   ],
   "debug": true,
   "disk_config": {
