@@ -1,8 +1,0 @@
-[[ "$TTY" == /dev/tty* ]] || return 0
-export $(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)
-if [[ -z $DISPLAY && "$TTY" == "/dev/tty1" ]]; then
-    export LANG=zh_CN.UTF8
-    systemd-cat -t sway sway
-    systemctl --user stop graphical-session.target
-    systemctl --user unset-environment DISPLAY WAYLAND_DISPLAY
-fi
