@@ -30,6 +30,7 @@ def apply():
         copytree(source, target, ignore=ignore_patterns("*~"), dirs_exist_ok=True)
 
 
+print(environ)
 match getenv("CHEZMOI_COMMAND"):
     case "update" | "apply":
         apply()
