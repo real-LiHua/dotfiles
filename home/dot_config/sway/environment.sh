@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 while read -r l; do
-    eval export $l
+    eval export "$l"
 done < <(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)
