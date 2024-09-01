@@ -7,7 +7,7 @@ else
     exit 1
 fi
 
-if ! read -t 5 flag; then
+if ! read -rt 5 flag; then
     sfdisk --delete "$disk"
     parted -sa  opt "$disk"             \
         mklabel gpt                     \
