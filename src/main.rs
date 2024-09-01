@@ -7,6 +7,5 @@ fn main() {
     let _init = String::from("init");
     match var("HOME") {
         _init => println!("1"),
-
     }
 }

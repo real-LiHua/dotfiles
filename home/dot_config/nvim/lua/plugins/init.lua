@@ -8,7 +8,7 @@ return {
 				auto_install = true,
 				highlight = { enable = true },
 				indent = { enable = true },
-				disable = function(lang, buf)
+				disable = function(_, buf)
 					local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
 					return ok and stats and stats.size > 102400
 				end,
@@ -112,11 +112,16 @@ return {
 		lazy = false,
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
-			vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-				pattern = { os.getenv("HOME") .. "/.local/share/chezmoi/home/*" },
-				callback = function()
-					vim.schedule(require("chezmoi.commands.__edit").watch)
-				end,
+			require("chezmoi").setup({
+				edit = {
+					watch = true,
+				},
+				notification = {
+					on_watch = true,
+				},
+				telescope = {
+					select = { "<CR>" },
+				},
 			})
 		end,
 	},

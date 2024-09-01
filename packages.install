@@ -25,6 +25,7 @@ pre-commit
 repo
 rime-ice-git
 rime-pinyin-zhwiki
+rust-analyzer
 whois
 wine-gecko
 wine-mono
