@@ -1,6 +1,5 @@
 return {
-	{
-		"nvim-treesitter/nvim-treesitter",
+	{"nvim-treesitter/nvim-treesitter",
 		lazy = false,
 		build = ":TSUpdate",
 		config = function()
@@ -78,26 +77,22 @@ return {
 		end,
 	},
 	{
-		"mfussenegger/nvim-lint",
-		event = { "InsertEnter" },
-		config = function()
-			vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-				callback = require("lint").try_lint,
-			})
-		end,
-	},
-	{
 		"mhartington/formatter.nvim",
 		event = { "InsertEnter" },
 		config = function()
+			local fmt
+			for _, v in pairs(require("formatter.filetypes")[vim.bo.filetype]) do
+				if io.popen("command -v " .. v().exe .. " 2>/dev/null"):close() then
+					fmt = v
+					break
+				end
+			end
 			require("formatter").setup({
 				logging = true,
 				filetype = {
-					lua = {
-						require("formatter.filetypes.lua").stylua,
-					},
 					["*"] = {
 						require("formatter.filetypes.any").remove_trailing_whitespace,
+						fmt,
 					},
 				},
 			})

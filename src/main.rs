@@ -9,3 +9,4 @@ fn main() {
         _init => println!("1"),
     }
 }
+
