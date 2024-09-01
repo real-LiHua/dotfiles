@@ -2,6 +2,8 @@ return {
     "nvim-treesitter/nvim-treesitter",
     lazy = false,
     build = ":TSUpdate",
+    dependencies = { "nvim-treesitter/nvim-treesitter-context",
+	"folke/twilight.nvim" },
     config = function()
 	require("nvim-treesitter.configs").setup({
 	    auto_install = true,

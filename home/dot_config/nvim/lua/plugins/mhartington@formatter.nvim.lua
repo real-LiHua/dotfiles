@@ -1,9 +1,9 @@
 return {
 	"mhartington/formatter.nvim",
-    lazy=false,
+	lazy=false,
 	config = function()
 		local fmt
-		for _, v in pairs(require("formatter.filetypes")[vim.bo.filetype]) do
+		for _, v in pairs(require("formatter.filetypes")[vim.bo.filetype] or {}) do
 			if io.popen("command -v " .. v().exe .. " 2>/dev/null"):close() then
 				fmt = v
 				break

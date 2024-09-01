@@ -15,7 +15,8 @@ if not vim.uv.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
-	spec = { { import = "plugins" } },
 	defaults = { lazy = true },
+	spec = { { import = "plugins" } },
+	lockfile="~/.local/share/chezmoi/lazy-lock.json",
 	checker = { enable = true },
 })
