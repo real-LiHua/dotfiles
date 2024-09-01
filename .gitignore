@@ -62,3 +62,8 @@ tags
 # End of https://www.toptal.com/developers/gitignore/api/linux,vim,go
 hook
 home/dot_config/private_google-chrome/private_Crash Reports
+
+
+# Added by cargo
+
+/target
