@@ -8,6 +8,7 @@ fastfetch
 fcitx5-pinyin-moegirl
 fcitx5-rime
 firefox
+firejail
 glfw
 grml-zsh-config
 kitty
@@ -37,6 +38,7 @@ wine-mono
 wl-clipboard
 woff-fira-code
 woff2-fira-code
+wofi
 wqy-bitmapfont
 wqy-microhei
 wqy-zenhei
