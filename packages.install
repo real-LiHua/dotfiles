@@ -2,6 +2,7 @@ aarch64-linux-gnu-gcc
 adobe-source-han-sans-cn-fonts
 adobe-source-han-serif-cn-fonts
 amdvlk
+android-tools
 aria2
 awesome-terminal-fonts
 clash-meta
@@ -10,6 +11,7 @@ fcitx5-pinyin-moegirl
 fcitx5-rime
 firefox
 firejail
+fuse2
 glfw
 grml-zsh-config
 kitty
