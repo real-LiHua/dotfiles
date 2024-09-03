@@ -3,9 +3,11 @@ adobe-source-han-sans-cn-fonts
 adobe-source-han-serif-cn-fonts
 amdvlk
 awesome-terminal-fonts
+clash-meta
 fastfetch
 fcitx5-pinyin-moegirl
 fcitx5-rime
+firefox
 glfw
 grml-zsh-config
 kitty
@@ -27,6 +29,7 @@ repo
 rime-ice-git
 rime-pinyin-zhwiki
 rust-analyzer
+udisks2
 whois
 wine-gecko
 wine-mono
