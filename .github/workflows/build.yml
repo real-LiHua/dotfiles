@@ -24,7 +24,6 @@ jobs:
       - run: pacman --noconfirm -Sy archiso perl
       - run: pacman --noconfirm -Scc
       - run: cp -rv /usr/share/archiso/configs/releng archiso
-      - run: echo "bootmodes=('uefi-x64.systemd-boot.esp' 'uefi-x64.systemd-boot.eltorito')" >> archiso/profiledef.sh
       - run: perl -pi -e 'chomp if eof' archiso/efiboot/loader/entries/01-archiso-x86_64-linux.conf
       - run: echo " script=https://lihua.surge.sh" >> archiso/efiboot/loader/entries/01-archiso-x86_64-linux.conf
       - run: mkarchiso -v archiso
