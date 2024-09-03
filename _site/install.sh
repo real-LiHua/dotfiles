@@ -1,4 +1,14 @@
 #!/usr/bin/bash
+
+set -e
+
+check_command() {
+    if ! command -v "$1" &> /dev/null; then
+        echo "$1 command not found. Please install $2."
+        exit 1
+    fi
+}
+
 if [[ -b '/dev/sda' ]]; then
     disk='/dev/sda'
 elif [[ -b '/dev/vda' ]]; then
@@ -8,6 +18,10 @@ else
 fi
 
 if ! read -rt 5 flag; then
+    check_command sfdisk util-linux
+    check_command parted parted
+    check_command btrfs btrfs-progs
+    
     sfdisk --delete "$disk"
     parted -sa  opt "$disk"             \
         mklabel gpt                     \
@@ -17,10 +31,16 @@ if ! read -rt 5 flag; then
         set     2       root    on
 
     mkfs.fat -vF 32 "$disk"1
-    mkfs.btrfs -vfn 32k "$disk"2
+    if ! mkfs.btrfs -vfn 32k "$disk"2; then
+        echo "Failed to create btrfs filesystem on ${disk}2. Please check the disk and try again."
+        exit 1
+    fi
 
-    mount -vo compress=zstd "$disk"2 /mnt
-    echo -n ,home,log,pkg,.snapshots | xargs -i -d, btrfs -v subvolume create /mnt/@{}
+    if ! mount -vo compress=zstd "$disk"2 /mnt; then
+        echo "Failed to mount ${disk}2. Please check the mount point and try again."
+        exit 1
+    fi
+    echo -n ,home,log,pkg,.snapshots | xargs -I{} -d, btrfs -v subvolume create /mnt/@{}
     umount -vR /mnt
 fi
 
