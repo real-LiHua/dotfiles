@@ -1,5 +1,0 @@
-[MAIN]
-exit-zero=yes
-jobs=0
-py-version=3.12
-recursive=yes
