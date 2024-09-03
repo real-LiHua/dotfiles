@@ -2,6 +2,7 @@ aarch64-linux-gnu-gcc
 adobe-source-han-sans-cn-fonts
 adobe-source-han-serif-cn-fonts
 amdvlk
+aria2
 awesome-terminal-fonts
 clash-meta
 fastfetch
@@ -31,7 +32,12 @@ rime-ice-git
 rime-pinyin-zhwiki
 rust-analyzer
 telegram-desktop
-udisks2
+udiskie
+vulkan-icd-loader
+vulkan-intel
+vulkan-mesa-layers
+vulkan-radeon
+vulkan-tools
 whois
 wine-gecko
 wine-mono
@@ -42,11 +48,6 @@ wofi
 wqy-bitmapfont
 wqy-microhei
 wqy-zenhei
-vulkan-icd-loader
-vulkan-intel
-vulkan-mesa-layers
-vulkan-radeon
-vulkan-tools
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 zsh-completions
