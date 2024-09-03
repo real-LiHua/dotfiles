@@ -14,6 +14,7 @@ firejail
 fuse2
 glfw
 grml-zsh-config
+jq
 kitty
 lib32-amdvlk
 lib32-vulkan-icd-loader
@@ -21,10 +22,15 @@ lib32-vulkan-intel
 lib32-vulkan-radeon
 lua-language-server
 lua51
+mako
+man-db
+man-pages-zh_cn
+man-pages-zh_tw
 neovim
 nerd-fonts
 noto-fonts-emoji
 obs-studio
+otf-font-awesome
 paru
 pkgfile
 powerline-fonts
@@ -40,6 +46,7 @@ vulkan-intel
 vulkan-mesa-layers
 vulkan-radeon
 vulkan-tools
+webkit2gtk
 whois
 wine-gecko
 wine-mono
