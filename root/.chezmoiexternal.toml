@@ -1,0 +1,4 @@
+["etc/udev/rules.d/51-edl.rules"]
+    type = "file"
+    url = "https://cdn.jsdelivr.net/gh/bkerler/edl/Drivers/51-edl.rules"
+    refreshPeriod = "168h"
