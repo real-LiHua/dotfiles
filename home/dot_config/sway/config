@@ -204,7 +204,9 @@ bar {
     swaybar_command waybar
 }
 
+default_border none
 for_window [app_id="firefox"] floating enable
+
 include /etc/sway/config.d/*
 exec_always ~/.config/sway/environment.sh
 exec dex -a
