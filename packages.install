@@ -16,6 +16,7 @@ fuse2
 glfw
 grml-zsh-config
 jq
+kdeconnect
 kitty
 lib32-amdvlk
 lib32-vulkan-icd-loader
@@ -36,6 +37,7 @@ paru
 pkgfile
 powerline-fonts
 pre-commit
+qt6-multimedia-ffmpeg
 repo
 rime-ice-git
 rime-pinyin-zhwiki
