@@ -37,6 +37,7 @@ paru
 pkgfile
 powerline-fonts
 pre-commit
+qt5-wayland
 qt6-multimedia-ffmpeg
 repo
 rime-ice-git
