@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - ".github/workflows/check.yml"
+      - "packages.install"
+      - "packages.uninstall"
   workflow_dispatch:
 jobs:
   check:
@@ -22,4 +24,5 @@ jobs:
       - run: pacman-key --populate archlinux
       - run: echo '[archlinuxcn]' >> /etc/pacman.conf
       - run: echo 'Server = https://repo.archlinuxcn.org/$arch' >> /etc/pacman.conf
-      - run: pacman --noconfirm -Sy archlinuxcn-keyring
+      - run: pacman -Sy --needed --noconfirm archlinuxcn-keyring
+      - run: pacman -Sy --needed --noconfirm $(<packages.install) $(<packages.uninstall)
