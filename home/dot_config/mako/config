@@ -1,2 +1,4 @@
+max-history=3
+default-timeout=3
 [app-name="Telegram Desktop"]
 anchor=top-center
