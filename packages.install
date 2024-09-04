@@ -47,6 +47,7 @@ qt6-multimedia-ffmpeg
 repo
 rime-ice-git
 rime-pinyin-zhwiki
+rofi-wayland
 rust-analyzer
 telegram-desktop
 udiskie
@@ -62,7 +63,6 @@ wine-mono
 wl-clipboard
 woff-fira-code
 woff2-fira-code
-wofi
 wqy-bitmapfont
 wqy-microhei
 wqy-zenhei
