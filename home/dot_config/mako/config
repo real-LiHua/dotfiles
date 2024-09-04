@@ -1,4 +1,8 @@
 max-history=3
 default-timeout=3000
+
 [app-name="Telegram Desktop"]
-anchor=top-center
+anchor=center-right
+[grouped]
+[body~="入群验证"]
+invisible=1
