@@ -4,5 +4,5 @@ default-timeout=3000
 [app-name="Telegram Desktop"]
 anchor=center-right
 [grouped]
-[body~="入群验证"]
+[body~="(贴纸)|(入群验证)|(的被警告次数为)"]
 invisible=1
