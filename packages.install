@@ -45,6 +45,7 @@ pipewire-jack
 pkgfile
 powerline-fonts
 pre-commit
+proxychains-ng
 qt5-wayland
 qt6-multimedia-ffmpeg
 repo
