@@ -208,4 +208,4 @@ default_border none
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="firefox"] floating enable
 include /etc/sway/config.d/*
-#exec dex -aw
+exec dex -aw
