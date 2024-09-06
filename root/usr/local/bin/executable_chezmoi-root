@@ -1,6 +1,7 @@
 #!/usr/bin/zsh
 PATH='/usr/bin'
 HOME='/'
+GPG_HOME="/home/$(id -un)/.gunpg"
 if [[ "x$1" == "xadd" ]]; then
     chezmoi -S "/home/$(id -un)/.local/share/chezmoi/root" $@
 else
