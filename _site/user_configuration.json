@@ -80,6 +80,7 @@
   ],
   "parallel downloads": 5,
   "profile_config": {
+    "gfx_driver": "All open-source (default)",
     "greeter": "ly",
     "profile": {
       "details": [
@@ -91,6 +92,7 @@
   "skip_ntp": false,
   "skip_version_check": true,
   "swap": true,
+  "timezone": "Asia/Shanghai",
   "uki": true,
   "version": "2.8.1"
 }
