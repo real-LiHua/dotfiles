@@ -1,2 +1,2 @@
-whitelist ${HOME}/.cache/winetricks/corefonts
+whitelist ${HOME}/.cache/winetricks
 whitelist ${HOME}/projects

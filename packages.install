@@ -10,6 +10,7 @@ bluez-obex
 bluez-utils
 chromium
 clash-meta
+cliphist
 dex
 dns-over-https
 fastfetch
@@ -20,6 +21,7 @@ fcitx5-rime
 firefox
 firejail
 fuse2
+gamescope
 gammastep
 glfw
 grml-zsh-config
@@ -81,6 +83,7 @@ wqy-microhei
 wqy-zenhei
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
+zenity
 zsh-completions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k-git
