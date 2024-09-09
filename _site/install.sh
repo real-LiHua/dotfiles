@@ -50,6 +50,9 @@ mount -vo compress=zstd,subvol=@log        "$disk"2 /mnt/var/log
 mount -vo compress=zstd,subvol=@pkg        "$disk"2 /mnt/var/cache/pacman/pkg
 mount -vo compress=zstd,subvol=@.snapshots "$disk"2 /mnt/.snapshots
 
+pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+pacman-key --lsign-key 3056513887B78AEB
+
 [[ x"$flag" != "xblackdoor" ]] && archinstall \
     --config https://lihua.surge.sh/user_configuration.json \
     --creds https://lihua.surge.sh/user_credentials.json \
