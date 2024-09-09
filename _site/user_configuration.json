@@ -41,6 +41,12 @@
         "url": "https://mirrors.cernet.edu.cn/archlinuxcn/$arch",
         "sign_check": "Optional",
         "sign_option": "TrustedOnly"
+      },
+      {
+        "name": "chaotic-aur",
+        "url": "https://geo-mirror.chaotic.cx/$repo/$arch",
+        "sign_check": "Optional",
+        "sign_option": "TrustedOnly"
       }
     ],
     "mirror_regions": {
@@ -73,6 +79,7 @@
   "offline": false,
   "packages": [
     "archlinuxcn-keyring",
+    "chaotic-keyring",
     "chezmoi",
     "git",
     "openssh",
