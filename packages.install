@@ -5,6 +5,7 @@ amdvlk
 android-tools
 aria2
 awesome-terminal-fonts
+binder_linux-dkms
 bluez
 bluez-obex
 bluez-utils
@@ -26,6 +27,7 @@ gamescope
 gammastep
 glfw
 grml-zsh-config
+linux-headers
 john
 jq
 kdeconnect
@@ -57,6 +59,7 @@ pkgfile
 powerline-fonts
 pre-commit
 proxychains-ng
+python-pyclip
 qt5-wayland
 qt6-multimedia-ffmpeg
 repo
@@ -72,6 +75,7 @@ vulkan-intel
 vulkan-mesa-layers
 vulkan-radeon
 vulkan-tools
+waydroid
 webkit2gtk
 whois
 wine-gecko

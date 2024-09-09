@@ -20,7 +20,8 @@
     "[[ -b /dev/vda ]] || rm -v /home/$(id -un 1000)/.ssh/key",
     "HOME='/' chezmoi -S /home/$(id -un 1000)/.local/share/chezmoi/root apply",
     "pacman -Sy --needed --noconfirm $(<$(su $(id -un 1000) -c 'chezmoi source-path')/../packages.install)",
-    "pacman -Rsc --noconfirm $(<$(su $(id -un 1000) -c 'chezmoi source-path')/../packages.uninstall)"
+    "pacman -Rsc --noconfirm $(<$(su $(id -un 1000) -c 'chezmoi source-path')/../packages.uninstall)",
+    "waydroid init -s GAPPS"
   ],
   "debug": false,
   "disk_config": {
