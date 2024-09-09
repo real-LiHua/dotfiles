@@ -2,7 +2,9 @@ aarch64-linux-gnu-gcc
 adobe-source-han-sans-cn-fonts
 adobe-source-han-serif-cn-fonts
 amdvlk
+android-emulator
 android-tools
+android-sdk
 aria2
 awesome-terminal-fonts
 binder_linux-dkms
@@ -30,6 +32,7 @@ grml-zsh-config
 linux-headers
 john
 jq
+jre8-openjdk
 kdeconnect
 kitty
 lib32-amdvlk
