@@ -14,5 +14,5 @@
 [init]
 	defaultBranch = main
 [core]
-	editor = vi
+	editor = nvim
 	excludesfile = ~/.config/git/gitignore
