@@ -32,7 +32,8 @@ gamescope
 gammastep
 glfw
 grml-zsh-config
-linux-headers
+hashcat
+intel-compute-runtime
 john
 jq
 jre8-openjdk
@@ -42,10 +43,12 @@ lib32-amdvlk
 lib32-gamemode
 lib32-gnutls
 lib32-mesa
+lib32-opencl-rusticl-mesa
 lib32-pipewire
 lib32-vulkan-icd-loader
 lib32-vulkan-intel
 lib32-vulkan-radeon
+linux-headers
 lua-language-server
 lua51
 mako
@@ -59,6 +62,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 obs-studio
+opencl-rusticl-mesa
 otf-font-awesome
 paru
 pipewire-jack
@@ -74,6 +78,7 @@ qt6-multimedia-ffmpeg
 repo
 rime-ice-git
 rime-pinyin-zhwiki
+rocm-opencl-runtime
 rofi-wayland
 rust-analyzer
 sway-git
