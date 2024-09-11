@@ -1,6 +1,8 @@
 aarch64-linux-gnu-gcc
 adobe-source-han-sans-cn-fonts
 adobe-source-han-serif-cn-fonts
+alhp-keyring
+alhp-mirrorlist
 amdvlk
 android-emulator
 android-tools
@@ -65,6 +67,8 @@ powerline-fonts
 pre-commit
 proxychains-ng
 python-pyclip
+qemu-desktop
+qemu-user-static-binfmt
 qt5-wayland
 qt6-multimedia-ffmpeg
 repo
@@ -75,6 +79,7 @@ rust-analyzer
 sway-git
 telegram-desktop
 udiskie
+virt-manager
 vulkan-icd-loader
 vulkan-intel
 vulkan-mesa-layers
