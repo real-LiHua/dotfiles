@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=IDA
+Comment=The Interactive Disassembler
+Exec=env QT_QPA_PLATFORM=xcb /opt/ida-pro/ida64
+Icon=ida-pro64
+Terminal=false
+Type=Application
+Categories=Development

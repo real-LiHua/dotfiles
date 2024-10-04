@@ -17,6 +17,7 @@ chaotic-mirrorlist
 chromium
 clash-meta
 cliphist
+cocogitto
 dex
 dns-over-https
 fastfetch
@@ -42,12 +43,15 @@ kitty
 lib32-amdvlk
 lib32-gamemode
 lib32-gnutls
+lib32-libxcomposite
 lib32-mesa
+lib32-ocl-icd
 lib32-opencl-rusticl-mesa
 lib32-pipewire
 lib32-vulkan-icd-loader
 lib32-vulkan-intel
 lib32-vulkan-radeon
+libva-vdpau-driver
 linux-headers
 lua-language-server
 lua51
@@ -55,6 +59,7 @@ mako
 man-db
 man-pages-zh_cn
 man-pages-zh_tw
+mesa-vdpau
 neovim
 nerd-fonts
 noto-fonts
@@ -69,6 +74,7 @@ pipewire-jack
 pkgfile
 powerline-fonts
 pre-commit
+proton
 proxychains-ng
 python-pyclip
 qemu-desktop
@@ -92,9 +98,6 @@ vulkan-radeon
 vulkan-tools
 webkit2gtk
 whois
-wine-gecko
-wine-mono
-winetricks
 wl-clipboard
 woff-fira-code
 woff2-fira-code
