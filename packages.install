@@ -9,9 +9,7 @@ android-tools
 android-sdk
 aria2
 awesome-terminal-fonts
-binder_linux-dkms
 bluez
-bluez-obex
 bluez-utils
 chaotic-mirrorlist
 chromium
@@ -26,7 +24,6 @@ fcitx5-pinyin-moegirl-rime
 fcitx5-qt
 fcitx5-rime
 firefox
-firejail
 fuse2
 gamemode
 gamescope
@@ -51,7 +48,6 @@ lib32-pipewire
 lib32-vulkan-icd-loader
 lib32-vulkan-intel
 lib32-vulkan-radeon
-libva-vdpau-driver
 linux-headers
 lua-language-server
 lua51
@@ -59,9 +55,7 @@ mako
 man-db
 man-pages-zh_cn
 man-pages-zh_tw
-mesa-vdpau
 neovim
-nerd-fonts
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -87,7 +81,6 @@ rime-pinyin-zhwiki
 rocm-opencl-runtime
 rofi-wayland
 rust-analyzer
-sway-git
 telegram-desktop
 udiskie
 virt-manager
@@ -96,6 +89,7 @@ vulkan-intel
 vulkan-mesa-layers
 vulkan-radeon
 vulkan-tools
+wakatime
 webkit2gtk
 whois
 wl-clipboard
