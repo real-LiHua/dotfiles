@@ -1,6 +1,7 @@
 return {
 	"ray-x/lsp_signature.nvim",
-	opts = {
+    lazy=false,
+    opts = {
 		bind = true,
 		handler_opts = {
 			border = "rounded",

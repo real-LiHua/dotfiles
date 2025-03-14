@@ -18,4 +18,6 @@ vim.g.load_netrw = 1
 vim.g.load_netrwPlugin = 1
 vim.o.termguicolors = true
 vim.cmd([[colorscheme slate]])
+
 require("config.lazy")
+
