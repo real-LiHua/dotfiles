@@ -7,5 +7,6 @@ return {
     },
     build = "make tiktoken",
     opts = {
+	model = "gpt-4o"
     },
   }
