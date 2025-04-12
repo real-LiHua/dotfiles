@@ -28,8 +28,8 @@ return {
 			default = { "git", "copilot", "lsp", "path", "snippets", "buffer", "ripgrep" },
 			providers = {
 				copilot = {
-					name = "copilot",
 					module = "blink-copilot",
+					name = "Copilot",
 					score_offset = 100,
 					async = true,
 					transform_items = transform_items("", "Copilot")
