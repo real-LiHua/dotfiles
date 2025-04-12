@@ -1,6 +1,6 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
-	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	local lazyrepo = "git@github.com:folke/lazy.nvim"
 	local out =
 		vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
 	if vim.v.shell_error ~= 0 then
@@ -18,5 +18,6 @@ require("lazy").setup({
 	defaults = { lazy = true },
 	spec = { { import = "plugins" } },
 	lockfile = "~/.local/share/chezmoi/lazy-lock.json",
+	git = { url_format = "git@github.com:%s" },
 	checker = { enable = true },
 })

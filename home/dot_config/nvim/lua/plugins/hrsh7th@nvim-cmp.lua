@@ -7,6 +7,7 @@ return {
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-cmdline",
 		"petertriho/cmp-git",
+		"garyhurtz/cmp_kitty",
 		"windwp/nvim-autopairs",
 		"brenoprata10/nvim-highlight-colors"
 	},
@@ -17,6 +18,10 @@ return {
 				expand = function(args)
 					vim.snippet.expand(args.body)
 				end,
+			},
+			window = {
+				completion = cmp.config.window.bordered(),
+				documentation = cmp.config.window.bordered(),
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -30,6 +35,8 @@ return {
 				{ name = "nvim_lsp_document_symbol" },
 				{ name = "nvim_lsp_signature_help" },
 				{ name = "git" },
+				{ name = "kitty" },
+				{ name = 'path' }
 			}, { { name = "buffer" } }),
 			formatting = {
 				format = require("nvim-highlight-colors").format
