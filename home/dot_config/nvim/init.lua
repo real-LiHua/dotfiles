@@ -20,4 +20,3 @@ vim.o.termguicolors = true
 vim.cmd([[colorscheme slate]])
 
 require("config.lazy")
-
