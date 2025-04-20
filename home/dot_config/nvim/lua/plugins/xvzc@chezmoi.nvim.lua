@@ -1,7 +1,6 @@
 return {
 	"xvzc/chezmoi.nvim",
 	event = { "BufWritePost" },
-	dependencies = { "nvim-lua/plenary.nvim" },
 	opts = {
 		edit = {
 			watch = true,
@@ -12,5 +11,6 @@ return {
 		telescope = {
 			select = { "<CR>" },
 		},
-	}
+	},
+	dependencies = { "nvim-lua/plenary.nvim" }
 }

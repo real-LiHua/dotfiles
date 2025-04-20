@@ -1,10 +1,6 @@
 return {
 	'nvim-lualine/lualine.nvim',
 	lazy = false,
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
-		"ravitemer/mcphub.nvim"
-	},
 	config = function()
 		require("lualine").setup({
 			theme = 'jellybeans',
@@ -14,5 +10,9 @@ return {
 				},
 			}
 		})
-	end
+	end,
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
+		"ravitemer/mcphub.nvim"
+	}
 }

@@ -1,10 +1,5 @@
 return {
 	"ravitemer/mcphub.nvim",
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-		"yetone/avante.nvim",
-		"olimorris/codecompanion.nvim"
-	},
 	cmd = "MCPHub",
 	build = "bundled_build.lua",
 	opts = {
@@ -19,5 +14,10 @@ return {
 				make_slash_commands = true,
 			},
 		}
+	},
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"olimorris/codecompanion.nvim",
+		"yetone/avante.nvim",
 	}
 }

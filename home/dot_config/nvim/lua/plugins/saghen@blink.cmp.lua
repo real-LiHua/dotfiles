@@ -1,11 +1,5 @@
 return {
 	"saghen/blink.cmp",
-	dependencies = {
-		"rafamadriz/friendly-snippets",
-		"mikavilpas/blink-ripgrep.nvim",
-		"Kaiser-Yang/blink-cmp-git",
-		"Kaiser-Yang/blink-cmp-avante",
-	},
 	opts = {
 		completion = {
 			accept = { auto_brackets = { enabled = false } },
@@ -37,5 +31,11 @@ return {
 				}
 			}
 		}
+	},
+	dependencies = {
+		"Kaiser-Yang/blink-cmp-git",
+		"Kaiser-Yang/blink-cmp-avante",
+		"mikavilpas/blink-ripgrep.nvim",
+		"rafamadriz/friendly-snippets",
 	}
 }

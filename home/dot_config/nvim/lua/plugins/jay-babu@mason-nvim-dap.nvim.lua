@@ -1,1 +1,7 @@
-return { "jay-babu/mason-nvim-dap.nvim", lazy = false, opts = {} }
+return {
+	"jay-babu/mason-nvim-dap.nvim",
+	dependenciess = {
+		"mfussenegger/nvim-dap",
+		"williamboman/mason.nvim",
+	}
+}

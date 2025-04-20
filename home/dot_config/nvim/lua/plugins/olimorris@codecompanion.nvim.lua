@@ -1,10 +1,5 @@
 return {
 	"olimorris/codecompanion.nvim",
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-		"nvim-treesitter/nvim-treesitter",
-		"ravitemer/mcphub.nvim"
-	},
 	config = function()
 		local adapters = require("codecompanion.adapters")
 		local adapter = function(m, o)
@@ -57,5 +52,10 @@ return {
 				}
 			}
 		})
-	end
+	end,
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"nvim-treesitter/nvim-treesitter",
+		"ravitemer/mcphub.nvim"
+	}
 }

@@ -1,12 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	dependencies = {
-		"nvim-treesitter/nvim-treesitter-context",
-		'nvim-treesitter/nvim-treesitter-refactor',
-		"folke/twilight.nvim",
-		"windwp/nvim-ts-autotag"
-	},
 	config = function()
 		require("nvim-treesitter.configs").setup({
 			auto_install = true,
@@ -25,4 +19,10 @@ return {
 			},
 		})
 	end,
+	dependencies = {
+		"folke/twilight.nvim",
+		"nvim-treesitter/nvim-treesitter-context",
+		'nvim-treesitter/nvim-treesitter-refactor',
+		"windwp/nvim-ts-autotag",
+	}
 }

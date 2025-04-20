@@ -1,11 +1,6 @@
 return {
 	"williamboman/mason-lspconfig.nvim",
 	event = { "BufNewFile", "BufReadPre" },
-	dependencies = {
-		"williamboman/mason.nvim",
-		"saghen/blink.cmp",
-		"neovim/nvim-lspconfig"
-	},
 	opts = {
 		automatic_installation = true,
 		handlers = {
@@ -16,4 +11,9 @@ return {
 			end,
 		},
 	},
+	dependencies = {
+		"neovim/nvim-lspconfig",
+		"saghen/blink.cmp",
+		"williamboman/mason.nvim",
+	}
 }
