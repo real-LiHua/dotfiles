@@ -3,6 +3,7 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-treesitter/nvim-treesitter",
+		"ravitemer/mcphub.nvim"
 	},
 	config = function()
 		local adapters = require("codecompanion.adapters")
@@ -15,6 +16,12 @@ return {
 			strategies = {
 				chat = {
 					adapter = "copilot",
+					tools = {
+						["mcp"] = {
+							callback = function() return require("mcphub.extensions.codecompanion") end,
+							description = "Call tools and resources from the MCP Servers",
+						}
+					}
 				},
 				inline = {
 					adapter = "copilot",
@@ -39,12 +46,7 @@ return {
 							role = "user",
 							content = function()
 								return string.format(
-									[[You are an expert at following the Conventional Commit specification. Given the git diff listed below, please generate a commit message for me:
-
-```diff
-%s
-```
-]],
+									"You are an expert at following the Conventional Commit specification. Given the git diff listed below, please generate a commit message for me:\n```diff\n%s```\n",
 									vim.fn.system("git diff --no-ext-diff --staged")
 								)
 							end,

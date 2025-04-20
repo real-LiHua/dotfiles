@@ -4,7 +4,7 @@ return {
 		"rafamadriz/friendly-snippets",
 		"mikavilpas/blink-ripgrep.nvim",
 		"Kaiser-Yang/blink-cmp-git",
-		"fang2hou/blink-copilot"
+		"Kaiser-Yang/blink-cmp-avante",
 	},
 	opts = {
 		completion = {
@@ -12,17 +12,20 @@ return {
 			documentation = { auto_show = true },
 			ghost_text = { enabled = true },
 		},
-		fuzzy = { implementation = "prefer_rust" },
+		fuzzy = {
+			implementation = "rust",
+			prebuilt_binaries = {
+				force_version = "../latest/download" -- 来点魔法
+			}
+		},
 		keymap = { preset = 'enter' },
 		signature = { enabled = true },
 		sources = {
-			default = { "git", "copilot", "lsp", "path", "snippets", "buffer", "ripgrep" },
+			default = { "git", "avante", "lsp", "path", "snippets", "buffer", "ripgrep" },
 			providers = {
-				copilot = {
-					module = "blink-copilot",
-					name = "Copilot",
-					score_offset = 100,
-					async = true
+				avante = {
+					module = 'blink-cmp-avante',
+					name = 'Avante'
 				},
 				git = {
 					module = 'blink-cmp-git',

@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "searxng": {
+      "args": [
+        "mcp-searxng"
+      ],
+      "disabled": true,
+      "command": "uvx"
+    }
+  },
+  "nativeMCPServers": {
+    "neovim": {
+      "disabled_resources": [
+        
+      ],
+      "custom_instructions": {
+        "disabled": false,
+        "text": ""
+      },
+      "disabled": false,
+      "disabled_tools": [
+        
+      ]
+    }
+  }
+}
