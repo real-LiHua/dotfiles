@@ -1,5 +1,5 @@
 return {
-	"philosofonusus/ecolog.nvim",
+	"t3ntxcl3s/ecolog.nvim",
 	opts = {
 		integrations = {
 			blink_cmp = true

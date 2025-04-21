@@ -18,14 +18,15 @@ return {
 		sources = {
 			default = { "git", "minuet", "lsp", "path", "snippets", "buffer", "ripgrep" },
 			providers = {
+				git = {
+					module = 'blink-cmp-git',
+					name = 'Git'
+				},
 				minuet = {
 					name = 'minuet',
 					module = 'minuet.blink',
 					async = true,
-				},
-				git = {
-					module = 'blink-cmp-git',
-					name = 'Git'
+					timeout_ms = 3000,
 				},
 				ripgrep = {
 					module = "blink-ripgrep",
@@ -39,5 +40,6 @@ return {
 		"mikavilpas/blink-ripgrep.nvim",
 		"milanglacier/minuet-ai.nvim",
 		"rafamadriz/friendly-snippets",
+		"t3ntxcl3s/ecolog.nvim",
 	}
 }

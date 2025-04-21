@@ -1,12 +1,18 @@
 return {
-	'milanglacier/minuet-ai.nvim',
+	"milanglacier/minuet-ai.nvim",
 	config = function()
-		require('minuet').setup {
+		require("minuet").setup {
+			provider = "openai_compatible",
+			provider_options = {
+				openai_compatible = {
+					model = "google/gemini-2.0-flash-exp:free",
+					stream = true,
+				}
+			}
 		}
 	end,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"philosofonusus/ecolog.nvim",
 		"Saghen/blink.cmp",
 	}
 }
