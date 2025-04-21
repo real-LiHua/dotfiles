@@ -5,9 +5,6 @@ return {
 	opts = {
 		use_bundled_binary = true,
 		extensions = {
-			avante = {
-				make_slash_commands = true,
-			},
 			codecompanion = {
 				show_result_in_chat = true,
 				make_vars = true,
@@ -18,6 +15,5 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"olimorris/codecompanion.nvim",
-		"yetone/avante.nvim",
 	}
 }

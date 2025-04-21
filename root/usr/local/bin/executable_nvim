@@ -1,0 +1,3 @@
+#!/bin/sh
+. ~/.config/nvim/.env
+/usr/bin/nvim $@

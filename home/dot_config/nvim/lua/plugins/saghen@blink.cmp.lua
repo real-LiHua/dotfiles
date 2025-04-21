@@ -5,6 +5,7 @@ return {
 			accept = { auto_brackets = { enabled = false } },
 			documentation = { auto_show = true },
 			ghost_text = { enabled = true },
+			trigger = { prefetch_on_insert = false }
 		},
 		fuzzy = {
 			implementation = "rust",
@@ -15,11 +16,12 @@ return {
 		keymap = { preset = 'enter' },
 		signature = { enabled = true },
 		sources = {
-			default = { "git", "avante", "lsp", "path", "snippets", "buffer", "ripgrep" },
+			default = { "git", "minuet", "lsp", "path", "snippets", "buffer", "ripgrep" },
 			providers = {
-				avante = {
-					module = 'blink-cmp-avante',
-					name = 'Avante'
+				minuet = {
+					name = 'minuet',
+					module = 'minuet.blink',
+					async = true,
 				},
 				git = {
 					module = 'blink-cmp-git',
@@ -34,8 +36,8 @@ return {
 	},
 	dependencies = {
 		"Kaiser-Yang/blink-cmp-git",
-		"Kaiser-Yang/blink-cmp-avante",
 		"mikavilpas/blink-ripgrep.nvim",
+		"milanglacier/minuet-ai.nvim",
 		"rafamadriz/friendly-snippets",
 	}
 }
