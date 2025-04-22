@@ -1,11 +1,67 @@
 return {
 	"saghen/blink.cmp",
 	opts = {
+		appearance = {
+			kind_icons = {
+				claude = '󰋦',
+				openai = '󱢆',
+				codestral = '󱎥',
+				gemini = '',
+				Groq = '',
+				Openrouter = '󱂇',
+				Ollama = '󰳆',
+				['Llama.cpp'] = '󰳆',
+				Deepseek = ''
+			}
+		},
 		completion = {
 			accept = { auto_brackets = { enabled = false } },
 			documentation = { auto_show = true },
 			ghost_text = { enabled = true, show_with_menu = true },
-			menu = { auto_show = true },
+			menu = {
+				auto_show = true,
+				draw = {
+					columns = { { "kind_icon" }, { "label", gap = 1 } },
+					components = {
+						label = {
+							text = function(ctx)
+								return require("colorful-menu").blink_components_text(ctx)
+							end,
+							highlight = function(ctx)
+								return require("colorful-menu").blink_components_highlight(ctx)
+							end,
+						},
+						kind_icon = {
+							text = function(ctx)
+								local icon = ctx.kind_icon
+								if vim.tbl_contains({ "Path" }, ctx.source_name) then
+									local dev_icon, _ = require("nvim-web-devicons").get_icon(ctx.label)
+									if dev_icon then
+										icon = dev_icon
+									end
+								else
+									local lspkind_icon = require("lspkind").symbolic(ctx.kind, nil)
+									if lspkind_icon ~= "" then
+										icon = lspkind_icon
+									end
+								end
+
+								return icon .. ctx.icon_gap
+							end,
+							highlight = function(ctx)
+								local hl = ctx.kind_hl
+								if vim.tbl_contains({ "Path" }, ctx.source_name) then
+									local dev_icon, dev_hl = require("nvim-web-devicons").get_icon(ctx.label)
+									if dev_icon then
+										hl = dev_hl
+									end
+								end
+								return hl
+							end,
+						},
+					},
+				},
+			},
 			trigger = { prefetch_on_insert = false }
 		},
 		fuzzy = {
@@ -54,7 +110,10 @@ return {
 		"Kaiser-Yang/blink-cmp-git",
 		"mikavilpas/blink-ripgrep.nvim",
 		"milanglacier/minuet-ai.nvim",
+		"nvim-tree/nvim-web-devicons",
+		"onsails/lspkind.nvim",
 		"rafamadriz/friendly-snippets",
 		"t3ntxcl3s/ecolog.nvim",
+		"xzbdmw/colorful-menu.nvim",
 	}
 }
