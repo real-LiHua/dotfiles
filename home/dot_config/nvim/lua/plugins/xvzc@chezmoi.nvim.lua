@@ -11,6 +11,5 @@ return {
 		telescope = {
 			select = { "<CR>" },
 		},
-	},
-	dependencies = { "nvim-lua/plenary.nvim" }
+	}
 }

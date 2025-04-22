@@ -106,14 +106,5 @@ return {
 			}
 		}
 	},
-	dependencies = {
-		"Kaiser-Yang/blink-cmp-git",
-		"mikavilpas/blink-ripgrep.nvim",
-		"milanglacier/minuet-ai.nvim",
-		"nvim-tree/nvim-web-devicons",
-		"onsails/lspkind.nvim",
-		"rafamadriz/friendly-snippets",
-		"t3ntxcl3s/ecolog.nvim",
-		"xzbdmw/colorful-menu.nvim",
-	}
+	dependencies = { "t3ntxcl3s/ecolog.nvim" }
 }

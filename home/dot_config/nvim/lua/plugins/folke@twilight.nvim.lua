@@ -1,1 +1,1 @@
-return { "folke/twilight.nvim", dependencies = { "folke/zen-mode.nvim" }}
+return { "folke/twilight.nvim" }

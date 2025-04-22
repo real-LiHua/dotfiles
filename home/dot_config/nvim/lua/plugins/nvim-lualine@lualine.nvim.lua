@@ -11,8 +11,4 @@ return {
 			}
 		})
 	end,
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
-		"ravitemer/mcphub.nvim"
-	}
 }

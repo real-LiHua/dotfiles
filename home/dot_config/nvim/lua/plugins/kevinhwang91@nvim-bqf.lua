@@ -5,5 +5,4 @@ return {
 		require("quicker").setup({
 		})
 	end,
-	dependencies = { "nvim-treesitter/nvim-treesitter" }
 }

@@ -11,9 +11,4 @@ return {
 			end,
 		},
 	},
-	dependencies = {
-		"neovim/nvim-lspconfig",
-		"saghen/blink.cmp",
-		"williamboman/mason.nvim",
-	}
 }

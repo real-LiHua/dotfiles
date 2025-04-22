@@ -15,9 +15,17 @@ if not vim.uv.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
-	defaults = { lazy = true },
-	spec = { { import = "plugins" } },
-	lockfile = "~/.local/share/chezmoi/lazy-lock.json",
-	git = { url_format = "git@github.com:%s" },
 	checker = { enable = true },
+	defaults = { lazy = true },
+	git = { url_format = "git@github.com:%s" },
+	lockfile = "~/.local/share/chezmoi/lazy-lock.json",
+	performance = {
+		rtp = {
+			disabled_plugins = {
+				"man",
+				"tutor",
+			}
+		}
+	},
+	spec = { { import = "plugins" } },
 })

@@ -12,8 +12,4 @@ return {
 			},
 		}
 	},
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-		"olimorris/codecompanion.nvim",
-	}
 }

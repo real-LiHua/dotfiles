@@ -13,6 +13,5 @@ return {
 	end,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"Saghen/blink.cmp",
 	}
 }
