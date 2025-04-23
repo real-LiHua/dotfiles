@@ -1,8 +1,6 @@
-# Created by https://www.toptal.com/developers/gitignore/api/linux,vim,dotenv
-# Edit at https://www.toptal.com/developers/gitignore?templates=linux,vim,dotenv
-
-### dotenv ###
-.env
+home/dot_config/nvim/lua/config/envs.lua
+# Created by https://www.toptal.com/developers/gitignore/api/linux,vim
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,vim
 
 ### Linux ###
 *~
@@ -39,5 +37,4 @@ tags
 # Persistent undo
 [._]*.un~
 
-# End of https://www.toptal.com/developers/gitignore/api/linux,vim,dotenv
-home/dot_config/nvim/dot_env
+# End of https://www.toptal.com/developers/gitignore/api/linux,vim

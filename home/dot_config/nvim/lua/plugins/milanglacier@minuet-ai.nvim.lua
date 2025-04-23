@@ -1,6 +1,7 @@
 return {
 	"milanglacier/minuet-ai.nvim",
 	config = function()
+		require("config.envs")
 		require("minuet").setup {
 			provider = "openai_compatible",
 			provider_options = {
@@ -10,8 +11,5 @@ return {
 				}
 			}
 		}
-	end,
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-	}
+	end
 }

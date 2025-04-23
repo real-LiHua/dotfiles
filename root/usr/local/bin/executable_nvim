@@ -1,6 +1,0 @@
-#!/bin/sh
-DOT_ENV=~/.config/nvim/.env
-if [ -f "$DOT_ENV" ]; then
-	export $(cat "$DOT_ENV")
-fi
-/usr/bin/nvim $@

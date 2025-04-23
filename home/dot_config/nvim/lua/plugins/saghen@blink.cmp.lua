@@ -15,11 +15,9 @@ return {
 			}
 		},
 		completion = {
-			accept = { auto_brackets = { enabled = false } },
 			documentation = { auto_show = true },
 			ghost_text = { enabled = true, show_with_menu = true },
 			menu = {
-				auto_show = true,
 				draw = {
 					columns = { { "kind_icon" }, { "label", gap = 1 } },
 					components = {
@@ -87,7 +85,7 @@ return {
 			providers = {
 				ecolog = {
 					module = "ecolog.integrations.cmp.blink_cmp",
-					name = "ecolog",
+					name = "Ecolog",
 				},
 				git = {
 					module = "blink-cmp-git",
@@ -95,7 +93,7 @@ return {
 				},
 				minuet = {
 					module = "minuet.blink",
-					name = "minuet",
+					name = "Minuet",
 					async = true,
 					timeout_ms = 3000,
 				},
@@ -108,3 +106,4 @@ return {
 	},
 	dependencies = { "t3ntxcl3s/ecolog.nvim" }
 }
+-- vim: set ts=2:
