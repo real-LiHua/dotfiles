@@ -1,18 +1,67 @@
 dns {
     upstream {
-        alidns: 'udp://dns.alidns.com:53'
-        googledns: 'tcp+udp://dns.google:53'
+    	AdGuard_IPv4: 'tcp://94.140.14.140'
+	AdGuard_IPv6: 'tcp://[2a10:50c0::bad1:ff]'
+	# AdGuard_DoT: 'tls://unfiltered.adguard-dns.com'
+	# AdGuard_DoH: 'https://unfiltered.adguard-dns.com/dns-query'
+	AdGuard_DoQ: 'quic://unfiltered.adguard-dns.com'
+
+	Ali_IPv4: 'tcp://223.5.5.5'
+	Ali_IPv6: 'tcp://[2400:3200::1]'
+	# Ali_DoT: 'tls://dns.alidns.com'
+	# Ali_DoH: 'https://dns.alidns.com/dns-query'
+	Ali_DoQ: 'quic://dns.alidns.com:853'
+
+	CFIEC_IPv6: 'tcp://[240C::6666]'
+	# CFIEC_DoT: 'tls://dns.cfiec.net'
+	CFIEC_DoH: 'https://dns.cfiec.net/dns-query'
+	
+	Cloudflare_IPv4: 'tcp://1.1.1.1'
+	Cloudflare_IPv6: 'tcp://[2606:4700:4700::1111]'
+	Cloudflare_DoH: 'https://dns.cloudflare.com/dns-query'
+
+	DNSPod_IPv4: 'tcp://119.29.29.29'
+	DNSPod_IPv6: 'tcp://[2402:4e00::]'
+	# DNSPod_DoT: 'tls://dot.pub'
+	DNSPod_DoH: 'https://dns.pub/dns-query'
+
+	Google_IPv4: 'tcp://8.8.8.8'
+	Google_IPv6: 'tcp://[2001:4860:4860::8888]'
+	# Google_DoT: 'tls://dns.google'
+	Google_DoH: 'https://dns.google/dns-query'
     }
 
     routing {
         request {
-            qname(geosite:category-ads) -> reject
             qname(geosite:category-ads-all) -> reject
-            fallback: alidns
+	    qname(suffix: 'adguard-dns.com') && qtype(a)    -> AdGuard_IPv4
+	    qname(suffix: 'adguard-dns.com') && qtype(aaaa) -> AdGuard_IPv6
+	    
+	    qname(suffix: 'alidns.com') && qtype(a)    -> Ali_IPv4
+	    qname(suffix: 'alidns.com') && qtype(aaaa) -> Ali_IPv6
+	    qname(geosite:aliyun) -> Ali_DoQ
+            
+	    qname(suffix: 'cloudflare.com') && qtype(a)    -> Cloudflare_IPv4
+	    qname(suffix: 'cloudflare.com') && qtype(aaaa) -> Cloudflare_IPv6
+	    qname(geosite:cloudflare) -> Cloudflare_DoH
+
+	    qname(full: 'dns.pub') && qtype(a)    -> DNSPod_IPv4
+	    qname(full: 'dns.pub') && qtype(aaaa) -> DNSPod_IPv6
+	    qname(geosite:tencent) -> DNSPod_DoH
+
+	    qname(full: 'dns.google') && qtype(a)    -> Google_IPv4
+	    qname(full: 'dns.google') && qtype(aaaa) -> Google_IPv6
+	    qname(geosite:google)                    -> Google_DoH
+	    
+	    qname(suffix: 'cfiec.net') && qtype(aaaa) -> CFIEC_IPv6
+	    qname(geosite:cn) && qtype(aaaa)          -> CFIEC_DoH
+
+	    fallback: Ali_DoQ
         }
         response {
-            upstream(googledns) -> accept
-            !qname(geosite:cn) && ip(geoip:private) -> googledns
+            upstream(Ali_DoQ) && !qname(geosite:cn) && ip(geoip:private) -> AdGuard_DoQ
+            upstream(AdGuard_DoQ) && !qname(geosite:cn) && ip(geoip:private) -> Cloudflare_DoH
+            !qname(geosite:cn) && ip(geoip:private) -> Google_DoH
             fallback: accept
         }
     }
