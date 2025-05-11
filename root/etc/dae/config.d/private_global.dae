@@ -8,6 +8,7 @@ global {
     check_interval: 600s
     check_tolerance: 50ms
 
+    lan_interface: docker0
     wan_interface: auto
     allow_insecure: false
 
