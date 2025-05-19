@@ -56,6 +56,8 @@ dns {
 	    qname(suffix: 'cfiec.net') && qtype(aaaa) -> CFIEC_IPv6
 	    qname(geosite:cn) && qtype(aaaa)          -> CFIEC_DoH
 
+    	    qname(geosite:jetbrains) -> Google_DoH
+    	    qname(geosite:jetbrains-ai) -> Google_DoH
 	    fallback: Ali_DoQ
         }
         response {

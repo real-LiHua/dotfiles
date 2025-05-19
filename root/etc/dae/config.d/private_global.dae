@@ -1,6 +1,4 @@
 global {
-    tproxy_port: 12345
-
     log_level: warn
 
     tcp_check_url: 'http://cp.cloudflare.com'
@@ -8,7 +6,7 @@ global {
     check_interval: 600s
     check_tolerance: 50ms
 
-    lan_interface: docker0
+    lan_interface: docker0,waydroid0
     wan_interface: auto
     allow_insecure: false
 
@@ -17,4 +15,6 @@ global {
     enable_local_tcp_fast_redirect: false
     auto_config_kernel_parameter: true
     sniffing_timeout: 100ms
+
+    mptcp: true
 }
