@@ -1,6 +1,6 @@
+*.pacnew
 home/dot_config/nvim/lua/config/envs.lua
 root/etc/dae/config.dae.example
-root/etc/dae/config.dae.pacnew
 root/etc/dae/config.d/private_subscription.dae
 # Created by https://www.toptal.com/developers/gitignore/api/linux,vim
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,vim
