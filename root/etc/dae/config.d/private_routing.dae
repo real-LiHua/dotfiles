@@ -2,7 +2,8 @@ routing {
 	pname(NetworkManager) -> direct
 	dip(224.0.0.0/3, 'ff00::/8') -> direct
 	dip(geoip:private) -> direct
-
+	
+	domain(geosite:category-ai-!cn) -> not_CN
 	domain(geosite:category-dev) -> proxy
     
 	dip(geoip:cn) -> direct

@@ -7,4 +7,17 @@ group {
 		filter: name(tor)
 		policy: fixed(0)
 	}
+
+	not_CN {
+		filter: !name(keyword:	"🇨🇳", "CN", "中国", "大陆", "China",
+					"🇭🇰", "HK", "香港", "HongKong", "Hong_Kong",
+					"🇲🇴", "MO", "澳门", "澳門", "Macao", "Macau",
+					"🇹🇼", "TW", "台湾", "臺灣", "TaiWan",
+					"北京", "上海", "广东", "广州", "广西", "南宁",
+					"山东", "青岛", "云南", "昆明", "海南", "海口",
+					"Beijing", "Shanghai", "Guangdong", "Guangzhou",
+					"Guangxi", "Nanning", "Shandong", "Qingdao",
+					"Yunnan", "Kunming", "Hainan", "Haikou")
+		policy: min_moving_avg
+	}
 }
