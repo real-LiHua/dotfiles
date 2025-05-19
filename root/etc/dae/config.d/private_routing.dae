@@ -1,11 +1,12 @@
 routing {
-    pname(NetworkManager) -> direct
-    dip(224.0.0.0/3, 'ff00::/8') -> direct
-    dip(geoip:private) -> direct
+	pname(NetworkManager) -> direct
+	dip(224.0.0.0/3, 'ff00::/8') -> direct
+	dip(geoip:private) -> direct
 
-    domain(geosite:category-dev) -> proxy
-    dip(geoip:cn) -> direct
-    domain(geosite:cn) -> direct
-
-    fallback: proxy
+	domain(geosite:category-dev) -> proxy
+    
+	dip(geoip:cn) -> direct
+	domain(geosite:cn) -> direct
+    
+	fallback: proxy
 }

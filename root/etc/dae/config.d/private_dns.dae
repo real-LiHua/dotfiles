@@ -1,15 +1,16 @@
 dns {
-    upstream {
-    	smartdns: 'tcp+udp://[::1]:5300'
-    }
+	upstream {
+		smartdns: 'tcp+udp://[::1]:5300'
+	}
 
-    routing {
-        request {
-            qname(geosite:category-ads-all) -> reject
-            fallback: smartdns
-        }
-        response {
-            fallback: accept
-        }
-    }
+	routing {
+		request {
+			qname(geosite:category-ads-all) -> reject
+			qname(geosite:category-education-cn) -> asis
+			fallback: smartdns
+		}
+		response {
+			fallback: accept
+		}
+	}
 }
