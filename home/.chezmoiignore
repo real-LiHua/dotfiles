@@ -1,5 +1,5 @@
-**/data.safe.bin
 .config/nvim/lua/config/envs.lua
+.mozilla/firefox/**/data.safe.bin
 .mozilla/firefox/default*/AlternateServices.bin
 .mozilla/firefox/default*/bookmarkbackups
 .mozilla/firefox/default*/cert9.db
