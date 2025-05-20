@@ -1,4 +1,5 @@
 *.pacnew
+data.safe.bin
 /home/dot_config/nvim/lua/config/envs.lua
 /home/private_dot_mozilla/private_firefox/default*/AlternateServices.bin
 /home/private_dot_mozilla/private_firefox/default*/bookmarkbackups
@@ -13,6 +14,7 @@
 /home/private_dot_mozilla/private_firefox/default*/persdict.dat
 /home/private_dot_mozilla/private_firefox/default*/private_cert9.db
 /home/private_dot_mozilla/private_firefox/default*/private_crashes
+/home/private_dot_mozilla/private_firefox/default*/private_gmp
 /home/private_dot_mozilla/private_firefox/default*/private_key4.db
 /home/private_dot_mozilla/private_firefox/default*/private_minidumps
 /home/private_dot_mozilla/private_firefox/default*/private_pkcs11.txt
@@ -20,7 +22,6 @@
 /home/private_dot_mozilla/private_firefox/default*/security_state
 /home/private_dot_mozilla/private_firefox/default*/sessionstore-backups
 /home/private_dot_mozilla/private_firefox/default*/sessionstore.jsonlz4
-/home/private_dot_mozilla/private_firefox/default*/settings/data.safe.bin
 /home/private_dot_mozilla/private_firefox/default*/storage
 /home/private_dot_mozilla/private_firefox/default*/storage.sqlite
 /home/private_dot_mozilla/private_firefox/default*/webappsstore.sqlite
