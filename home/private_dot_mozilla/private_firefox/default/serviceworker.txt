@@ -1,0 +1,14 @@
+10
+
+https://chat.mistral.ai/
+https://chat.mistral.ai/sw.js
+true
+{f9e2242d-6ff9-457c-bb90-a9701e174eb5}
+0
+1747706013778157
+1747706013784734
+1747706001721342
+1
+true
+0
+#

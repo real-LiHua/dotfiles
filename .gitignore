@@ -1,7 +1,34 @@
 *.pacnew
-home/dot_config/nvim/lua/config/envs.lua
-root/etc/dae/config.dae.example
-root/etc/dae/config.d/private_subscription.dae
+/home/dot_config/nvim/lua/config/envs.lua
+/home/private_dot_mozilla/private_firefox/default*/AlternateServices.bin
+/home/private_dot_mozilla/private_firefox/default*/bookmarkbackups
+/home/private_dot_mozilla/private_firefox/default*/chromeappsstore.sqlite
+/home/private_dot_mozilla/private_firefox/default*/cookies.sqlite
+/home/private_dot_mozilla/private_firefox/default*/datareporting
+/home/private_dot_mozilla/private_firefox/default*/empty_*
+/home/private_dot_mozilla/private_firefox/default*/favicons.sqlite
+/home/private_dot_mozilla/private_firefox/default*/formhistory.sqlite
+/home/private_dot_mozilla/private_firefox/default*/gmp-gmpopenh264
+/home/private_dot_mozilla/private_firefox/default*/logins.json
+/home/private_dot_mozilla/private_firefox/default*/persdict.dat
+/home/private_dot_mozilla/private_firefox/default*/private_cert9.db
+/home/private_dot_mozilla/private_firefox/default*/private_crashes
+/home/private_dot_mozilla/private_firefox/default*/private_key4.db
+/home/private_dot_mozilla/private_firefox/default*/private_minidumps
+/home/private_dot_mozilla/private_firefox/default*/private_pkcs11.txt
+/home/private_dot_mozilla/private_firefox/default*/private_saved-telemetry-pings
+/home/private_dot_mozilla/private_firefox/default*/security_state
+/home/private_dot_mozilla/private_firefox/default*/sessionstore-backups
+/home/private_dot_mozilla/private_firefox/default*/sessionstore.jsonlz4
+/home/private_dot_mozilla/private_firefox/default*/settings/data.safe.bin
+/home/private_dot_mozilla/private_firefox/default*/storage
+/home/private_dot_mozilla/private_firefox/default*/storage.sqlite
+/home/private_dot_mozilla/private_firefox/default*/webappsstore.sqlite
+/home/private_dot_mozilla/private_firefox/default*/xulstore.json
+/home/private_dot_mozilla/private_firefox/private_Pending Ping
+/home/private_dot_mozilla/private_firefox/private_Crash Reports
+/root/etc/dae/config.dae.example
+/root/etc/dae/config.d/private_subscription.dae
 # Created by https://www.toptal.com/developers/gitignore/api/linux,vim
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,vim
 
