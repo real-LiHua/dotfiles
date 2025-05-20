@@ -1,0 +1,29 @@
+**/data.safe.bin
+.config/nvim/lua/config/envs.lua
+.mozilla/firefox/default*/AlternateServices.bin
+.mozilla/firefox/default*/bookmarkbackups
+.mozilla/firefox/default*/cert9.db
+.mozilla/firefox/default*/chromeappsstore.sqlite
+.mozilla/firefox/default*/crashes
+.mozilla/firefox/default*/cookies.sqlite
+.mozilla/firefox/default*/datareporting
+.mozilla/firefox/default*/favicons.sqlite
+.mozilla/firefox/default*/formhistory.sqlite
+.mozilla/firefox/default*/gmp
+.mozilla/firefox/default*/gmp-gmpopenh264
+.mozilla/firefox/default*/key4.db
+.mozilla/firefox/default*/logins.json
+.mozilla/firefox/default*/minidumps
+.mozilla/firefox/default*/persdict.dat
+.mozilla/firefox/default*/pkcs11.txt
+.mozilla/firefox/default*/saved-telemetry-pings
+.mozilla/firefox/default*/security_state
+.mozilla/firefox/default*/serviceworker.txt
+.mozilla/firefox/default*/sessionstore-backups
+.mozilla/firefox/default*/sessionstore.jsonlz4
+.mozilla/firefox/default*/storage
+.mozilla/firefox/default*/storage.sqlite
+.mozilla/firefox/default*/webappsstore.sqlite
+.mozilla/firefox/default*/xulstore.json
+.mozilla/firefox/Crash Reports
+.mozilla/firefox/Pending Ping
