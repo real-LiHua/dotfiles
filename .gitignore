@@ -20,6 +20,7 @@ data.safe.bin
 /home/private_dot_mozilla/private_firefox/default*/private_pkcs11.txt
 /home/private_dot_mozilla/private_firefox/default*/private_saved-telemetry-pings
 /home/private_dot_mozilla/private_firefox/default*/security_state
+/home/private_dot_mozilla/private_firefox/default*/serviceworker.txt
 /home/private_dot_mozilla/private_firefox/default*/sessionstore-backups
 /home/private_dot_mozilla/private_firefox/default*/sessionstore.jsonlz4
 /home/private_dot_mozilla/private_firefox/default*/storage
