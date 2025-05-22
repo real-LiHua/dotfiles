@@ -1,5 +1,7 @@
 return {
 	"t3ntxcl3s/ecolog.nvim",
+	dir = "~/Documents/GitHub/real-LiHua/ecolog.nvim",
+	dev = true,
 	opts = {
 		shelter = {
 			modules = {

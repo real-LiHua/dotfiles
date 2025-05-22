@@ -6,8 +6,5 @@ return {
 			use_emojis = true,
 		},
 		ui = { use_signcolumn = true }
-	},
-	dependencies = {
-		"ibhagwan/fzf-lua",
 	}
 }

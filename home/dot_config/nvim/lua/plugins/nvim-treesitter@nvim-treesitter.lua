@@ -18,11 +18,5 @@ return {
 				highlight_current_scope = { enable = true },
 			},
 		})
-	end,
-	dependencies = {
-		"folke/twilight.nvim",
-		"nvim-treesitter/nvim-treesitter-context",
-		'nvim-treesitter/nvim-treesitter-refactor',
-		"windwp/nvim-ts-autotag",
-	}
+	end
 }

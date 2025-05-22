@@ -1,3 +1,4 @@
+**/*~
 .config/nvim/lua/config/envs.lua
 .mozilla/**/.keep
 .mozilla/firefox/**/data.safe.bin

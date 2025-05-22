@@ -1,5 +1,6 @@
 return {
 	"saghen/blink.cmp",
+	event = "InsertEnter",
 	opts = {
 		appearance = {
 			kind_icons = {
@@ -81,7 +82,7 @@ return {
 		keymap = { preset = 'enter' },
 		signature = { enabled = true },
 		sources = {
-			default = { "git", "codecompanion", "minuet", "lsp", "path", "ecolog", "snippets", "buffer", "ripgrep" },
+			default = { "ecolog", "git", "lsp", "path", "snippets", "buffer", "ripgrep", "codecompanion" },
 			providers = {
 				ecolog = {
 					module = "ecolog.integrations.cmp.blink_cmp",
@@ -104,6 +105,9 @@ return {
 			}
 		}
 	},
-	dependencies = { "t3ntxcl3s/ecolog.nvim" }
+	dependencies = {
+			"olimorris/codecompanion.nvim",
+			"rafamadriz/friendly-snippets",
+	}
 }
 -- vim: set ts=2:
