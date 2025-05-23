@@ -9,11 +9,15 @@ group {
 	}
 
 	ai {
-		filter: name(keyword: "🇬🇧","EN", "英国",
-				"🇫🇷", "FR", "法国",
-				"🇮🇳", "IN", "印度",
-				"🇯🇵", "JP", "日本",
-				"🇺🇸", "US", "美国")
+		filter: name(
+		keyword: "🇩🇪", keyword: "DE", keyword: "德国",
+		keyword: "🇬🇧", keyword: "EN", keyword: "英国",
+		keyword: "🇫🇷", keyword: "FR", keyword: "法国",
+		keyword: "🇮🇳", keyword: "IN", keyword: "印度",
+		keyword: "🇯🇵", keyword: "JP", keyword: "日本",
+		keyword: "🇰🇷", keyword: "KR", keyword: "韩国",
+		keyword: "🇸🇬", keyword: "SG", keyword: "新加坡",
+		keyword: "🇺🇸", keyword: "US", keyword: "美国")
 		policy: min_moving_avg
 	}
 }

@@ -4,12 +4,5 @@ return {
 	build = "bundled_build.lua",
 	opts = {
 		use_bundled_binary = true,
-		extensions = {
-			codecompanion = {
-				show_result_in_chat = true,
-				make_vars = true,
-				make_slash_commands = true,
-			},
-		}
 	},
 }

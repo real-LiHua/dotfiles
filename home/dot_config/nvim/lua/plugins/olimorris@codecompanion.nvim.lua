@@ -17,21 +17,28 @@ return {
 						},
 					},
 				})
-			end
+			end,
+		},
+		extensions = {
+			mcphub = {
+				callback = "mcphub.extensions.codecompanion",
+				opts = {
+					make_slash_commands = true,
+					make_vars = true,
+					show_result_in_chat = true,
+				},
+			},
 		},
 		strategies = {
 			chat = {
 				adapter = "openrouter_claude",
-				tools = {
-					mcp = { callback = function() return require("mcphub.extensions.codecompanion") end },
-				}
 			},
 			inline = {
 				adapter = "copilot",
 			},
 			cmd = {
 				adapter = "copilot",
-			}
+			},
 		},
 	},
 }
