@@ -1,11 +1,11 @@
 return {
 	"WhoIsSethDaniel/mason-tool-installer.nvim",
-	cmd={
+	cmd = {
 		"MasonToolsInstall",
 		"MasonToolsUpdate",
 		"MasonToolsClean",
 	},
-	opts={
+	opts = {
 		ensure_installed = {
 			"basedpyright",
 			"clangd",
@@ -22,6 +22,6 @@ return {
 			"systemd_ls",
 			"vue_ls",
 			"yamlls",
-		}
-	}
+		},
+	},
 }

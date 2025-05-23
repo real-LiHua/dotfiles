@@ -4,10 +4,10 @@ return {
 		vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
 			callback = function()
 				require("lint").try_lint()
-			end
+			end,
 		})
 		vim.diagnostic.config({
-			virtual_text = true
+			virtual_text = true,
 		})
-	end
+	end,
 }

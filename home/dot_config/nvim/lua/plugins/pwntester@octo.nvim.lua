@@ -6,6 +6,6 @@ return {
 		picker_config = {
 			use_emojis = true,
 		},
-		ui = { use_signcolumn = true }
-	}
+		ui = { use_signcolumn = true },
+	},
 }

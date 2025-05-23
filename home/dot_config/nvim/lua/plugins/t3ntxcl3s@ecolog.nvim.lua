@@ -8,12 +8,12 @@ return {
 				cmp = true,
 				peek = true,
 				files = true,
-			}
+			},
 		},
 		integrations = {
-			blink_cmp = true
+			blink_cmp = true,
 		},
 		interpolation = false,
 		vim_env = true,
-	}
+	},
 }

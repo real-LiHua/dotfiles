@@ -4,16 +4,16 @@ return {
 	opts = {
 		appearance = {
 			kind_icons = {
-				claude = '󰋦',
-				openai = '󱢆',
-				codestral = '󱎥',
-				gemini = '',
-				Groq = '',
-				Openrouter = '󱂇',
-				Ollama = '󰳆',
-				['Llama.cpp'] = '󰳆',
-				Deepseek = ''
-			}
+				claude = "󰋦",
+				openai = "󱢆",
+				codestral = "󱎥",
+				gemini = "",
+				Groq = "",
+				Openrouter = "󱂇",
+				Ollama = "󰳆",
+				["Llama.cpp"] = "󰳆",
+				Deepseek = "",
+			},
 		},
 		completion = {
 			documentation = { auto_show = true },
@@ -61,7 +61,7 @@ return {
 					},
 				},
 			},
-			trigger = { prefetch_on_insert = false }
+			trigger = { prefetch_on_insert = false },
 		},
 		fuzzy = {
 			implementation = "rust",
@@ -76,13 +76,23 @@ return {
 				-- => 'https://github.com/saghen/blink.cmp/releases/download/../latest/download/'
 				-- => 'https://github.com/saghen/blink.cmp/releases/latest/download/'
 				-- 访问后由GitHub 自行重定向
-				force_version = "../latest/download"
-			}
+				force_version = "../latest/download",
+			},
 		},
-		keymap = { preset = 'enter' },
+		keymap = { preset = "enter" },
 		signature = { enabled = true },
 		sources = {
-			default = { "ecolog", "git", "lsp", "path", "snippets", "buffer", "ripgrep", "minuet", "codecompanion" },
+			default = {
+				"ecolog",
+				"git",
+				"lsp",
+				"path",
+				"snippets",
+				"buffer",
+				"ripgrep",
+				"minuet",
+				"codecompanion",
+			},
 			providers = {
 				ecolog = {
 					module = "ecolog.integrations.cmp.blink_cmp",
@@ -90,7 +100,7 @@ return {
 				},
 				git = {
 					module = "blink-cmp-git",
-					name = "Git"
+					name = "Git",
 				},
 				minuet = {
 					module = "minuet.blink",
@@ -100,15 +110,15 @@ return {
 				},
 				ripgrep = {
 					module = "blink-ripgrep",
-					name = "Ripgrep"
-				}
-			}
-		}
+					name = "Ripgrep",
+				},
+			},
+		},
 	},
 	dependencies = {
-			"olimorris/codecompanion.nvim",
-			"rafamadriz/friendly-snippets",
-			"t3ntxcl3s/ecolog.nvim",
-	}
+		"olimorris/codecompanion.nvim",
+		"rafamadriz/friendly-snippets",
+		"t3ntxcl3s/ecolog.nvim",
+	},
 }
 -- vim: set ts=2:

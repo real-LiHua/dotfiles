@@ -11,5 +11,5 @@ return {
 		telescope = {
 			select = { "<CR>" },
 		},
-	}
+	},
 }

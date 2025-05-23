@@ -18,5 +18,5 @@ return {
 				highlight_current_scope = { enable = true },
 			},
 		})
-	end
+	end,
 }

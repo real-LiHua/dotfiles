@@ -1,4 +1,4 @@
 return {
-    "theHamsta/nvim-dap-virtual-text",
-    event = { "BufNewFile", "BufReadPre" },
+	"theHamsta/nvim-dap-virtual-text",
+	event = { "BufNewFile", "BufReadPre" },
 }
