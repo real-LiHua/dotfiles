@@ -1,19 +1,21 @@
 return {
 	"mhartington/formatter.nvim",
+	cmd = {"Format", "FormatWrite"},
 	event = { "BufReadPre", "InsertEnter" },
 	config = function()
-		require("formatter").setup({
-			logging = true,
+		local util = require "formatter.util"
+		require("formatter").setup {
 			filetype = {
 				["*"] = {
 					vim.lsp.buf.format
 				}
 			},
-		})
+			logging = true,
+		}
 		vim.api.nvim_create_augroup("__formatter__", { clear = true })
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = "__formatter__",
-			command = ":FormatWrite",
-		})
-	end
+--		vim.api.nvim_create_autocmd("BufWritePost", {
+--			group = "__formatter__",
+--			command = ":FormatWrite",
+--		})
+	end,
 }

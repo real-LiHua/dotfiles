@@ -82,7 +82,7 @@ return {
 		keymap = { preset = 'enter' },
 		signature = { enabled = true },
 		sources = {
-			default = { "ecolog", "git", "lsp", "path", "snippets", "buffer", "ripgrep", "codecompanion" },
+			default = { "ecolog", "git", "lsp", "path", "snippets", "buffer", "ripgrep", "minuet", "codecompanion" },
 			providers = {
 				ecolog = {
 					module = "ecolog.integrations.cmp.blink_cmp",
@@ -108,6 +108,7 @@ return {
 	dependencies = {
 			"olimorris/codecompanion.nvim",
 			"rafamadriz/friendly-snippets",
+			"t3ntxcl3s/ecolog.nvim",
 	}
 }
 -- vim: set ts=2:

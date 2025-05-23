@@ -1,7 +1,6 @@
 return {
 	"olimorris/codecompanion.nvim",
-	dir="~/Documents/GitHub/real-LiHua/codecompanion.nvim",	
-	dev=true,
+	cmd = { "CodeCompanion", "CodeCompanionActions", "CodeCompanionCmd", "CodeCompanionChat" },
 	opts = {
 		adapters = {
 			openrouter_claude = function()

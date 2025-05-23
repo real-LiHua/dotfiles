@@ -1,6 +1,6 @@
 return {
 	'nvim-lualine/lualine.nvim',
-	lazy = false,
+	lazy=false,
 	config = function()
 		require("lualine").setup({
 			theme = 'jellybeans',

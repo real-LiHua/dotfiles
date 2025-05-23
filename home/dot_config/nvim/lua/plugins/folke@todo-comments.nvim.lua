@@ -1,4 +1,4 @@
 return {
 	"folke/todo-comments.nvim",
-	lazy = false,
+	event = { "BufNewFile", "BufReadPost" },
 }
