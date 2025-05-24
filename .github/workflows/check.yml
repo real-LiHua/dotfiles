@@ -22,11 +22,16 @@ jobs:
 
       - run: pacman-key --init
       - run: pacman-key --populate archlinux
-      - run: pacman-key --recv-key 3056513887B78AEB
-      - run: pacman-key --lsign-key 3056513887B78AEB
-      - run: cp -v root/etc/pacman.conf /etc/pacman.conf
-      - run: cp -vr root/etc/pacman.d/hooks /etc/pacman.d
-      - run: pacman -Sy --noconfirm --needed archlinuxcn-keyring chaotic-keyring
+      - run: pacman-key --recv-key 3056513887B78AEB 4345771566D76038C7FEB43863EC0ADBEA87E4E3 f9a6e68a711354d84a9b91637533bafe69a25079
+      - run: pacman-key --lsign-key 3056513887B78AEB 4345771566D76038C7FEB43863EC0ADBEA87E4E3 f9a6e68a711354d84a9b91637533bafe69a25079
+      - run: pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+      - run: pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+      - run: pacman -U --noconfirm 'https://www.blackarch.org/keyring/blackarch-keyring.pkg.tar.zst'
+      - run: curl -s 'https://blackarch.org/blackarch-mirrorlist' -o '/etc/pacman.d/blackarch-mirrorlist'
+      - run: sed -i 's/^#S/S/g' '/etc/pacman.d/blackarch-mirrorlist'
+      - run: cp -v 'root/etc/pacman.conf' '/etc/pacman.conf'
+      - run: cp -vr 'root/etc/pacman.d/hooks' '/etc/pacman.d'
+      - run: pacman -Sy --noconfirm --needed archlinuxcn-keyring chaotic-keyring blackarch-keyring
       - run: pacman -Sy --noconfirm --needed $(<packages.install)
       - run: pacman -Sy --noconfirm --needed $(<packages.uninstall)
       - run: pacman -Rsc --noconfirm $(<packages.uninstall)
