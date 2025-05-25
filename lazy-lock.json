@@ -6,6 +6,7 @@
   "codecompanion.nvim": { "branch": "main", "commit": "d3c3ac2f6c046655b88765988cabfa381cbe7365" },
   "colorful-menu.nvim": { "branch": "master", "commit": "bc3e82609f2fcf7dad7ca87c20e65e51d5d9d87c" },
   "conform.nvim": { "branch": "master", "commit": "6feb2f28f9a9385e401857b21eeac3c1b66dd628" },
+  "ecolog.nvim": { "branch": "main", "commit": "0d2ad3bf2ddd0775b9851d1c78319d2b551995b1" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
   "fzf-lua": { "branch": "main", "commit": "8adf950093af5361621cf52208d64995b1af78b5" },
   "gitsigns.nvim": { "branch": "main", "commit": "8b729e489f1475615dc6c9737da917b3bc163605" },

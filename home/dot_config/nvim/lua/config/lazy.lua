@@ -18,7 +18,9 @@ require("lazy").setup({
 	performance = {
 		rtp = {
 			disabled_plugins = {
+				"editorconfig",
 				"man",
+				"matchit",
 				"tutor",
 			},
 		},
