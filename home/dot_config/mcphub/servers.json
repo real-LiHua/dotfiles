@@ -1,26 +1,43 @@
 {
-  "mcpServers": {
-    "searxng": {
-      "args": [
-        "mcp-searxng"
-      ],
-      "disabled": true,
-      "command": "uvx"
-    }
-  },
-  "nativeMCPServers": {
-    "neovim": {
-      "disabled_resources": [
-        
-      ],
-      "custom_instructions": {
-        "disabled": false,
-        "text": ""
-      },
-      "disabled": false,
-      "disabled_tools": [
-        
-      ]
-    }
-  }
+	"nativeMCPServers": {
+		"neovim": {
+			"disabled": false,
+			"disabled_tools": [],
+			"disabled_resources": [],
+			"custom_instructions": {
+				"disabled": false,
+				"text": ""
+			}
+		}
+	},
+	"mcpServers": {
+		"fetch": {
+			"command": "uvx",
+			"args": [
+				"mcp-server-fetch"
+			]
+		},
+		"puppeteer": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-puppeteer"
+			]
+		},
+		"sequential-thinking": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-sequential-thinking"
+			]
+		},
+		"time": {
+			"command": "uvx",
+			"args": [
+				"mcp-server-time",
+				"--local-timezone",
+				"Asia/Shanghai"
+			]
+		}
+	}
 }

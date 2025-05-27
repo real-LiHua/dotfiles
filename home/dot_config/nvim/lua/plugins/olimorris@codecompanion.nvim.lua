@@ -31,7 +31,7 @@ return {
 		},
 		strategies = {
 			chat = {
-				adapter = "openrouter_claude",
+				adapter = "gemini",
 			},
 			inline = {
 				adapter = "copilot",
