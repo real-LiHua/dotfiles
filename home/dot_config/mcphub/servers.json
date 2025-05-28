@@ -1,43 +1,59 @@
 {
-	"nativeMCPServers": {
-		"neovim": {
-			"disabled": false,
-			"disabled_tools": [],
-			"disabled_resources": [],
-			"custom_instructions": {
-				"disabled": false,
-				"text": ""
-			}
-		}
-	},
-	"mcpServers": {
-		"fetch": {
-			"command": "uvx",
-			"args": [
-				"mcp-server-fetch"
-			]
-		},
-		"puppeteer": {
-			"command": "npx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-puppeteer"
-			]
-		},
-		"sequential-thinking": {
-			"command": "npx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-sequential-thinking"
-			]
-		},
-		"time": {
-			"command": "uvx",
-			"args": [
-				"mcp-server-time",
-				"--local-timezone",
-				"Asia/Shanghai"
-			]
-		}
-	}
+  "mcpServers": {
+    "fetch": {
+      "autoApprove": [
+        "fetch"
+      ],
+      "args": [
+        "mcp-server-fetch",
+        "--ignore-robots-txt",
+        "--user-agent='Mozilla/5.0 (Windows NT 11.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6998.166 Safari/537.36'"
+      ],
+      "command": "uvx"
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ]
+    },
+    "sequential-thinking": {
+      "autoApprove": [
+        "sequentialthinking"
+      ],
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "command": "npx"
+    },
+    "time": {
+      "autoApprove": [
+        "get_current_time",
+        "convert_time"
+      ],
+      "args": [
+        "mcp-server-time",
+        "--local-timezone",
+        "Asia/Shanghai"
+      ],
+      "command": "uvx"
+    }
+  },
+  "nativeMCPServers": {
+    "neovim": {
+      "disabled": false,
+      "custom_instructions": {
+        "disabled": false,
+        "text": ""
+      },
+      "disabled_tools": [
+        
+      ],
+      "disabled_resources": [
+        
+      ]
+    }
+  }
 }
