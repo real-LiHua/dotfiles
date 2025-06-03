@@ -1,5 +1,23 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	event = { "BufEnter", "BufAdd", "BufNew", "BufNewFile", "BufWinEnter" },
+	cmd = {
+		"TSBufEnable",
+		"TSBufDisable",
+		"TSBufToggle",
+		"TSDisable",
+		"TSEditQuery",
+		"TSEditQueryUserAfter",
+		"TSEnable",
+		"TSInstall",
+		"TSInstallInfo",
+		"TSInstallSync",
+		"TSModuleInfo",
+		"TSToggle",
+		"TSUninstall",
+		"TSUpdateSync",
+		"TSUpdate",
+	},
 	build = ":TSUpdate",
 	config = function()
 		require("nvim-treesitter.configs").setup({

@@ -25,7 +25,7 @@ return {
 				opts = {
 					make_slash_commands = true,
 					make_vars = true,
-					show_result_in_chat = true,
+					show_result_in_chat = false,
 				},
 			},
 		},
