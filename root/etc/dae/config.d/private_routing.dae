@@ -8,6 +8,6 @@ routing {
     
 	dip(geoip:cn) -> direct
 	domain(geosite:cn) -> direct
-    
+	domain(rtmp.t.me) -> direct
 	fallback: proxy
 }
