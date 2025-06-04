@@ -8,7 +8,8 @@ routing {
 
 	domain(geosite:category-ai-!cn) -> ai
 	domain(geosite:category-dev) -> proxy
-    
+	domain(geosite:ehentai) -> ehentai
+
 	dip(geoip:cn) -> direct
 	domain(geosite:cn) -> direct
 	domain(rtmp.t.me) -> direct
