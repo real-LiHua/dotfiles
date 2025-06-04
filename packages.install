@@ -77,6 +77,7 @@ qemu-desktop
 qemu-user-static-binfmt
 qt5-wayland
 qt6-multimedia-ffmpeg
+qt6-wayland-lily
 repo
 rime-ice-git
 rime-pinyin-zhwiki
