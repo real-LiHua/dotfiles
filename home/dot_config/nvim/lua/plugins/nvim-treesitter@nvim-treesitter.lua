@@ -1,40 +1,13 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	branch = "main",
 	event = { "BufEnter", "BufAdd", "BufNew", "BufNewFile", "BufWinEnter" },
 	cmd = {
-		"TSBufEnable",
-		"TSBufDisable",
-		"TSBufToggle",
-		"TSDisable",
-		"TSEditQuery",
-		"TSEditQueryUserAfter",
-		"TSEnable",
+		"TSLog",
 		"TSInstall",
-		"TSInstallInfo",
-		"TSInstallSync",
-		"TSModuleInfo",
-		"TSToggle",
+		"TSInstallFromGrammar",
 		"TSUninstall",
-		"TSUpdateSync",
 		"TSUpdate",
 	},
 	build = ":TSUpdate",
-	config = function()
-		require("nvim-treesitter.configs").setup({
-			auto_install = true,
-			highlight = { enable = true },
-			indent = { enable = true },
-			disable = function(_, buf)
-				local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-				return ok and stats and stats.size > 102400
-			end,
-			refactor = {
-				highlight_definitions = {
-					enable = true,
-					clear_on_cursor_move = true,
-				},
-				highlight_current_scope = { enable = true },
-			},
-		})
-	end,
 }
