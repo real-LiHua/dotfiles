@@ -3,6 +3,10 @@ group {
 		policy: min_moving_avg
 	}
 
+	random {
+		policy: random
+	}
+
 	tor {
 		filter: name(tor)
 		policy: fixed(0)
@@ -11,9 +15,9 @@ group {
 	ai {
 		filter: name(
 		keyword: "🇩🇪", keyword: "DE", keyword: "德国",
-		keyword: "🇬🇧", keyword: "EN", keyword: "英国",
+		keyword: "🇬🇧", keyword: "英国",
 		keyword: "🇫🇷", keyword: "FR", keyword: "法国",
-		keyword: "🇮🇳", keyword: "IN", keyword: "印度",
+		keyword: "🇮🇳", keyword: "印度",
 		keyword: "🇯🇵", keyword: "JP", keyword: "日本",
 		keyword: "🇰🇷", keyword: "KR", keyword: "韩国",
 		keyword: "🇸🇬", keyword: "SG", keyword: "新加坡",
