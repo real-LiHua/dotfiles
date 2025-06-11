@@ -12,7 +12,7 @@ routing {
 
 	dip(geoip:cn) -> direct
 	domain(geosite:cn) -> direct
-	domain(rtmp.t.me) -> direct
+	#domain(rtmp.t.me) -> direct
 	domain(api.urbandictionary.com) -> random
 	fallback: proxy
 }

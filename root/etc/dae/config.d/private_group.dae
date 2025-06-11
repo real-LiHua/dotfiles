@@ -12,6 +12,11 @@ group {
 		policy: fixed(0)
 	}
 
+	cloudflare {
+		filter: name(keyword: cloudflare)
+		policy: min_moving_avg
+	}
+
 	ai {
 		filter: name(
 		keyword: "🇩🇪", keyword: "DE", keyword: "德国",
