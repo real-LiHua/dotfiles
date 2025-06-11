@@ -1,5 +1,12 @@
 **/*~
 .config/nvim/lua/config/envs.lua
+.local/share/fcitx5/rime/build
+.local/share/fcitx5/rime/lua
+.local/share/fcitx5/rime/luna_pinyin.userdb
+.local/share/fcitx5/rime/installation.yaml
+.local/share/fcitx5/rime/sync
+.local/share/fcitx5/rime/trash
+.local/share/fcitx5/rime/user.yaml
 .mozilla/**/.keep
 .mozilla/firefox/**/data.safe.bin
 .mozilla/firefox/default*/AlternateServices.bin

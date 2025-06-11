@@ -80,8 +80,8 @@ qt5-wayland
 qt6-multimedia-ffmpeg
 qt6-wayland-lily
 repo
-rime-ice-git
 rime-pinyin-zhwiki
+rime-wanxiang-pinyin
 rocm-opencl-runtime
 rofi-wayland
 rust-analyzer
