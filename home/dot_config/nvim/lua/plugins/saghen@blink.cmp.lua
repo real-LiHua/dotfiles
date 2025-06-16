@@ -64,7 +64,7 @@ return {
 			trigger = { prefetch_on_insert = false },
 		},
 		fuzzy = {
-			implementation = "rust",
+			implementation = "lua",
 			prebuilt_binaries = {
 				-- 来点魔法, blink_cmp 好像没有指定最新版的功能，而且 force_version 似乎必须定义
 				-- ~~调用 REST API 获取版本号感觉浪费时间~~, 参考了内部实现

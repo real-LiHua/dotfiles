@@ -51,6 +51,7 @@ lib32-vulkan-icd-loader
 lib32-vulkan-intel
 lib32-vulkan-radeon
 linux-headers
+lua-dkjson
 lua-language-server
 lua51
 mako

@@ -8,6 +8,11 @@ return {
 					capabilities = require("blink.cmp").get_lsp_capabilities(),
 				})
 			end,
+			clangd = function()
+				require("lspconfig").clangd.setup({
+					cmd = { "/opt/clion/bin/clang/linux/x64/bin/clangd" },
+				})
+			end,
 		},
 	},
 	dependencies = {
