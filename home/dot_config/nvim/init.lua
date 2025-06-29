@@ -1,3 +1,5 @@
+require("config.lazy")
+
 vim.o.bk = true
 vim.o.cuc = true
 vim.o.cul = true
@@ -17,6 +19,4 @@ vim.o.wic = true
 vim.g.load_netrw = 1
 vim.g.load_netrwPlugin = 1
 vim.o.termguicolors = true
-vim.cmd([[colorscheme slate]])
-
-require("config.lazy")
+vim.cmd.colo("slate")
