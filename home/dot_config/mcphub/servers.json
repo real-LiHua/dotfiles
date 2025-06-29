@@ -1,84 +1,98 @@
 {
-	"nativeMCPServers": {
-		"neovim": {
-			"disabled": false,
-			"disabled_tools": [],
-			"disabled_resources": [],
-			"custom_instructions": {
-				"disabled": false,
-				"text": ""
-			}
-		}
+    "mcpServers": {
+	"github.com/mrexodia/ida-pro-mcp": {
+	    "args": [
+		"git+https://github.com/mrexodia/ida-pro-mcp"
+	    ],
+	    "disabled": true,
+	    "command": "uvx",
+	    "autoApprove": [
+		"list_functions",
+		"list_globals",
+		"list_globals_filter",
+		"list_strings",
+		"list_strings_filter",
+		"rename_function",
+		"rename_global_variable",
+		"rename_local_variable",
+		"get_current_address",
+		"get_current_function",
+		"get_entry_points",
+		"decompile_function",
+		"declare_c_type",
+		"check_connection",
+		"get_function_by_address",
+		"get_function_by_name",
+		"get_metadata",
+		"get_xrefs_to",
+		"get_xrefs_to_field",
+		"set_comment"
+	    ]
 	},
-	"mcpServers": {
-		"puppeteer": {
-			"command": "npx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-puppeteer"
-			]
-		},
-		"time": {
-			"autoApprove": [
-				"get_current_time",
-				"convert_time"
-			],
-			"command": "uvx",
-			"args": [
-				"mcp-server-time",
-				"--local-timezone",
-				"Asia/Shanghai"
-			]
-		},
-		"fetch": {
-			"autoApprove": [
-				"fetch"
-			],
-			"command": "uvx",
-			"args": [
-				"mcp-server-fetch",
-				"--ignore-robots-txt",
-				"--user-agent='Mozilla/5.0 (Windows NT 11.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6998.166 Safari/537.36'"
-			]
-		},
-		"sequential-thinking": {
-			"autoApprove": [
-				"sequentialthinking"
-			],
-			"command": "npx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-sequential-thinking"
-			]
-		},
-		"github.com/mrexodia/ida-pro-mcp": {
-			"autoApprove": [
-				"list_functions",
-				"list_globals",
-				"list_globals_filter",
-				"list_strings",
-				"list_strings_filter",
-				"rename_function",
-				"rename_global_variable",
-				"rename_local_variable",
-				"get_current_address",
-				"get_current_function",
-				"get_entry_points",
-				"decompile_function",
-				"declare_c_type",
-				"check_connection",
-				"get_function_by_address",
-				"get_function_by_name",
-				"get_metadata",
-				"get_xrefs_to",
-				"get_xrefs_to_field",
-				"set_comment"
-			],
-			"command": "uvx",
-			"args": [
-				"git+https://github.com/mrexodia/ida-pro-mcp"
-			],
-			"disabled": true
-		}
+	"github.com/real-LiHua/Base1000QianZiWenCodec": {
+	    "args": [
+		"git+https://github.com/real-LiHua/Base1000QianZiWenCodec[mcp]"
+	    ],
+	    "command": "uvx",
+	    "autoApprove": [
+		"encode",
+		"decode"
+	    ]
+	},
+	"fetch": {
+	    "args": [
+		"mcp-server-fetch",
+		"--ignore-robots-txt",
+		"--user-agent='Mozilla/5.0 (Windows NT 11.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6998.166 Safari/537.36'"
+	    ],
+	    "command": "uvx",
+	    "autoApprove": [
+		"fetch"
+	    ]
+	},
+	"puppeteer": {
+	    "args": [
+		"-y",
+		"@modelcontextprotocol/server-puppeteer"
+	    ],
+	    "command": "npx"
+	},
+	"sequential-thinking": {
+	    "args": [
+		"-y",
+		"@modelcontextprotocol/server-sequential-thinking"
+	    ],
+	    "command": "npx",
+	    "autoApprove": [
+		"sequentialthinking"
+	    ]
+	},
+	"time": {
+	    "args": [
+		"mcp-server-time",
+		"--local-timezone",
+		"Asia/Shanghai"
+	    ],
+	    "command": "uvx",
+	    "autoApprove": [
+		"get_current_time",
+		"convert_time"
+	    ]
 	}
+    },
+    "nativeMCPServers": {
+	"neovim": {
+	    "disabled_resources": [
+
+	    ],
+	    "disabled": false,
+	    "disabled_tools": [
+
+	    ],
+	    "custom_instructions": {
+		"text": "",
+		"disabled": false
+	    }
+	}
+    }
 }

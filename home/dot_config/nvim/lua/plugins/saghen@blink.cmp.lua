@@ -64,7 +64,7 @@ return {
 			trigger = { prefetch_on_insert = false },
 		},
 		fuzzy = {
-			implementation = "lua",
+			implementation = "rust",
 			prebuilt_binaries = {
 				-- 来点魔法, blink_cmp 好像没有指定最新版的功能，而且 force_version 似乎必须定义
 				-- ~~调用 REST API 获取版本号感觉浪费时间~~, 参考了内部实现
@@ -82,8 +82,8 @@ return {
 		keymap = { preset = "enter" },
 		signature = { enabled = true },
 		sources = {
-			default = {
-				"ecolog",
+			default = { --				"ecolog",
+				"avante",
 				"git",
 				"lsp",
 				"path",
@@ -91,9 +91,13 @@ return {
 				"buffer",
 				"ripgrep",
 				"minuet",
-				"codecompanion",
 			},
 			providers = {
+				avante = {
+					module = "blink-cmp-avante",
+					name = "Avante",
+					opts = {},
+				},
 				ecolog = {
 					module = "ecolog.integrations.cmp.blink_cmp",
 					name = "Ecolog",
@@ -116,6 +120,7 @@ return {
 		},
 	},
 	dependencies = {
+		"Kaiser-Yang/blink-cmp-avante",
 		"olimorris/codecompanion.nvim",
 		"rafamadriz/friendly-snippets",
 		"t3ntxcl3s/ecolog.nvim",

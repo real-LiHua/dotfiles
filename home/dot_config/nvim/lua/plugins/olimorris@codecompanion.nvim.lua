@@ -1,5 +1,6 @@
 return {
 	"olimorris/codecompanion.nvim",
+	enabled = false,
 	cmd = { "CodeCompanion", "CodeCompanionActions", "CodeCompanionCmd", "CodeCompanionChat" },
 	opts = {
 		adapters = {
@@ -20,6 +21,9 @@ return {
 			end,
 		},
 		extensions = {
+			history = {
+				enabled = true,
+			},
 			mcphub = {
 				callback = "mcphub.extensions.codecompanion",
 				opts = {

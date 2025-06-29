@@ -4,5 +4,7 @@ return {
 	build = "bundled_build.lua",
 	opts = {
 		use_bundled_binary = true,
+		auto_toggle_mcp_servers = true,
+		make_vars = true,
 	},
 }
