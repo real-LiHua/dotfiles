@@ -9,6 +9,7 @@ return {
 		end,
 		windows = {
 			position = "left",
+			width = 42,
 			sidebar_header = {
 				enabled = false,
 			},
@@ -17,7 +18,7 @@ return {
 			},
 		},
 		selector = {
-			provider = "fzf-lua",
+			provider = "fzf",
 		},
 		disabled_tools = {
 			"list_files",
