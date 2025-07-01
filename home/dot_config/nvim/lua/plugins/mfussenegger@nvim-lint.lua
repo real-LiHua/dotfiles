@@ -1,7 +1,8 @@
 return {
 	"mfussenegger/nvim-lint",
+	event = { "BufNewFile", "BufReadPost" },
 	config = function()
-		vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 			callback = function()
 				require("lint").try_lint()
 			end,
