@@ -50,6 +50,20 @@
 		"fetch"
 	    ]
 	},
+	"git": {
+	    "command": "uvx",
+	    "args": ["mcp-server-git"],
+	    "autoApprove": [
+		"git_status",
+		"git_diff_unstaged",
+		"git_diff_staged",
+		"git_diff",
+		"git_log",
+		"git_show",
+		"git_branch"
+	    ]
+	    
+	},
 	"puppeteer": {
 	    "args": [
 		"-y",
