@@ -1,0 +1,30 @@
+use_default_settings: true
+
+search:
+  autocomplete: "duckduckgo"
+  autocomplete_min: 1
+  favicon_resolver: "duckduckgo"
+  suspended_times:
+    SearxEngineAccessDenied: 0
+    SearxEngineCaptcha: 0
+    SearxEngineTooManyRequests: 0
+    cf_SearxEngineCaptcha: 0
+    cf_SearxEngineAccessDenied: 0
+    recaptcha_SearxEngineCaptcha: 0
+  formats:
+    - html
+    - json
+
+server:
+  secret_key: "114514"
+
+ui:
+  query_in_title: true
+  cache_url: "https://web.archive.org/web/*/"
+  hotkeys: vim
+
+plugins:
+  searx.plugins.self_info.SXNGPlugin:
+    active: false
+  searx.plugins.tor_check.SXNGPlugin:
+    active: true

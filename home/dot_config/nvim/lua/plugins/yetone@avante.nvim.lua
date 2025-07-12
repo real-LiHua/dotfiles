@@ -2,6 +2,9 @@ return {
 	"yetone/avante.nvim",
 	build = "make",
 	opts = {
+		web_search_engine = {
+			provider = "searxng",
+		},
 		provider = "gemini",
 		system_prompt = function()
 			local hub = require("mcphub").get_hub_instance()
@@ -18,7 +21,7 @@ return {
 			},
 		},
 		selector = {
-			provider = "fzf",
+			provider = "fzf_lua",
 		},
 		disabled_tools = {
 			"list_files",
