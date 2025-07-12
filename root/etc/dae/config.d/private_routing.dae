@@ -3,16 +3,20 @@ routing {
 	dip(224.0.0.0/3, 'ff00::/8') -> direct
 	dip(geoip:private) -> direct
 	
+    	l4proto(udp) && dport(443) -> block
+	
 	### https://t.me/Loon0x00/2523090
 	# dip(95.161.76.100/31) -> block
 
+	domain(geosite:steam) -> steam
 	domain(geosite:category-ai-!cn) -> ai
+	domain(download-cdn.jetbrains.com) -> direct
 	domain(geosite:category-dev) -> proxy
 	domain(geosite:ehentai) -> ehentai
+	domain(ssp.ximalaya.com) -> random
 
 	dip(geoip:cn) -> direct
 	domain(geosite:cn) -> direct
 	#domain(rtmp.t.me) -> direct
-	domain(api.urbandictionary.com) -> random
 	fallback: proxy
 }

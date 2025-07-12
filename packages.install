@@ -34,6 +34,7 @@ glfw
 grml-zsh-config
 hashcat
 intel-compute-runtime
+iptables-nft
 john
 jq
 jre8-openjdk
@@ -47,7 +48,7 @@ mako
 man-db
 man-pages-zh_cn
 man-pages-zh_tw
-neovim-git
+neovim
 networkmanager-openvpn
 noto-fonts
 noto-fonts-cjk

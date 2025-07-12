@@ -1,5 +1,5 @@
 global {
-	log_level: warn
+	log_level: info
 
 	check_interval: 600s
 	check_tolerance: 50ms

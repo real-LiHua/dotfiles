@@ -121,7 +121,6 @@ return {
 	},
 	dependencies = {
 		"Kaiser-Yang/blink-cmp-avante",
-		"olimorris/codecompanion.nvim",
 		"rafamadriz/friendly-snippets",
 		"t3ntxcl3s/ecolog.nvim",
 	},
