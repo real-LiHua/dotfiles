@@ -10,6 +10,8 @@ if not vim.uv.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
+require("lazy.core.handler.event").mappings.LazyFile =
+	{ id = "LazyFile", event = { "BufReadPost", "BufNewFile", "BufWritePre" } }
 require("lazy").setup({
 	checker = { enable = true },
 	defaults = { lazy = true },

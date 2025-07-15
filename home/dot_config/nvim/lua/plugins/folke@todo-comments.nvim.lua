@@ -1,4 +1,9 @@
 return {
 	"folke/todo-comments.nvim",
-	event = { "BufNewFile", "BufReadPost" },
+	event = "LazyFile",
+	opts = {
+		highlight = {
+			after = "",
+		},
+	},
 }

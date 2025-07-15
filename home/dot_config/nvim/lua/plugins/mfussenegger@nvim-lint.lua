@@ -1,6 +1,6 @@
 return {
 	"mfussenegger/nvim-lint",
-	event = { "BufNewFile", "BufReadPost" },
+	event = "LazyFile",
 	config = function()
 		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 			callback = function()
