@@ -1,6 +1,23 @@
 return {
 	"yetone/avante.nvim",
 	build = "make",
+	cmd = {
+		"AvanteAsk",
+		"AvanteBuild",
+		"AvanteChat",
+		"AvanteChatNew",
+		"AvanteHistory",
+		"AvanteClear",
+		"AvanteEdit",
+		"AvanteFocus",
+		"AvanteRefresh",
+		"AvanteStop",
+		"AvanteSwitchProvider",
+		"AvanteShowRepoMap",
+		"AvanteToggle",
+		"AvanteModels",
+		"AvanteSwitchSelectorProvider",
+	},
 	opts = {
 		web_search_engine = {
 			provider = "searxng",

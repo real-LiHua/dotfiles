@@ -1,12 +1,13 @@
 dns {
 	upstream {
-		smartdns: 'tcp+udp://[::1]:5300'
+		lan: 'tcp+udp://192.168.1.1'
+		smartdns: 'udp://127.0.0.53'
 	}
 
 	routing {
 		request {
 			qname(geosite:category-ads-all) -> reject
-			qname(geosite:category-education-cn) -> asis
+			qname(geosite:category-education-cn) -> lan
 			fallback: smartdns
 		}
 		response {

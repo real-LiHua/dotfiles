@@ -1,4 +1,5 @@
 routing {
+	pname(smartdns) && l4proto(udp) && dport(53) -> must_direct
 	pname(NetworkManager) -> direct
 	dip(224.0.0.0/3, 'ff00::/8') -> direct
 	dip(geoip:private) -> direct
@@ -10,10 +11,9 @@ routing {
 
 	domain(geosite:steam) -> steam
 	domain(geosite:category-ai-!cn) -> ai
-	domain(download-cdn.jetbrains.com) -> direct
+	domain(geosite:jetbrains) -> direct
 	domain(geosite:category-dev) -> proxy
 	domain(geosite:ehentai) -> ehentai
-	domain(ssp.ximalaya.com) -> random
 
 	dip(geoip:cn) -> direct
 	domain(geosite:cn) -> direct

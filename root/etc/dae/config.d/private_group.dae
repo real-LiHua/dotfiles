@@ -20,7 +20,6 @@ group {
 	ai {
 		filter: name(
 		keyword: "🇬🇧", keyword: "英国",
-		keyword: "🇫🇷", keyword: "FR", keyword: "法国",
 		keyword: "🇮🇳", keyword: "印度",
 		keyword: "🇯🇵", keyword: "JP", keyword: "日本",
 		keyword: "🇰🇷", keyword: "KR", keyword: "韩国",
