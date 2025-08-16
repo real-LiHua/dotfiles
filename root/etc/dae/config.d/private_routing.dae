@@ -1,9 +1,10 @@
 routing {
 	pname(smartdns) && l4proto(udp) && dport(53) -> must_direct
 	pname(NetworkManager) -> direct
-	dip(224.0.0.0/3, 'ff00::/8') -> direct
-	dip(geoip:private) -> direct
 	
+	dip(224.0.0.0/3, 'ff00::/8') -> direct
+	dip(geoip:private) -> must_direct
+
     	l4proto(udp) && dport(443) -> block
 	
 	### https://t.me/Loon0x00/2523090
@@ -11,12 +12,15 @@ routing {
 
 	domain(geosite:steam) -> steam
 	domain(geosite:category-ai-!cn) -> ai
-	domain(geosite:jetbrains) -> direct
+
+	dip(217.197.84.140, '2a0a:4580:103f:c0de::1') && dport(22) -> direct
 	domain(geosite:category-dev) -> proxy
-	domain(geosite:ehentai) -> ehentai
+	
+	domain(geosite:jetbrains) -> direct
+	#domain(geosite:ehentai) -> ehentai
 
 	dip(geoip:cn) -> direct
-	domain(geosite:cn) -> direct
+	
 	#domain(rtmp.t.me) -> direct
 	fallback: proxy
 }

@@ -1,17 +1,18 @@
 dns {
-	upstream {
-		lan: 'tcp+udp://192.168.1.1'
-		smartdns: 'udp://127.0.0.53'
-	}
+    ipversion_prefer: 4
+    upstream {
+	 lan: 'tcp+udp://192.168.1.1'
+	 smartdns: 'udp://127.0.0.53'
+    }
 
-	routing {
-		request {
-			qname(geosite:category-ads-all) -> reject
-			qname(geosite:category-education-cn) -> lan
-			fallback: smartdns
-		}
-		response {
-			fallback: accept
-		}
+    routing {
+	request {
+		qname(geosite:category-ads-all) -> reject
+		qname(geosite:category-education-cn) -> lan
+		fallback: smartdns
 	}
+	response {
+		fallback: accept
+	}
+    }
 }

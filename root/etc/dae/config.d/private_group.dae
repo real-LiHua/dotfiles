@@ -1,5 +1,6 @@
 group {
 	proxy {
+		filter: !name(keyword: "移动", keyword: "联通", keyword: "电信")
 		policy: min_moving_avg
 	}
 
@@ -23,10 +24,15 @@ group {
 		keyword: "🇮🇳", keyword: "印度",
 		keyword: "🇯🇵", keyword: "JP", keyword: "日本",
 		keyword: "🇰🇷", keyword: "KR", keyword: "韩国",
+		keyword: "🇵🇭", keyword: "PH", keyword: "菲律宾",
 		keyword: "🇸🇬", keyword: "SG", keyword: "新加坡",
+		keyword: "🇹🇷", keyword: "TR", keyword: "土耳其",
 		keyword: "🇺🇸", keyword: "US", keyword: "美国"
-		) && !name(keyword: "中转", keyword: "CloudFlare")
-		policy: random
+		) && !name(
+		keyword: "移动", keyword: "联通", keyword: "电信",
+		keyword: "中转", keyword: "CloudFlare"
+		)
+		policy: min_moving_avg
 	}
 
 	ehentai {

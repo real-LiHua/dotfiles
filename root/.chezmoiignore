@@ -2,3 +2,4 @@
 **/*.pacnew
 etc/dae/config.dae.example
 etc/dae/config.d/subscription.dae
+etc/dae/config.d/subscription.origin
