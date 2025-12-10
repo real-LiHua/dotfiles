@@ -1,0 +1,62 @@
+{
+	"policies": {
+		"DisableFirefoxAccounts": true,
+		"DisableFirefoxStudies": true,
+		"DisableMasterPasswordCreation": true,
+		"DisablePasswordReveal": true,
+		"DisablePocket": true,
+		"DisablePrivateBrowsing": false,
+		"DisableTelemetry": true,
+		"DontCheckDefaultBrowser": true,
+		"Extensions": {
+			"Install": [
+				"https://addons.mozilla.org/firefox/downloads/latest/foxyproxy-standard/latest.xpi",
+				"https://addons.mozilla.org/firefox/downloads/latest/keepassxc-browser/latest.xpi",
+				"https://addons.mozilla.org/firefox/downloads/latest/kiss-translator/latest.xpi",
+				"https://addons.mozilla.org/firefox/downloads/latest/tampermonkey/latest.xpi"
+			]
+		},
+		"FirefoxHome": {
+			"Search": false,
+			"TopSites": false,
+			"SponsoredTopSites": false,
+			"Highlights": false,
+			"Pocket": false,
+			"Stories": false,
+			"SponsoredPocket": false,
+			"SponsoredStories": false,
+			"Snippets": false,
+			"Locked": true
+		},
+		"FirefoxSuggest": {
+			"WebSuggestions": false,
+			"SponsoredSuggestions": false,
+			"ImproveSuggest": false,
+			"Locked": true
+		},
+		"PrimaryPassword": false,
+		"SearchEngines": {
+			"Add": [
+				{
+					"Name": "SearXNG",
+					"URLTemplate": "https://searx.envs.net/searxng/search",
+					"Method": "POST",
+					"IconURL": "https://searx.envs.net/searxng/static/themes/simple/img/favicon.png",
+					"Alias": "@searxng",
+					"Description": "尊重隐私的开源元搜索引擎",
+					"PostData": "q={searchTerms}",
+					"SuggestURLTemplate": "https://searx.envs.net/searxng/autocompleter?q={searchTerms}"
+				}
+			],
+			"Default": "SearXNG",
+			"Remove": ["百度"]
+		},
+		"ShowHomeButton": true,
+		"SupportMenu": {
+			"Title": "GitHub",
+			"URL": "https://github.com/real-LiHua/dotfiles"
+		},
+		"TranslateEnabled": false,
+		"VisualSearchEnabled": true
+	}
+}

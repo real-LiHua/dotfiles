@@ -1,1 +1,2 @@
 EDITOR=nvim
+HISTFILE=~/.config/zsh/.zsh_history
