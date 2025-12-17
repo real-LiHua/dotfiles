@@ -15,20 +15,20 @@ jobs:
       actions: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-        
+        uses: actions/checkout@v6
+
       - name: Get npm cache directory
         id: npm-cache-dir
         run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
-        
-      - uses: actions/cache@v4
+
+      - uses: actions/cache@v5
         id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
         with:
           path: ${{ steps.npm-cache-dir.outputs.dir }}
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-    
+
       - run: mv _site/install.sh _site/index.html
       - run: npm i
       - run: ./node_modules/surge/bin/surge _site lihua.surge.sh --token ${{ secrets.SURGE_TOKEN }}
