@@ -10,6 +10,7 @@
 		"DontCheckDefaultBrowser": true,
 		"Extensions": {
 			"Install": [
+				"https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi",
 				"https://addons.mozilla.org/firefox/downloads/latest/foxyproxy-standard/latest.xpi",
 				"https://addons.mozilla.org/firefox/downloads/latest/keepassxc-browser/latest.xpi",
 				"https://addons.mozilla.org/firefox/downloads/latest/kiss-translator/latest.xpi",
@@ -34,6 +35,13 @@
 			"ImproveSuggest": false,
 			"Locked": true
 		},
+		"GenerativeAI": {
+			"Enabled": true,
+			"Chatbot": true,
+			"LinkPreviews": true,
+			"TabGroups": true,
+			"Locked": false
+		},
 		"PrimaryPassword": false,
 		"SearchEngines": {
 			"Add": [
@@ -44,7 +52,7 @@
 					"IconURL": "https://searx.envs.net/searxng/static/themes/simple/img/favicon.png",
 					"Alias": "@searxng",
 					"Description": "尊重隐私的开源元搜索引擎",
-					"PostData": "q={searchTerms}",
+					"PostData": "safesearch=0&q={searchTerms}",
 					"SuggestURLTemplate": "https://searx.envs.net/searxng/autocompleter?q={searchTerms}"
 				}
 			],
