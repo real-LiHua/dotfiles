@@ -1,7 +1,7 @@
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/doc/pkgfile/command-not-found.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/doc/git-extras/git-extras-completion.zsh
 source <(fzf --zsh)
-source <(atuin init zsh)
 cpr() {
   rsync --archive -hh --partial --info=stats1,progress2 - - modify-window=1 "$@"
 } 

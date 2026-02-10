@@ -5,11 +5,11 @@ default-timeout=7000
 [app-name="Telegram Desktop"]
 anchor=center-right
 [grouped]
-[body~="^[^：]+：.*((李华)|(狸花)|([Ll][Ii1]\ ?[Hh][Uu][Aa4])).*$"]
+[body~="^[^：]+：.*((李华)|([狸梨]花)|([Ll][Ii1]\ ?[Hh][Uu][Aa4])).*$"]
 anchor=center
 default-timeout=0
 [body~="^[^：]+：.*((男娘)|(女装)).*$"]
 anchor=center
 default-timeout=1024000
-[body~="^[^：]+：((.*贴纸)|(图片)|(/((prpr)|(((un)|[dst])?ban)|(((un)|([dst]))?mute)|([ds]?kick)) .+)|(.*(入群验证)|(和另外 \d+ 个用户正在验证！)|(新成员 .+ 你好！)|(最近加入的 .+ 和另外 \d+ 个还未验证的新成员，你们好！)|(的被警告次数为)|(他的丁丁现在长度为)|(她的小穴现在深度为)|(发起斗鸡要下注)|(Your dick has grown by)|(你的((丁丁)|(小穴))已经)|(最大的丁丁排行榜：)|(Top of the biggest dicks:)|(禁宵(开启)|(解除)).*))$"]
+[body~="^[^：]+：((贴纸)|(图片)|(/((prpr)|(((un)|[dst])?ban)|(((un)|([dst]))?mute)|([ds]?kick)) .*))|(.*(入群验证)|(和另外 \d+ 个用户正在验证！)|(新成员 .+ 你好！)|(最近加入的 .+ 和另外 \d+ 个还未验证的新成员，你们好！)|(的被警告次数为)|(他的丁丁现在长度为)|(她的小穴现在深度为)|(发起斗鸡要下注)|(Your dick has grown by)|(你的((丁丁)|(小穴))已经)|(最大的丁丁排行榜：)|(Top of the biggest dicks:)|(禁宵(开启)|(解除)).*)$"]
 invisible=1

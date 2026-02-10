@@ -1,2 +1,6 @@
 EDITOR=nvim
-HISTFILE=~/.config/zsh/.zsh_history
+FZF_CTRL_R_OPTS="--preview 'echo {} | awk \"{for(i=2;i<=NF;i++){printf \\\"%s \\\", \\\$i}print \\\"\\\";}\" | bat -p --theme Solarized\ \(dark\) -l zsh --color always' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+FZF_CTRL_T_OPTS='--preview --exit-0'
+FZF_ALT_C_OPTS='--exit-0'
+HISTFILE=~/.cache/zsh/.zsh_history
+

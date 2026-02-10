@@ -1,0 +1,19 @@
+#!/bin/sh
+
+case "$1" in
+  *[!A-Z_]*)
+    echo "Invalid directory name" >&2
+    exit 1
+    ;;
+esac
+
+test -f ${XDG_CONFIG_HOME:-~/.config}/user-dirs.dirs && . ${XDG_CONFIG_HOME:-~/.config}/user-dirs.dirs
+if [ "x$1" = "xDESKTOP" ]; then
+  varname="XDG_${1}_DIR"
+  eval "value=\${$varname:-\$HOME/Desktop}"
+  echo "$value"
+else
+  varname="XDG_${1}_DIR"
+  eval "value=\${$varname:-\$HOME}"
+  echo "$value"
+fi

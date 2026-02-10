@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+import sys as __sys
+import os as __os
+import readline as __readline
+import atexit as __atexit
+from pathlib import Path as __Path
+
+if (
+    not hasattr(__builtins__, "__IPYTHON__")
+    and "bpython" not in __sys.argv[0]
+    and __sys.version_info < (3, 13)
+):
+    if __history := __os.environ.get("PYTHON_HISTORY"):
+        __history = __Path(__history)
+    elif __state_home := __os.environ.get("XDG_STATE_HOME"):
+        __state_home = __Path(__state_home)
+    else:
+        __state_home = __Path.home() / ".local" / "state"
+
+    __history = __history or __state_home / "python_history"
+
+    if not __history.is_file():
+        __readline.write_history_file(str(__history))
+
+    __readline.read_history_file(__history)
+    __atexit.register(__readline.write_history_file, __history)
+
+
+class __hook:
+    import time as __time
+
+    def __str__(self) -> str:
+        return self.__time.strftime("%H:%M:%S\n>>> ", self.__time.localtime())
+
+
+__sys.ps1 = __hook()
