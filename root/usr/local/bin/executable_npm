@@ -1,0 +1,211 @@
+#!/usr/bin/env bash
+
+# Set strict mode to catch errors early
+set -euo pipefail
+
+# Define constants
+readonly EMULATED_NPM_VERSION="11.4.1"
+
+# --- Helper Functions ---
+
+# Function to check for required commands
+check_command() {
+  local cmd="$1"
+  if ! command -v "$cmd" &>/dev/null; then
+    echo "Error: '$cmd' is not installed. Please install it first." >&2
+    exit 1
+  fi
+}
+
+# Function to parse --scope for init
+parse_init_scope() {
+  local _scope=""
+  local _args=()
+  for arg in "$@"; do
+    case "$arg" in
+    --scope=*) _scope="${arg#*=}" ;;
+    --scope)
+      # This assumes --scope is followed by its value.
+      # If it's the last arg, _scope might remain empty.
+      # More robust parsing would involve looking ahead.
+      shift # consume --scope
+      _scope="$1"
+      ;;
+    *) _args+=("$arg") ;; # Keep other args
+    esac
+  done
+  echo "$_scope"
+}
+
+# --- Main Script Logic ---
+
+# Ensure required dependencies are installed
+check_command "pnpm"
+check_command "jq"
+
+# Ensure at least one argument is passed
+if [[ $# -eq 0 ]]; then
+  echo "Usage: $0 <command> [options]"
+  echo ""
+  echo "Supported commands:"
+  echo "  init [--scope=<scope>]"
+  echo "  install [packages...] [--prefix <dir>] [--global]"
+  echo "  add [packages...] [--save-dev|--save-prod|--global]"
+  echo "  run <script> [--prefix <dir>] [args...]"
+  echo "  exec [command...] [--yes]"
+  echo "  publish"
+  echo "  info"
+  echo "  version"
+  echo "  --version"
+  echo ""
+  echo "This script attempts to translate common npm commands to pnpm."
+  exit 1
+fi
+
+# Extract command and shift arguments
+COMMAND=$1
+shift
+
+# Process commands
+case "$COMMAND" in
+version)
+  echo "{\"npm\":\"$EMULATED_NPM_VERSION\"}"
+  exit 0
+  ;;
+
+--version)
+  echo "$EMULATED_NPM_VERSION"
+  exit 0
+  ;;
+
+init)
+  SCOPE=$(parse_init_scope "$@")
+
+  # Initialize package
+  pnpm init --silent || {
+    echo "Error: pnpm init failed." >&2
+    exit 1
+  }
+
+  # Add scope if specified
+  if [[ -n "$SCOPE" ]]; then
+    if ! jq --arg scope "$SCOPE" '.name |= "@\($scope)/" + sub("^@?[^/]+/"; "")' package.json >package.tmp.json; then
+      echo "Error: Failed to modify package.json with jq." >&2
+      exit 1
+    fi
+    mv package.tmp.json package.json || {
+      echo "Error: Failed to move package.tmp.json." >&2
+      exit 1
+    }
+
+    # Fix for Error: Cannot find module ...
+    if [[ $SCOPE == "mason" ]]; then
+      echo -e "preferSymlinkedExecutables: true" >pnpm-workspace.yaml || {
+        echo "Cannot write to pnpm-workspace.yaml"
+        exit 1
+      }
+    fi
+  fi
+
+  cat package.json
+  exit 0
+  ;;
+
+exec)
+  # Remove '--yes' options
+  args=()
+  for arg in "$@"; do
+    if [[ "$arg" != "--yes" ]]; then
+      args+=("$arg")
+    fi
+  done
+
+  # Forward the remaining arguments to pnpm exec
+  pnpm exec "${args[@]}"
+
+  exit 0
+  ;;
+
+install | add) # Treat 'npm add' same as 'npm install <packages>'
+  pnpm_args=()
+  packages=()
+  prefix_dir=""
+  is_global=0
+
+  for arg in "$@"; do
+    case "$arg" in
+    --prefix)
+      shift
+      prefix_dir="$1"
+      ;;
+    -g | --global)
+      is_global=1
+      ;;
+    --save-dev | --save-prod | --save-optional | --save-exact | --no-save)
+      pnpm_args+=("$arg")
+      ;;
+    -*)
+      pnpm_args+=("$arg")
+      ;;
+    *)
+      packages+=("$arg")
+      ;;
+    esac
+  done
+
+  if [[ -n "$prefix_dir" ]]; then
+    pnpm_args+=("--dir" "$prefix_dir")
+  fi
+
+  if [[ $is_global -eq 1 ]]; then
+    pnpm_args+=("--global")
+  fi
+
+  if [[ ${#packages[@]} -gt 0 ]]; then
+    # If packages are specified, it's 'pnpm add'
+    pnpm add "${pnpm_args[@]}" "${packages[@]}"
+  else
+    # If no packages, it's 'pnpm install'
+    pnpm install "${pnpm_args[@]}"
+  fi
+  exit 0
+  ;;
+
+run)
+  SCRIPT=$1
+  shift
+
+  LOCAL_ARGS=()
+  PREFIX_DIR=""
+
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+    --prefix)
+      shift
+      PREFIX_DIR="$1"
+      ;;
+    *)
+      LOCAL_ARGS+=("$1")
+      ;;
+    esac
+    shift
+  done
+
+  if [[ -n "$PREFIX_DIR" ]]; then
+    pnpm --dir "$PREFIX_DIR" run "$SCRIPT" "${LOCAL_ARGS[@]}"
+  else
+    pnpm run "$SCRIPT" "${LOCAL_ARGS[@]}"
+  fi
+  exit 0
+  ;;
+
+publish | info)
+  /usr/bin/npm "$COMMAND" "$@"
+  exit 0
+  ;;
+
+*)
+  # Default: forward command and arguments directly to pnpm
+  pnpm "$COMMAND" "$@"
+  ;;
+esac
